@@ -14,7 +14,7 @@ module.exports = function(grunt) {
         errorHTMLRootDir: 'w3c',
         path: 'w3c/validation-status.json',
         reportpath: 'w3c/validation-report.json',
-        relaxerror: ['Bad value X-UA-Compatible for attribute http-equiv on element meta.'] //ignores these errors
+       relaxerror: ['The Content-Type was “text/html”. Using the HTML parser.', 'Using the schema for HTML with SVG 1.1, MathML 3.0, RDFa 1.1, and ITS 2.0 support.', 'Bad value X-UA-Compatible for attribute http-equiv on element meta.'] //ignores these errors
       },
       files: {
         src: '<%= srcFolder %>/public/**/*.html'
@@ -83,5 +83,6 @@ module.exports = function(grunt) {
   grunt.registerTask('test', ['validation', 'jshint', 'qunit']);
 
   // the default task can be run just by typing "grunt" on the command line
-  grunt.registerTask('default', ['validation', 'jshint', 'qunit', 'concat', 'uglify', 'cssmin']);
+  //grunt.registerTask('default', ['validation', 'jshint', 'qunit', 'concat', 'uglify', 'cssmin']);
+  grunt.registerTask('default', ['validation', 'jshint']);
 };
