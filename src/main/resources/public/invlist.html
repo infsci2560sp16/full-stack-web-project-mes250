@@ -1,12 +1,120 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta charset="UTF-8">
-<title>Title of the document</title>
-</head>
+<link rel="stylesheet" type="text/css" href="stylesheets/inventory.css">
+<title>Main Inventory</title>
+<script type="text/javascript">
+        //Build an array containing inventory records.
+        var inventory = new Array();
+        //Build headers
+        inventory.push([ "ID", "Owner", "Manufacturer", "Model", "Type", "IP Address", "Serial", "Processor", "RAM", "Location"]);
+        //Build rows
+        inventory.push([1, "Ray", "Dell", "Lattitude E6540", "Laptop", "192.168.1.1", "JT8001", "Intel Quadcore i7", "16", "Main Office"]);
+        inventory.push([2, "David", "Dell", "Lattitude E6540", "Laptop", "192.168.1.1", "JT8001","Intel Quadcore i7", "16", "Main Office"]);
+        inventory.push([3, "Helen", "Dell", "Lattitude E6540", "Laptop", "192.168.1.1", "JT8001","Intel Quadcore i7", "16", "Main Office"]);
+        inventory.push([4, "Ryan", "Dell", "Lattitude E6540", "Laptop", "192.168.1.1", "JT8001","Intel Quadcore i7", "16", "Main Office"]);
+        inventory.push([5, "Mike", "Dell", "Lattitude E6540", "Laptop", "192.168.1.1", "JT8001","Intel Quadcore i7", "16", "Main Office"]);
+        inventory.push([6, "Kristen", "Dell", "Lattitude E6540", "Laptop", "192.168.1.1", "JT8001","Intel Quadcore i7", "16", "Main Office"]);
+        inventory.push([7, "Amy", "Dell", "Lattitude E6540", "Laptop", "192.168.1.1", "JT8001","Intel Quadcore i7",  "16", "Main Office"]);
+        inventory.push([8, "Richard", "Dell", "Lattitude E6540", "Laptop", "192.168.1.1", "JT8001","Intel Quadcore i7", "16", "Main Office"]);
+        inventory.push([9, "Alfred", "Dell", "Lattitude E6540", "Laptop", "192.168.1.1", "JT8001","Intel Quadcore i7", "16", "Main Office"]);
+        inventory.push([10, "Joe", "Dell", "Lattitude E6540", "Laptop", "192.168.1.1", "JT8001","Intel Quadcore i7", "16", "Main Office"]);
+        
+        function GenerateTable() {
+            
 
+            //Create a HTML Table element.
+            var table = document.createElement("TABLE");
+            table.border = "1";
+
+            //Get the count of columns.
+            var columnCount = inventory[0].length;
+
+            //Add the header row.
+            var row = table.insertRow(-1);
+            for (var i = 0; i < columnCount; i++) {
+                var headerCell = document.createElement("TH");
+                headerCell.innerHTML = inventory[0][i];
+                row.appendChild(headerCell);
+            }
+
+            //Add the data rows.
+            for (var i = 1; i < inventory.length; i++) {
+                row = table.insertRow(-1);
+                for (var j = 0; j < columnCount; j++) {
+                    var cell = row.insertCell(-1);
+                    cell.innerHTML = inventory[i][j];
+                }
+            }
+
+            var invTable = document.getElementById("invTable");
+            invTable.innerHTML = "";
+            invTable.appendChild(table);
+        }
+        
+        function insert(){
+			var ownerValue = document.getElementById('Owner').value;
+			var manufacturerValue = document.getElementById('Manufacturer').value;
+    		var modelValue = document.getElementById('Model').value;
+    		
+    		inventory.push (ownerValue.value);
+    		
+    		//Create a HTML Table element.
+            var table = document.createElement("TABLE");
+            table.border = "1";
+
+            //Get the count of columns.
+            var columnCount = inventory[0].length;
+
+            //Add the header row.
+            var row = table.insertRow(-1);
+            for (var i = 0; i < columnCount; i++) {
+                var headerCell = document.createElement("TH");
+                headerCell.innerHTML = inventory[0][i];
+                row.appendChild(headerCell);
+            }
+
+            //Add the data rows.
+            for (var i = 1; i < inventory.length; i++) {
+                row = table.insertRow(-1);
+                for (var j = 0; j < columnCount; j++) {
+                    var cell = row.insertCell(-1);
+                    cell.innerHTML = inventory[i][j];
+                }
+            }
+
+            var invTable = document.getElementById("invTable");
+            invTable.innerHTML = "";
+            invTable.appendChild(table);
+  		}
+        
+    </script>
+</head>
 <body>
-Content of the document......
+    <div class="header">
+	<div class="header-shadow"></div>
+		<div class="header-gradient">
+		<br>
+		Device Inventory
+		</div> <!-- header-gradient -->
+	</div> <!-- header -->
+	<br>
+    <hr />
+    <input type="button" value="List Current Devices" onclick="GenerateTable()" />
+    <hr />
+	<form>
+	<h2>New Device</h2>
+	<input id="Owner" type="text" />
+	<input id="Manufacturer" type="text" />
+	<input id="Model" type="text" />
+	<input type="button" value="Add Device" onclick="insert()" />
+	</form>
+	
+    <hr />
+    <div class="CSSTable">
+    <div id="invTable"></div>
+    </div>
+
 </body>
 
 </html>
