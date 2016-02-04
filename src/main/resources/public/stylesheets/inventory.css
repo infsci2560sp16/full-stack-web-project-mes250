@@ -46,8 +46,8 @@ a:active {
 ----------------------------------------------------------------------- */
 .header {
 	position:relative;
-	width:1200px;
-	height:50px;
+	width:800px;
+	height:40px;
 	margin:10px auto 0 auto;
 	font-size: 23px;
 	border-radius:10px;
@@ -93,7 +93,7 @@ a:active {
 .CSSTable {
 	margin:10px auto 0px auto;
 	padding:0px;
-	width:1700px;
+	width:1000px;
 	-moz-box-shadow: 1px 6px 10px #000000;
     -webkit-box-shadow: 1px 6px 10px #000000;
     box-shadow: 1px 6px 10px #000000;
@@ -106,23 +106,6 @@ a:active {
 	height:100%;
 	margin:0px;
 	padding:0px;
-/* 	border-radius: 10px 10px 10px 10px; */
-}
-
-.CSSTable table tr:last-child td:last-child {
-/* 	border-bottom-right-radius: 10px; */
-}
-
-.CSSTable table tr:first-child td:first-child {
-/* 	border-top-left-radius: 10px; */
-}
-
-.CSSTable table tr:first-child td:last-child {
-/* 	border-top-right-radius:10px; */
-}
-
-.CSSTable table tr:last-child td:first-child{
-/* 	border-bottom-left-radius:10px; */
 }
 
 .CSSTable tr:hover td{	
@@ -130,7 +113,6 @@ a:active {
 }
 
 .CSSTable tr:nth-child(odd){ background-color:#cccccc; }
-
 
 .CSSTable tr:nth-child(even){ background-color:#b2b2b2; }
 

@@ -1,5 +1,5 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+
 <head>
 <link rel="stylesheet" type="text/css" href="stylesheets/inventory.css">
 <title>Main Inventory</title>
@@ -7,22 +7,20 @@
         //Build an array containing inventory records.
         var inventory = new Array();
         //Build headers
-        inventory.push([ "ID", "Owner", "Manufacturer", "Model", "Type", "IP Address", "Serial", "Processor", "RAM", "Location"]);
+        inventory.push(["Owner", "Manufacturer", "Model", "Type", "IP Address", "Serial", "Processor", "RAM", "Location"]);
         //Build rows
-        inventory.push([1, "Ray", "Dell", "Lattitude E6540", "Laptop", "192.168.1.1", "JT8001", "Intel Quadcore i7", "16", "Main Office"]);
-        inventory.push([2, "David", "Dell", "Lattitude E6540", "Laptop", "192.168.1.1", "JT8001","Intel Quadcore i7", "16", "Main Office"]);
-        inventory.push([3, "Helen", "Dell", "Lattitude E6540", "Laptop", "192.168.1.1", "JT8001","Intel Quadcore i7", "16", "Main Office"]);
-        inventory.push([4, "Ryan", "Dell", "Lattitude E6540", "Laptop", "192.168.1.1", "JT8001","Intel Quadcore i7", "16", "Main Office"]);
-        inventory.push([5, "Mike", "Dell", "Lattitude E6540", "Laptop", "192.168.1.1", "JT8001","Intel Quadcore i7", "16", "Main Office"]);
-        inventory.push([6, "Kristen", "Dell", "Lattitude E6540", "Laptop", "192.168.1.1", "JT8001","Intel Quadcore i7", "16", "Main Office"]);
-        inventory.push([7, "Amy", "Dell", "Lattitude E6540", "Laptop", "192.168.1.1", "JT8001","Intel Quadcore i7",  "16", "Main Office"]);
-        inventory.push([8, "Richard", "Dell", "Lattitude E6540", "Laptop", "192.168.1.1", "JT8001","Intel Quadcore i7", "16", "Main Office"]);
-        inventory.push([9, "Alfred", "Dell", "Lattitude E6540", "Laptop", "192.168.1.1", "JT8001","Intel Quadcore i7", "16", "Main Office"]);
-        inventory.push([10, "Joe", "Dell", "Lattitude E6540", "Laptop", "192.168.1.1", "JT8001","Intel Quadcore i7", "16", "Main Office"]);
+        inventory.push(["Ray", "Dell", "Lattitude E6540", "Laptop", "192.168.1.1", "JT8001", "Intel Quadcore i7", "16", "Main Office"]);
+        inventory.push(["David", "Dell", "Lattitude E6540", "Laptop", "192.168.1.1", "JT8001","Intel Quadcore i7", "16", "Main Office"]);
+        inventory.push(["Helen", "Dell", "Lattitude E6540", "Laptop", "192.168.1.1", "JT8001","Intel Quadcore i7", "16", "Main Office"]);
+        inventory.push(["Ryan", "Dell", "Lattitude E6540", "Laptop", "192.168.1.1", "JT8001","Intel Quadcore i7", "16", "Main Office"]);
+        inventory.push(["Mike", "Dell", "Lattitude E6540", "Laptop", "192.168.1.1", "JT8001","Intel Quadcore i7", "16", "Main Office"]);
+        inventory.push(["Kristen", "Dell", "Lattitude E6540", "Laptop", "192.168.1.1", "JT8001","Intel Quadcore i7", "16", "Main Office"]);
+        inventory.push(["Amy", "Dell", "Lattitude E6540", "Laptop", "192.168.1.1", "JT8001","Intel Quadcore i7",  "16", "Main Office"]);
+        inventory.push(["Richard", "Dell", "Lattitude E6540", "Laptop", "192.168.1.1", "JT8001","Intel Quadcore i7", "16", "Main Office"]);
+        inventory.push(["Alfred", "Dell", "Lattitude E6540", "Laptop", "192.168.1.1", "JT8001","Intel Quadcore i7", "16", "Main Office"]);
+        inventory.push(["Joe", "Dell", "Lattitude E6540", "Laptop", "192.168.1.1", "JT8001","Intel Quadcore i7", "16", "Main Office"]);
         
         function GenerateTable() {
-            
-
             //Create a HTML Table element.
             var table = document.createElement("TABLE");
             table.border = "1";
@@ -53,39 +51,22 @@
         }
         
         function insert(){
+			//Pull new data from form
 			var ownerValue = document.getElementById('Owner').value;
 			var manufacturerValue = document.getElementById('Manufacturer').value;
     		var modelValue = document.getElementById('Model').value;
+    		var typeValue = document.getElementById('Type').value;
+    		var ipValue = document.getElementById('IP').value;
+    		var serialValue = document.getElementById('Serial').value;
+    		var processorValue = document.getElementById('Processor').value;
+    		var ramValue = document.getElementById('RAM').value;
+    		var locationValue = document.getElementById('Location').value;
     		
-    		inventory.push (ownerValue.value);
+    		//Add new data to Inventory
+    		inventory.push ([ownerValue, manufacturerValue, modelValue, typeValue, ipValue, serialValue, processorValue, ramValue, locationValue]);
     		
-    		//Create a HTML Table element.
-            var table = document.createElement("TABLE");
-            table.border = "1";
-
-            //Get the count of columns.
-            var columnCount = inventory[0].length;
-
-            //Add the header row.
-            var row = table.insertRow(-1);
-            for (var i = 0; i < columnCount; i++) {
-                var headerCell = document.createElement("TH");
-                headerCell.innerHTML = inventory[0][i];
-                row.appendChild(headerCell);
-            }
-
-            //Add the data rows.
-            for (var i = 1; i < inventory.length; i++) {
-                row = table.insertRow(-1);
-                for (var j = 0; j < columnCount; j++) {
-                    var cell = row.insertCell(-1);
-                    cell.innerHTML = inventory[i][j];
-                }
-            }
-
-            var invTable = document.getElementById("invTable");
-            invTable.innerHTML = "";
-            invTable.appendChild(table);
+    		//Refresh table
+    		GenerateTable()
   		}
         
     </script>
@@ -98,22 +79,30 @@
 		Device Inventory
 		</div> <!-- header-gradient -->
 	</div> <!-- header -->
-	<br>
+	<br>	
     <hr />
-    <input type="button" value="List Current Devices" onclick="GenerateTable()" />
-    <hr />
-	<form>
-	<h2>New Device</h2>
-	<input id="Owner" type="text" />
-	<input id="Manufacturer" type="text" />
-	<input id="Model" type="text" />
-	<input type="button" value="Add Device" onclick="insert()" />
-	</form>
-	
-    <hr />
+    <br>
     <div class="CSSTable">
     <div id="invTable"></div>
     </div>
+    <script>GenerateTable();</script>
+    <br>
+    <br>
+    <hr />
+	<form>
+	<h2>Add New Device</h2>
+	<p>Owner: <input id="Owner" type="text" /></p>
+	<p>Manufacturer: <input id="Manufacturer" type="text" /></p>
+	<p>Model: <input id="Model" type="text" /></p>
+	<p>Type: <input id="Type" type="text" /></p>
+	<p>IP Address: <input id="IP" type="text" /></p>
+	<p>Serial: <input id="Serial" type="text" /></p>
+	<p>Processor: <input id="Processor" type="text" /></p>
+	<p>Ram: <input id="RAM" type="text" /></p>
+	<p>Location: <input id="Location" type="text" /></p>
+	<br>
+	<input type="button" value="Add Device" onclick="insert()" />
+	</form>
 
 </body>
 
