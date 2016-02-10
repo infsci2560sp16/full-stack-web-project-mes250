@@ -1,35 +1,38 @@
         function generateTable() {
-            //Create a HTML Table element.
+            //Create a HTML Table element
             var table = document.createElement("TABLE");
             table.border = "1";
 
-            //Get the count of columns.
+            //Get the count of columns
             var columnCount = inventory[0].length;
 
-            //Add the header row.
+            //Add the header row
             var row = table.insertRow(-1);
+            var headerCell;
+            
+            //Insert data for each header column
             for (var i = 0; i < columnCount; i++) {
-                var headerCell = document.createElement("TH");
+                headerCell = document.createElement("TH");
                 headerCell.innerHTML = inventory[0][i];
                 row.appendChild(headerCell);
             }
             
-            //Create empty header for delete
-            var headerCell = document.createElement("TH");
+            //Create empty header for delete column
+            headerCell = document.createElement("TH");
             headerCell.innerHTML = "";
             row.appendChild(headerCell);
 
-            //Add the data rows.
-            for (var i = 1; i < inventory.length; i++) {
+            //Add the data rows
+            for (i = 1; i < inventory.length; i++) {
                 row = table.insertRow(-1);
             	
-            	//add data
+            	//add data cells
                 for (var j = 0; j < columnCount; j++) {
                     var cell = row.insertCell(-1);
                     cell.innerHTML = inventory[i][j] ;
                 }
                 
-                //Create delete button for each row
+                //Create delete button cell for each row
                 row = row.insertCell(-1);
     			row.innerHTML = "<input type='button' value='Remove Device' onClick='deleteRow(this);'>"; 
             }
@@ -55,7 +58,7 @@
     		inventory.push ([ownerValue, manufacturerValue, modelValue, typeValue, ipValue, serialValue, processorValue, ramValue, locationValue]);
     		
     		//Refresh table
-    		generateTable()
+    		generateTable();
   		}// end insert
   		
   		function deleteRow(btn) {
