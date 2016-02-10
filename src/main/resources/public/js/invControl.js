@@ -16,6 +16,41 @@
                 headerCell.innerHTML = inventory[0][i];
                 row.appendChild(headerCell);
             }
+
+            //Add the data rows
+            for (i = 1; i < inventory.length; i++) {
+                row = table.insertRow(-1);
+            	
+            	//add data cells
+                for (var j = 0; j < columnCount; j++) {
+                    var cell = row.insertCell(-1);
+                    cell.innerHTML = inventory[i][j] ;
+                }
+            }
+
+            var invTable = document.getElementById("invTable");
+            invTable.innerHTML = "";
+            invTable.appendChild(table);
+        } //end Generate Table
+        
+        function generateTableDel() {
+            //Create a HTML Table element
+            var table = document.createElement("TABLE");
+            table.border = "1";
+
+            //Get the count of columns
+            var columnCount = inventory[0].length;
+
+            //Add the header row
+            var row = table.insertRow(-1);
+            var headerCell;
+            
+            //Insert data for each header column
+            for (var i = 0; i < columnCount; i++) {
+                headerCell = document.createElement("TH");
+                headerCell.innerHTML = inventory[0][i];
+                row.appendChild(headerCell);
+            }
             
             //Create empty header for delete column
             headerCell = document.createElement("TH");

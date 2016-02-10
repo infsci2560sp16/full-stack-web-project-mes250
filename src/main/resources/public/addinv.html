@@ -43,18 +43,39 @@
 	<div class="header-shadow"></div>
 		<div class="header-gradient">
 		<br>
-		Device Inventory
+		Add New Device
 		</div> <!-- header-gradient -->
 	</div> <!-- header -->
+	<br>	
+    <br>
+    Add new device to the inventory.
+    <br>
+    <br>
+	<form>
+	<p>Owner: <input id="Owner" type="text" /></p>
+	<p>Manufacturer: <input id="Manufacturer" type="text" /></p>
+	<p>Model: <input id="Model" type="text" /></p>
+	<p>Type: <input id="Type" type="text" /></p>
+	<p>IP Address: <input id="IP" type="text" /></p>
+	<p>Serial: <input id="Serial" type="text" /></p>
+	<p>Processor: <input id="Processor" type="text" /></p>
+	<p>Ram: <input id="RAM" type="text" /></p>
+	<p>Location: <input id="Location" type="text" /></p>
 	<br>
-	Sort data by columns or filter results.	
+	<input type="button" value="Add Device" onclick="insert()" />
+	</form>
+	<br>
+	<hr />
+	<br>
     <br>
     <div class="CSSTable">
     <div id="invTable"></div>
-    </div>
     <script>generateTable();</script>
+    </div>
     <br>
     <br>
+    <hr />
+
 </body>
 
 </html>
