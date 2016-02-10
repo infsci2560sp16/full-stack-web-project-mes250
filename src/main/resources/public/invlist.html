@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" type="text/css" href="stylesheets/inventory.css">
+<script type="text/javascript" src="js/invControl.js"></script>
 <title>Main Inventory</title>
 <script type="text/javascript">
         //Build an array containing inventory records.
@@ -20,57 +21,7 @@
         inventory.push(["Richard", "Dell", "Lattitude E6540", "Laptop", "192.168.1.1", "JT8001","Intel Quadcore i7", "16", "Main Office"]);
         inventory.push(["Alfred", "Dell", "Lattitude E6540", "Laptop", "192.168.1.1", "JT8001","Intel Quadcore i7", "16", "Main Office"]);
         inventory.push(["Joe", "Dell", "Lattitude E6540", "Laptop", "192.168.1.1", "JT8001","Intel Quadcore i7", "16", "Main Office"]);
-        
-        function GenerateTable() {
-            //Create a HTML Table element.
-            var table = document.createElement("TABLE");
-            table.border = "1";
-
-            //Get the count of columns.
-            var columnCount = inventory[0].length;
-
-            //Add the header row.
-            var row = table.insertRow(-1);
-            for (var i = 0; i < columnCount; i++) {
-                var headerCell = document.createElement("TH");
-                headerCell.innerHTML = inventory[0][i];
-                row.appendChild(headerCell);
-            }
-
-            //Add the data rows.
-            for (var i = 1; i < inventory.length; i++) {
-                row = table.insertRow(-1);
-                for (var j = 0; j < columnCount; j++) {
-                    var cell = row.insertCell(-1);
-                    cell.innerHTML = inventory[i][j];
-                }
-            }
-
-            var invTable = document.getElementById("invTable");
-            invTable.innerHTML = "";
-            invTable.appendChild(table);
-        }
-        
-        function insert(){
-			//Pull new data from form
-			var ownerValue = document.getElementById('Owner').value;
-			var manufacturerValue = document.getElementById('Manufacturer').value;
-    		var modelValue = document.getElementById('Model').value;
-    		var typeValue = document.getElementById('Type').value;
-    		var ipValue = document.getElementById('IP').value;
-    		var serialValue = document.getElementById('Serial').value;
-    		var processorValue = document.getElementById('Processor').value;
-    		var ramValue = document.getElementById('RAM').value;
-    		var locationValue = document.getElementById('Location').value;
-    		
-    		//Add new data to Inventory
-    		inventory.push ([ownerValue, manufacturerValue, modelValue, typeValue, ipValue, serialValue, processorValue, ramValue, locationValue]);
-    		
-    		//Refresh table
-    		GenerateTable()
-  		}
-        
-    </script>
+</script>
 </head>
 <body>
     <div class="header">
@@ -86,7 +37,7 @@
     <div class="CSSTable">
     <div id="invTable"></div>
     </div>
-    <script>GenerateTable();</script>
+    <script>generateTable();</script>
     <br>
     <br>
     <hr />
