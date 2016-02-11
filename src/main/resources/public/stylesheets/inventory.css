@@ -9,7 +9,7 @@ html {
 body {
 	color: #fff;
 	font-family:Verdana, Arial, Helvetica, sans-serif;
-    font-size:10px;
+    font-size:11px;
 	line-height:1.286em;
 	margin-top:0px;
 	margin-bottom:30px;
@@ -18,8 +18,7 @@ body {
 }
 
 
-/* Navigation
------------------------------------------------------------------------ */
+/* Navigation ----------------------------------------------------------------------- */
 nav {
     background-color: #525252;
     border: 1px solid #525252;
@@ -79,8 +78,7 @@ nav li:hover > ul{
     display : block;
 }
 
-/* Header
------------------------------------------------------------------------ */
+/* Header ----------------------------------------------------------------------- */
 .header {
 	color: #000;
 	width:300px;
@@ -98,8 +96,7 @@ nav li:hover > ul{
 	}
 
 
-/* Sub Header
------------------------------------------------------------------------ */
+/* Sub Header ----------------------------------------------------------------------- */
 .subheader {
 	color: #000;
 	width:200px;
@@ -118,8 +115,7 @@ nav li:hover > ul{
 	}
 	
 
-/* Table
------------------------------------------------------------------------- */
+/* Table ------------------------------------------------------------------------ */
 .CSSTable {
 	margin:10px auto 0px auto;
 	padding:0px;
@@ -208,8 +204,7 @@ nav li:hover > ul{
 	border-width:0px 0px 1px 1px;
 }
 
-/* Login
------------------------------------------------------------------------- */
+/* Login ------------------------------------------------------------------------ */
 .Login input:textarea {
 	width: 250px;
 	padding: 5px;
@@ -225,7 +220,7 @@ nav li:hover > ul{
 }
 
 .Login form fieldset {
-	padding: 26px;
+	padding: 2px 25px 2px 25px;
 	border: 1px solid #b4b4b4;
 	-moz-border-radius: 10px;
 	-webkit-border-radius: 10px;
@@ -245,15 +240,15 @@ nav li:hover > ul{
 	border: 1px solid #b4b4b4;
 	-moz-border-radius: 10px;
 	-webkit-border-radius: 10px;
-	padding: 10px;
+	padding: 13px;
 }
 
-form ol, form legend, form fieldset {
+.Login form ol, form legend, form fieldset {
 	background-image: -moz-linear-gradient(top, #6D6E6E, #474747); /* FF3.6 */
 	background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0, #474747),color-stop(1, #6D6E6E)); /* Saf4+, Chrome */
 }
 
-label.info {
+.Login label.info {
 	position: absolute;
 	color: #000;
 	top:0px;
@@ -269,15 +264,58 @@ label.info {
 	-webkit-border-radius: 0px;
 	padding: 0px;
 	background-image: none;
-	
 }
 
 .Login input[type=submit] {
-	width: 80px;
-	color: #000;
-	-moz-border-radius: 6px;
-	-webkit-border-radius: 6px;
-	border: none;
+	width: 100px; 
+	height: 40px;
+	background-color: #239C9C; 
+	color: #FFF;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;	
 }
+
+/* Contact Us ------------------------------------------------------------------------ */
+
+.Contact input, textarea {
+	padding: 10px;
+	border: 1px solid #E5E5E5;
+	width: 200px;
+	color: #999999;
+	box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 8px;
+	-moz-box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 8px;
+	-webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 8px;	
+		
+}
+
+.Contact textarea {
+	width: 400px;
+	height: 150px;
+	max-width: 400px;
+	line-height: 18px;
+}
+
+.Contact input:hover, textarea:hover, input:focus, textarea:focus {
+	border-color: 1px solid #C9C9C9;
+	box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 8px;
+	-moz-box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 8px;
+	-webkit-box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 8px;	
+}
+
+.Contact label {
+	
+}
+
+.Contact input[type=submit] {
+	width: 100px; 
+	height: 40px;
+	background-color: #239C9C; 
+	color: #FFF;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;		
+}
+
 
 	
