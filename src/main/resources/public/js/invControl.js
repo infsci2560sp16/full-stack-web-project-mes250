@@ -36,6 +36,52 @@ function generateTable() {
 	invTable.appendChild(table);
 } //end Generate Table
 
+function generateTableRetire() {
+	//Create a HTML Table element
+	var table = document.createElement("TABLE");
+	table.border = "1";
+	table.id = "inventory";
+	table.summary = "This table lists all devices in the inventory with a delete button";
+
+	//Get the count of columns
+	var columnCount = inventory[0].length;
+
+	//Add the header row
+	var row = table.insertRow(-1);
+	var headerCell;
+	
+	//Insert data for each header column
+	for (var i = 0; i < columnCount; i++) {
+		headerCell = document.createElement("TH");
+		headerCell.innerHTML = inventory[0][i];
+		row.appendChild(headerCell);
+	}
+	
+	//Create empty header for delete column
+	headerCell = document.createElement("TH");
+	headerCell.innerHTML = "";
+	row.appendChild(headerCell);
+
+	//Add the data rows
+	for (i = 1; i < inventory.length; i++) {
+		row = table.insertRow(-1);
+		
+		//add data cells
+		for (var j = 0; j < columnCount; j++) {
+			var cell = row.insertCell(-1);
+			cell.innerHTML = inventory[i][j] ;
+		}
+		
+		//Create delete button cell for each row
+		row = row.insertCell(-1);
+		row.innerHTML = "<input type='button' value='Retire Device' onClick='retireDevice(this);'>"; 
+	}
+
+	var invTable = document.getElementById("invTable");
+	invTable.innerHTML = "";
+	invTable.appendChild(table);
+} //end Generate Retire Table
+
 function generateTableDel() {
 	//Create a HTML Table element
 	var table = document.createElement("TABLE");
@@ -80,7 +126,7 @@ function generateTableDel() {
 	var invTable = document.getElementById("invTable");
 	invTable.innerHTML = "";
 	invTable.appendChild(table);
-} //end Generate Table
+} //end Generate Delete Table
 
 function insert(){
 	//Pull new data from form
@@ -131,6 +177,12 @@ function deleteRow(btn) {
 	var row = btn.parentNode.parentNode;
 	row.parentNode.removeChild(row);
 }// end deleteRow
+
+function retireDevice(btn) {
+    var row = btn.parentNode.parentNode;
+    row.style.backgroundColor = '#ff8080';
+    alert("Device has been marked as retired.");
+}
 
 function redirectMe() {
 	var x = document.getElementById("form-1").elements.namedItem("loginUsername").value;
