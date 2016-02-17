@@ -17,31 +17,51 @@ body {
 	text-align:center;
 }
 
+/*.logo {
+    color: #525252;
+     background-color: #525252;
+    display: block;
+    margin: 0;
+    overflow: hidden;
+    display: inline-block;
+    font-size: 20px;
+    padding: 0.5em 2em;
+    float:left;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    text-shadow: rgba(0,0,0,0.5) -1px 0, rgba(0,0,0,0.3) 0 -1px, rgba(255,255,255,0.5) 0 1px, rgba(0,0,0,0.3) -1px -2px;
+}
 
+*/
 /* Navigation ----------------------------------------------------------------------- */
-nav {
+.nav {
     background-color: #525252;
     border: 1px solid #525252;
     color: #fff;
     display: block;
     margin: 0;
-    overflow: hidden;
+    color: #fff;
+    font-size: 20px;
+    display: block;
+    line-height: 2em;
+    padding: 0.5em 2em;
+    text-decoration: none;
+    position: relative;
 }
 
-nav ul{
+.nav ul{
     margin: 0;
     padding: 0;
     list-style: none;
 }
 
-nav ul li {
+.nav ul li {
     margin: 0;
     display: inline-block;
     list-style-type: none;
     transition: all 0.2s;
 }
 
-nav > ul > li > a {
+.nav > ul > li > a {
     color: #fff;
     font-size: 20px;
     display: block;
@@ -50,17 +70,17 @@ nav > ul > li > a {
     text-decoration: none;
 }
 
-nav li > ul{
+.nav li > ul{
     display : none;
     margin-top:1px;
     background-color: #525252;
 }
 
-nav li > ul li{
+.nav li > ul li{
     display: block;
 }
 
-nav  li > ul li a {
+.nav  li > ul li a {
     color: #fff;
     font-size: 16px;
     display: block;
@@ -69,11 +89,11 @@ nav  li > ul li a {
     text-decoration: none;
 }
 
-nav li:hover {
+.nav li:hover {
     background-color: #239C9C;
 }
 
-nav li:hover > ul{
+.nav li:hover > ul{
     position:absolute;
     display : block;
 }
