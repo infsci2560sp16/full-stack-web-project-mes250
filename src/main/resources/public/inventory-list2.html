@@ -1,9 +1,12 @@
 <!DOCTYPE html>
-
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" type="text/css" href="stylesheets/inventory.css">
 <script type="text/javascript" src="js/invControl.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/t/dt/jq-2.2.0,pdfmake-0.1.18,dt-1.10.11,b-1.1.2,b-html5-1.1.2/datatables.min.css"/>
+ 
+<script type="text/javascript" src="https://cdn.datatables.net/t/dt/jq-2.2.0,pdfmake-0.1.18,dt-1.10.11,b-1.1.2,b-html5-1.1.2/datatables.min.js"></script>
 <title>Main Inventory</title>
 <script type="text/javascript">
         //Build an array containing inventory records.
@@ -26,16 +29,16 @@
 <body>
     <div class="nav">
     <ul>
-        <li><a href="index.html">Login</a></li>
+        <li><a href="login.html">Login</a></li>
         <li>
-            <a href="invlist.html">Inventory</a>
+            <a href="inventory-list.html">Inventory</a>
             <ul>
-                <li><a href="addinv.html">Add Device</a></li>
-                <li><a href="delinv.html">Delete Devices</a></li>
-                <li><a href="retinv.html">Retire Devices</a></li>
+                <li><a href="add-inventory.html">Add Device</a></li>
+                <li><a href="delete-inventory.html">Delete Devices</a></li>
+                <li><a href="retire-inventory.html">Retire Devices</a></li>
             </ul>
         </li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="contact-us.html">Contact Us</a></li>
     </ul>
 	</div>
 
@@ -43,20 +46,22 @@
 	<div class="header-shadow"></div>
 		<div class="header-gradient">
 		<br>
-		Retire Device
+		<h1>Device Inventory</h1>
 		</div> <!-- header-gradient -->
 	</div> <!-- header -->
-	<br>	
-	Retire a device that can be reused later.
+	<br>
+	<h4>View all devices.  If needed, sort data by columns.</h4>
     <br>
-    <div class="CSSTable">
-    <div id="invTable"></div>
+    <div id=invTable>
+    <script>generateTable();</script>
     </div>
-    <script>generateTableDel();</script>
+    <script>$(document).ready( function () {
+    $('#inventory2').DataTable();
+	} );
+	</script>
+    
     <br>
     <br>
-
-
 </body>
 
 </html>

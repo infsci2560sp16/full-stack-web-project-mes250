@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" type="text/css" href="stylesheets/inventory.css">
@@ -26,16 +26,16 @@
 <body>
     <div class="nav">
     <ul>
-        <li><a href="index.html">Login</a></li>
+        <li><a href="login.html">Login</a></li>
         <li>
-            <a href="invlist.html">Inventory</a>
+            <a href="inventory-list.html">Inventory</a>
             <ul>
-                <li><a href="addinv.html">Add Device</a></li>
-                <li><a href="delinv.html">Delete Devices</a></li>
-                <li><a href="retinv.html">Retire Devices</a></li>
+                <li><a href="add-inventory.html">Add Device</a></li>
+                <li><a href="delete-inventory.html">Delete Devices</a></li>
+                <li><a href="retire-inventory.html">Retire Devices</a></li>
             </ul>
         </li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="contact-us.html">Contact Us</a></li>
     </ul>
 	</div>
 
@@ -43,18 +43,20 @@
 	<div class="header-shadow"></div>
 		<div class="header-gradient">
 		<br>
-		Device Inventory
+		<h1>Delete Device</h1>
 		</div> <!-- header-gradient -->
 	</div> <!-- header -->
-	<br>
-	Sort data by columns or filter results.	
+	<br>	
+	<h4>Delete devices from the inventory.</h4>
     <br>
     <div class="CSSTable">
     <div id="invTable"></div>
     </div>
-    <script>generateTable();</script>
+    <script>generateTableDel();</script>
     <br>
     <br>
+
+
 </body>
 
 </html>

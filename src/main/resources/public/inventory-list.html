@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" type="text/css" href="stylesheets/inventory.css">
 <script type="text/javascript" src="js/invControl.js"></script>
-<title>Main Inventory</title>
+<title>Main Inventory List</title>
 <script type="text/javascript">
         //Build an array containing inventory records.
         var inventory = new Array();
@@ -26,16 +26,16 @@
 <body>
     <div class="nav">
     <ul>
-        <li><a href="index.html">Login</a></li>
+        <li><a href="login.html">Login</a></li>
         <li>
-            <a href="invlist.html">Inventory</a>
+            <a href="inventory-list.html">Inventory</a>
             <ul>
-                <li><a href="addinv.html">Add Device</a></li>
-                <li><a href="delinv.html">Delete Devices</a></li>
-                <li><a href="retinv.html">Retire Devices</a></li>
+                <li><a href="add-inventory.html">Add Device</a></li>
+                <li><a href="delete-inventory.html">Delete Devices</a></li>
+                <li><a href="retire-inventory.html">Retire Devices</a></li>
             </ul>
         </li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="contact-us.html">Contact Us</a></li>
     </ul>
 	</div>
 
@@ -43,39 +43,18 @@
 	<div class="header-shadow"></div>
 		<div class="header-gradient">
 		<br>
-		Add New Device
+		<h1>Device Inventory</h1>
 		</div> <!-- header-gradient -->
 	</div> <!-- header -->
-	<br>	
-    <br>
-    Add new device to the inventory.
-    <br>
-    <br>
-	<form>
-	<p>Owner: <input id="Owner" type="text" /></p>
-	<p>Manufacturer: <input id="Manufacturer" type="text" /></p>
-	<p>Model: <input id="Model" type="text" /></p>
-	<p>Type: <input id="Type" type="text" /></p>
-	<p>IP Address: <input id="IP" type="text" /></p>
-	<p>Serial: <input id="Serial" type="text" /></p>
-	<p>Processor: <input id="Processor" type="text" /></p>
-	<p>Ram: <input id="RAM" type="text" /></p>
-	<p>Location: <input id="Location" type="text" /></p>
 	<br>
-	<input type="button" value="Add Device" onclick="insert()" />
-	</form>
-	<br>
-	<hr />
-	<br>
+	<h4>All devices are listed in the table below.  If needed, sort data by columns.</h4>
     <br>
     <div class="CSSTable">
     <div id="invTable"></div>
-    <script>generateTable();</script>
     </div>
+    <script>generateTable();</script>
     <br>
     <br>
-    <hr />
-
 </body>
 
 </html>

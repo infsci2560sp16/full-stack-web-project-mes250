@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="stylesheets/inventory.css">
+<script type="text/javascript" src="js/invControl.js"></script>
+<title>Login</title>
+</head>
+
+<body>
+    <!--<div class="logo">FITIM</div>-->
+    <div class="nav">
+    <ul>
+        <li><a href="login.html">Login</a></li>
+        <li>
+            <a href="inventory-list.html">Inventory</a>
+            <ul>
+                <li><a href="add-inventory.html">Add Device</a></li>
+                <li><a href="delete-inventory.html">Delete Devices</a></li>
+                <li><a href="retire-inventory.html">Retire Devices</a></li>
+            </ul>
+        </li>
+        <li><a href="contact-us.html">Contact Us</a></li>
+    </ul>
+	</div>
+	<br>
+	<br>
+	
+	<div class="header">
+	<div class="header-shadow"></div>
+		<div class="header-gradient">
+		<br>
+		<h1>FITIM</h1>
+		</div> <!-- header-gradient -->
+	</div> <!-- header -->
+	
+	<br>
+	<h4>FITIM is a Free I.T. Inventory Management application.  Please login below to use this app.</h4>
+	<br>
+	<div class="Login">
+    <!--<form id="form-1" action="submit" method="post">-->
+    <form id="form-1" onsubmit="return redirectMe();">
+  	<fieldset>
+    	<legend>Log into your account</legend>
+    		<ol>
+      			<li><label for="loginUsername">User Name</label></li>
+      			<li><input type="text" id="loginUsername" name="username" required/></li>
+    		</ol>
+    		<ol>
+    			<li><label for="loginPassword">Password</label></li>
+      			<li><input type="password" id="loginPassword" name="password" required/></li>
+   			</ol>  
+    		<ol class="buttons">
+      			<li><input type="submit" class="button" value="Login" /></li>
+    		</ol>
+  	</fieldset>
+	</form>
+	<br>
+	<br>
+	<form id="form-2" onsubmit="return redirectMe2();">
+  	<fieldset>
+    	<legend>Create Account</legend>
+    		<ol>
+      			<li><label for="createUsername">User Name</label></li>
+      			<li><input type="text" id="createUsername" name="password" required/></li>
+    		</ol>
+    		<ol class="buttons">
+      			<li><input type="submit" class="button" value="Create Account" /></li>
+    		</ol>
+  	</fieldset>
+	</form>
+	</div>
+    
+</body>
+</html>
