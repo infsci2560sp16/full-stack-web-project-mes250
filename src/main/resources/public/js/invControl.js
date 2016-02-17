@@ -9,8 +9,9 @@ function generateTable() {
 	var columnCount = inventory[0].length;
 
 	//Add the header row
+	var row = table.insertRow(-1);
 	var headerCell = table.createTHead();
-	var row = headerCell.insertRow(-1);
+	
 	
 	//Insert data for each header column
 	for (var i = 0; i < columnCount; i++) {
@@ -18,6 +19,7 @@ function generateTable() {
 		headerCell.innerHTML = inventory[0][i];
 		row.appendChild(headerCell);
 	}
+	
 	
 	
 	//Add the data rows
