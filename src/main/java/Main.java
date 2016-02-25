@@ -17,6 +17,7 @@ import org.jscience.physics.model.RelativisticModel;
 import org.jscience.physics.amount.Amount;
 
 import com.heroku.sdk.jdbc.DatabaseUrl;
+import com.google.gson.Gson;
 
 public class Main {
 
@@ -40,7 +41,7 @@ public class Main {
             return new ModelAndView(attributes, "index.ftl");
         }, new FreeMarkerEngine());
 
- 	get("/db", (req, res) -> {
+    get("/db", (req, res) -> {
       Connection connection = null;
       Map<String, Object> attributes = new HashMap<>();
       try {
@@ -66,6 +67,8 @@ public class Main {
       }
     }, new FreeMarkerEngine());
 
+    
+   
   }
 
 }
