@@ -4,10 +4,7 @@
 <meta charset="UTF-8">
 <link rel="stylesheet" type="text/css" href="stylesheets/inventory.css">
 <script type="text/javascript" src="js/invControl.js"></script>
-<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/t/dt/jq-2.2.0,pdfmake-0.1.18,dt-1.10.11,b-1.1.2,b-html5-1.1.2/datatables.min.css"/>
- 
-<script type="text/javascript" src="https://cdn.datatables.net/t/dt/jq-2.2.0,pdfmake-0.1.18,dt-1.10.11,b-1.1.2,b-html5-1.1.2/datatables.min.js"></script>
-<title>Main Inventory</title>
+<title>Main Inventory List</title>
 <script type="text/javascript">
         //Build an array containing inventory records.
         var inventory = new Array();
@@ -52,15 +49,10 @@
 	<br>
 	<h2>All devices are listed in the table below.  If needed, sort data by columns.</h2>
     <br>
-    <div id=invTable>
-    <script>generateTable();</script>
+    <div class="CSSTable">
+    <div id="invTable"></div>
     </div>
-    <!--Used http://datatables.net/manual/installation for advanced table sort-->
-    <script>$(document).ready( function () {
-    $('#inventory2').DataTable();
-	} );
-	</script>
-    
+    <script>generateTable();</script>
     <br>
     <br>
 </body>

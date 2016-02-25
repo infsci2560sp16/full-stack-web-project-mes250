@@ -119,14 +119,14 @@ h2 {
 .CSSTable {
 	margin:10px auto 0px auto;
 	padding:0px;
-	width:1000px;
+	 width: 100%;
 	-moz-box-shadow: 1px 6px 10px #000000;
     -webkit-box-shadow: 1px 6px 10px #000000;
     box-shadow: 1px 6px 10px #000000;
 }
 
 .CSSTable table{
-    border-collapse: collapse;
+    
     border-spacing: 0;
 	width:100%;
 	margin:0px;
@@ -136,13 +136,14 @@ h2 {
 .CSSTable th{
 	vertical-align:middle;
 	border:1px solid #000000;
-	border-width:0px 1px 1px 0px;
+	border-width:0px 0px 1px 0px;
 	text-align:middle;
-	font-size:13px;
+	font-size:15px;
 	font-family:Arial;
 	font-weight:normal;
 	color:#000000;
 	font-weight: bold;
+	padding: 8px 10px;
 }
 
 .CSSTable tr:hover td{	
@@ -156,16 +157,18 @@ h2 {
 .CSSTable td{
 	vertical-align:middle;
 	border:1px solid #000000;
-	border-width:0px 1px 1px 0px;
+	border-width:0px 0px 1px 0px;
 	text-align:middle;
 	font-size:11px;
 	font-family:Arial;
 	font-weight:normal;
 	color:#000000;
+	font-size:1.2em;
+	padding: 8px 10px;
 }
 
 .CSSTable tr:last-child td{
-	border-width:0px 1px 0px 0px;
+	border-width:0px 0px 0px 0px;
 }
 
 .CSSTable tr td:last-child{
@@ -185,7 +188,7 @@ h2 {
 }
 
 .CSSTable tr:first-child td:last-child{
-	border-width:0px 0px 1px 1px;
+	border-width:0px 0px 1px 0px;
 }
 
 /* Login ------------------------------------------------------------------------ */
