@@ -67,7 +67,32 @@ public class Main {
       }
     }, new FreeMarkerEngine());
 
-    
+    get("/api/invlist", (req, res) -> {
+      Connection connection = null;
+      Map<String, Object> attributes = new HashMap<>();
+      try {
+        connection = DatabaseUrl.extract().getConnection();
+
+        Statement stmt = connection.createStatement();
+        ResultSet rs = stmt.executeQuery("SELECT * FROM inventory");
+
+        while ( rs.next() ) {
+            String  owner = rs.getString("owner");
+            String  manufacturer = rs.getString("manufacturer");
+            System.out.println( "owner = " + owner );
+            System.out.println( "manufacturer = " + manufacturer );
+            System.out.println();
+         }
+         rs.close();
+         stmt.close();
+         connection.close();
+      } catch (Exception e) {
+        attributes.put("message", "There was an error: " + e);
+        return new ModelAndView(attributes, "error.ftl");
+      } finally {
+        if (connection != null) try{connection.close();} catch(SQLException e){}
+      }
+    }, new FreeMarkerEngine());
    
   }
 
