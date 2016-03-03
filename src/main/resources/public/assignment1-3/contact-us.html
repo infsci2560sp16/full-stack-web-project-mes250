@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="stylesheets/inventory.css">
+<script type="text/javascript" src="js/invControl.js"></script>
+<title>Login</title>
+</head>
+
+<body>
+    <div class="nav">
+    <ul>
+        <li><a href="login.html">Login</a></li>
+        <li>
+            <a href="inventory-list.html">Inventory</a>
+            <ul>
+                <li><a href="add-inventory.html">Add Device</a></li>
+                <li><a href="delete-inventory.html">Delete Devices</a></li>
+                <li><a href="retire-inventory.html">Retire Devices</a></li>
+            </ul>
+        </li>
+        <li><a href="contact-us.html">Contact Us</a></li>
+    </ul>
+	</div>
+	<br>
+	<div class="header">
+	<div class="header-shadow"></div>
+		<div class="header-gradient">
+		<br>
+		<h1>Contact Us</h1>
+		</div> <!-- header-gradient -->
+	</div> <!-- header -->
+	<br>
+	<div class="Contact">
+	<h2 id="formdesc">If you're having problems with the site or would like to suggest a new feature, please use the form below.</h2>
+	<br>
+	<form class="form" action="mailto:mes250@pitt.edu" method="post" aria-describedby="formdesc">
+		
+		<p class="name">
+			<label for="name">Name</label>
+			<input type="text" name="name" id="name" placeholder="John Doe" />
+		</p>
+		
+		<p class="email">
+			<label for="email">Email</label>
+			<input type="text" name="email" id="email" placeholder="mail@example.com" />
+		</p>	
+	
+		<p class="text">
+			<label for="message"></label>
+			<textarea name="message" id="message" placeholder="Let us know what you're thinking." ></textarea>
+		</p>
+		
+		<p class="submit">
+			<input type="submit" value="Send" />
+		</p>
+	</form>
+	</div>
+    
+</body>
+</html>

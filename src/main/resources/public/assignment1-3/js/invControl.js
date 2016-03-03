@@ -1,21 +1,3 @@
-function getData() {
-    $.ajax({
-        url: 'http://localhost:5000/api/invlist',
-    	type: 'GET',
-    	dataType: 'json',
-        success : handleData
-    });
-}
-
-function handleData(data) {
-    var trHTML = '';
-        $.each(data, function (i, item) {
-            trHTML += '<tr><td>' + item.OWNER + '</td><td>' + item.MANUFACTURER + '</td><td>' + item.MODEL + '</td><td>' + item.TYPE + '</td><td>' + item.IP + '</td><td>' + item.SERIAL + '</td><td>' + item.PROCESSOR + '</td><td>' + item.RAM + '</td><td>' + item.LOCATION + '</td></tr>';
-        });
-        $('#inventory').append(trHTML);
-}
-
-
 function generateTable() {
 	//Create a HTML Table element
 	var table = document.createElement("TABLE");

@@ -1,7 +1,6 @@
 import java.sql.*;
-import java.util.HashMap;
-import java.util.ArrayList;
-import java.util.Map;
+import java.util.*;
+import org.json.JSONObject;
 
 import java.net.URI;
 import java.net.URISyntaxException;
@@ -18,11 +17,14 @@ import org.jscience.physics.amount.Amount;
 
 import com.heroku.sdk.jdbc.DatabaseUrl;
 import com.google.gson.Gson;
+import java.util.List;
 
 public class Main {
 
   public static void main(String[] args) {
-
+      
+    Gson gson = new Gson();
+      
     port(Integer.valueOf(System.getenv("PORT")));
     staticFileLocation("/public");
 
@@ -67,7 +69,7 @@ public class Main {
       }
     }, new FreeMarkerEngine());
 
-    get("/api/invlist", (req, res) -> {
+    get("/api/invlist2", (req, res) -> {
       Connection connection = null;
       Map<String, Object> attributes = new HashMap<>();
       try {
@@ -76,24 +78,65 @@ public class Main {
         Statement stmt = connection.createStatement();
         ResultSet rs = stmt.executeQuery("SELECT * FROM inventory");
 
-        while ( rs.next() ) {
-            String  owner = rs.getString("owner");
-            String  manufacturer = rs.getString("manufacturer");
-            System.out.println( "owner = " + owner );
-            System.out.println( "manufacturer = " + manufacturer );
-            System.out.println();
-         }
-         rs.close();
-         stmt.close();
-         connection.close();
-      } catch (Exception e) {
-        attributes.put("message", "There was an error: " + e);
-        return new ModelAndView(attributes, "error.ftl");
-      } finally {
-        if (connection != null) try{connection.close();} catch(SQLException e){}
-      }
-    }, new FreeMarkerEngine());
-   
+        ArrayList<String> output = new ArrayList<String>();
+          while (rs.next()) { 
+            output.add(rs.getString("owner"));
+            output.add(rs.getString("manufacturer"));
+            output.add(rs.getString("model"));
+            output.add(rs.getString("ip"));
+            output.add(rs.getString("serial"));
+            output.add(rs.getString("processor"));
+            output.add(rs.getString("ram"));
+            output.add(rs.getString("location"));
+          }
+
+          attributes.put("results", output);
+          return attributes;
+        } catch (Exception e) {
+          attributes.put("message", "There was an error: " + e);
+          return attributes;
+        } finally {
+          if (connection != null) try{connection.close();} catch(SQLException e){}
+        }
+      }, gson::toJson);
+    
+    get("/api/invlist", (req, res) -> {
+      Connection connection = null;
+      Map<String, Object> attributes = new HashMap<>();
+      try {
+        connection = DatabaseUrl.extract().getConnection();
+
+        Statement stmt = connection.createStatement();
+        ResultSet rs = stmt.executeQuery("SELECT * FROM inventory");
+        
+       List<JSONObject> resList = new ArrayList<JSONObject>();
+        // get column names
+        ResultSetMetaData rsMeta = rs.getMetaData();
+        int columnCnt = rsMeta.getColumnCount();
+        List<String> columnNames = new ArrayList<String>();
+        for(int i=1;i<=columnCnt;i++) {
+            columnNames.add(rsMeta.getColumnName(i).toUpperCase());
+        }
+
+        while(rs.next()) { // convert each object to an human readable JSON object
+            JSONObject obj = new JSONObject();
+            for(int i=1;i<=columnCnt;i++) {
+                String key = columnNames.get(i - 1);
+                String value = rs.getString(i);
+                obj.put(key, value);
+            }
+            resList.add(obj);
+        }
+          return resList;
+          
+        } catch (Exception e) {
+          attributes.put("message", "There was an error: " + e);
+          return attributes;
+        } finally {
+          if (connection != null) try{connection.close();} catch(SQLException e){}
+        }
+      });
+  
   }
 
 }

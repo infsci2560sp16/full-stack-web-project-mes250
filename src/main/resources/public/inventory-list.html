@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" type="text/css" href="stylesheets/inventory.css">
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
 <script type="text/javascript" src="js/invControl.js"></script>
 <!--Used http://datatables.net for advanced table sort-->
 <script type="text/javascript" src="https://cdn.datatables.net/t/dt/jq-2.2.0,pdfmake-0.1.18,dt-1.10.11,b-1.1.2,b-html5-1.1.2/datatables.min.js"></script>
@@ -10,6 +11,7 @@
 <title>Main Inventory</title>
 </head>
 <body>
+	
     <div class="nav">
     <ul>
         <li><a href="login.html">Login</a></li>
@@ -40,24 +42,17 @@
     		<tr><th>Owner</th><th>Manufacturer</th><th>Model</th><th>Type</th><th>IP Address</th><th>Serial</th><th>Processor</th><th>RAM</th><th>Location</th></tr>
     	</thead>
     	<tbody>
-    		<tr><td>Ray</td><td>Dell</td><td>Lattitude E6540</td><td>Laptop</td><td>192.168.1.1</td><td>JT8001</td><td>Intel Quadcore i7</td><td>16</td><td>300</td></tr>
-    		<tr><td>David</td><td>Apple</td><td>MacBook</td><td>Laptop</td><td>192.168.1.2</td><td>C0003F93982</td><td>Intel Quadcore i7</td><td>16</td><td>734</td></tr>
-    		<tr><td>Helen</td><td>Dell</td><td>Lattitude E5540</td><td>Laptop</td><td>192.168.1.3</td><td>LB98YN</td><td>Intel Quadcore i7</td><td>16</td><td>123</td></tr>
-    		<tr><td>Ryan</td><td>Dell</td><td>Optiplex 9020</td><td>Desktop</td><td>192.168.1.10</td><td>87HJ98</td><td>Intel Quadcore i5</td><td>8</td><td>310</td></tr>
-    		<tr><td>Mike</td><td>Dell</td><td>Optiplex 990</td><td>Desktop</td><td>192.168.1.8</td><td>90LI09</td><td>Intel Quadcore i7</td><td>16</td><td>309</td></tr>
-    		<tr><td>Kristen</td><td>Dell</td><td>Lattitude E6540</td><td>Laptop</td><td>192.168.1.9</td><td>12OP12</td><td>Intel Quadcore i7</td><td>16</td><td>305</td>
-    		</tr><tr><td>Amy</td><td>Dell</td><td>Lattitude E6540</td><td>Laptop</td><td>192.168.1.4</td><td>23WE23</td><td>Intel Quadcore i7</td><td>8</td><td>Boulder 215</td></tr>
-    		<tr><td>Richard</td><td>Apple</td><td>iMac</td><td>Desktop</td><td>192.168.1.5</td><td>C97987JH876</td><td>Intel Quadcore i7</td><td>16</td><td>105</td></tr>
-    		<tr><td>Alfred</td><td>Dell</td><td>Lattitude E6540</td><td>Laptop</td><td>192.168.1.6</td><td>UY78UY</td><td>Intel Quadcore i5</td><td>8</td><td>305</td></tr>
-    		<tr><td>Joe</td><td>Dell</td><td>Lattitude E6540</td><td>Laptop</td><td>192.168.1.7</td><td>09JF54</td><td>Intel Quadcore i7</td><td>16</td><td>308</td></tr>
+    	
     	</tbody>
     </table>
+    
+    
    	
-   	<!--Unable to get dynamically loaded table to have the correct table tags.  Used hard coded table for demonstration.  Will fix for database tables.-->
-    <!--Used http://datatables.net for advanced table sort-->
-    <script>$(document).ready( function () {
-    $('#inventory').DataTable();
-	} );
+    <script>
+    getData();
+    $(document).ajaxStop(function() {
+    $('#inventory').DataTable()
+    });
 	</script>
     
 </body>
