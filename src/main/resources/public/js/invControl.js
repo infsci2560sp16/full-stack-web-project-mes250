@@ -10,7 +10,7 @@ function getData() {
 function handleData(data) {
     var trHTML = '';
         $.each(data, function (i, item) {
-            trHTML += '<tr><td>' + item.OWNER + '</td><td>' + item.MANUFACTURER + '</td><td>' + item.MODEL + '</td><td>' + item.TYPE + '</td><td>' + item.IP + '</td><td>' + item.SERIAL + '</td><td>' + item.PROCESSOR + '</td><td>' + item.RAM + '</td><td>' + item.LOCATION + '</td></tr>';
+            trHTML += '<tr><td>' + item.OWNER + '</td><td>' + item.DEVICE_NAME + '</td><td>' + item.MANUFACTURER + '</td><td>' + item.MODEL + '</td><td>' + item.TYPE_DESC + '</td><td>' + item.IP_ADDRESS + '</td><td>' + item.SERIAL + '</td><td>' + item.PROCESSOR + '</td><td>' + item.RAM + '</td><td>' + item.LOCATION + '</td></tr>';
         });
         $('#inventory').append(trHTML);
 }

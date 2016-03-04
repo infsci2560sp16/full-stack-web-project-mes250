@@ -107,9 +107,10 @@ public class Main {
         connection = DatabaseUrl.extract().getConnection();
 
         Statement stmt = connection.createStatement();
-        ResultSet rs = stmt.executeQuery("SELECT * FROM inventory");
+        ResultSet rs = stmt.executeQuery("SELECT * FROM inventory, type where type=type_id");
         
-       List<JSONObject> resList = new ArrayList<JSONObject>();
+        List<JSONObject> resList = new ArrayList<JSONObject>();
+        
         // get column names
         ResultSetMetaData rsMeta = rs.getMetaData();
         int columnCnt = rsMeta.getColumnCount();
@@ -117,7 +118,8 @@ public class Main {
         for(int i=1;i<=columnCnt;i++) {
             columnNames.add(rsMeta.getColumnName(i).toUpperCase());
         }
-
+        
+        //get data
         while(rs.next()) { // convert each object to an human readable JSON object
             JSONObject obj = new JSONObject();
             for(int i=1;i<=columnCnt;i++) {
@@ -127,7 +129,7 @@ public class Main {
             }
             resList.add(obj);
         }
-          return resList;
+        return resList;
           
         } catch (Exception e) {
           attributes.put("message", "There was an error: " + e);

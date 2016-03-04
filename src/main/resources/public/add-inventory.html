@@ -4,24 +4,11 @@
 <meta charset="UTF-8">
 <link rel="stylesheet" type="text/css" href="stylesheets/inventory.css">
 <script type="text/javascript" src="js/invControl.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+<!--Used http://datatables.net for advanced table sort-->
+<script type="text/javascript" src="https://cdn.datatables.net/t/dt/jq-2.2.0,pdfmake-0.1.18,dt-1.10.11,b-1.1.2,b-html5-1.1.2/datatables.min.js"></script>
+<link rel="stylesheet" type="text/css" href="stylesheets/datatable.css"/>
 <title>Main Inventory</title>
-<script type="text/javascript">
-        //Build an array containing inventory records.
-        var inventory = new Array();
-        //Build headers
-        inventory.push(["Owner", "Manufacturer", "Model", "Type", "IP Address", "Serial", "Processor", "RAM", "Location"]);
-        //Build rows
-        inventory.push(["Ray", "Dell", "Lattitude E6540", "Laptop", "192.168.1.1", "JT8001", "Intel Quadcore i7", "16", "300"]);
-        inventory.push(["David", "Apple", "MacBook", "Laptop", "192.168.1.2", "C0003F93982","Intel Quadcore i7", "16", "734"]);
-        inventory.push(["Helen", "Dell", "Lattitude E5540", "Laptop", "192.168.1.3", "LB98YN","Intel Quadcore i7", "16", "123"]);
-        inventory.push(["Ryan", "Dell", "Optiplex 9020", "Desktop", "192.168.1.10", "87HJ98","Intel Quadcore i5", "8", "310"]);
-        inventory.push(["Mike", "Dell", "Optiplex 990", "Desktop", "192.168.1.8", "90LI09","Intel Quadcore i7", "16", "309"]);
-        inventory.push(["Kristen", "Dell", "Lattitude E6540", "Laptop", "192.168.1.9", "12OP12","Intel Quadcore i7", "16", "305"]);
-        inventory.push(["Amy", "Dell", "Lattitude E6540", "Laptop", "192.168.1.4", "23WE23","Intel Quadcore i7",  "8", "Boulder 215"]);
-        inventory.push(["Richard", "Apple", "iMac", "Desktop", "192.168.1.5", "C97987JH876","Intel Quadcore i7", "16", "105"]);
-        inventory.push(["Alfred", "Dell", "Lattitude E6540", "Laptop", "192.168.1.6", "UY78UY","Intel Quadcore i5", "8", "305"]);
-        inventory.push(["Joe", "Dell", "Lattitude E6540", "Laptop", "192.168.1.7", "09JF54","Intel Quadcore i7", "16", "308"]);
-</script>
 </head>
 <body>
     <div class="nav">
@@ -52,15 +39,27 @@
     *Required fields
     <br>
 	<form>
-	<p><label for="Owner">Owner:</label> <input id="Owner" type="text" /></p>
-	<p><label for="Manufacturer">*Manufacturer:</label> <input id="Manufacturer"  type="text" /></p>
-	<p><label for="Model">*Model:</label> <input id="Model" type="text" /></p>
-	<p><label for="Type">*Type:</label> <input id="Type"  type="text" /></p>
-	<p><label for="IP">IP Address:</label> <input id="IP"  type="text" /></p>
-	<p><label for="Serial">*Serial:</label> <input id="Serial" type="text" /></p>
-	<p><label for="Processor">*Processor:</label> <input id="Processor"  type="text" /></p>
+	<p><label for="Owner">Owner:</label> <input id="OWNER" type="text" /></p>
+	<p><label for="DeviceName">*Device Name:</label> <input id="DeviceName"  type="text" /></p>
+	<p><label for="Manufacturer">*Manufacturer:</label> <input id="MANUFACTURER"  type="text" /></p>
+	<p><label for="Model">*Model:</label> <input id="MODEL" type="text" /></p>
+	<p><label for="Type">*Type:</label> <select name="TYPE" id="TYPE">
+		<option value="0"></option>
+		<option value="1">Workstation</option>
+    	<option value="2">Laptop</option>
+    	<option value="3">Switch</option>
+    	<option value="4">Router</option>
+    	<option value="5">Physical Server</option>
+    	<option value="6">Virtual Server</option>
+    	<option value="7">RAID Storage</option>
+    	<option value="8">Printer</option>
+    	<option value="9">Lab Equipment</option>
+  		</select></p>
+	<p><label for="IP">IP Address:</label> <input id="IP_ADDRESS"  type="text" /></p>
+	<p><label for="Serial">*Serial:</label> <input id="SERIAL" type="text" /></p>
+	<p><label for="Processor">*Processor:</label> <input id="PROCESSOR"  type="text" /></p>
 	<p><label for="RAM">*RAM:</label> <input id="RAM"  type="text" /></p>
-	<p><label for="Location">Location:</label> <input id="Location" type="text" /></p>
+	<p><label for="Location">Location:</label> <input id="LOCATION" type="text" /></p>
 	<br>
 	<input type="button" value="Add Device" onclick="insert()" />
 	</form>
@@ -68,9 +67,20 @@
 	<hr />
 	<br>
     <br>
-    <div class="CSSTable">
-    <div id="invTable"></div>
-    <script>generateTable();</script>
+    <table id="inventory" class="display" aria-describedby="tbldesc">
+    	<thead>
+    		<tr><th>Owner</th><th>Device Name</th><th>Manufacturer</th><th>Model</th><th>Type</th><th>IP Address</th><th>Serial</th><th>Processor</th><th>RAM</th><th>Location</th></tr>
+    	</thead>
+    	<tbody>
+    	
+    	</tbody>
+    </table>
+    <script>
+    getData();
+    $(document).ajaxStop(function() {
+    $('#inventory').DataTable()
+    });
+	</script>
     </div>
     <br>
     <br>
