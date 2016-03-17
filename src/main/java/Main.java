@@ -36,6 +36,9 @@ public class Main {
       return "E=mc^2: " + energy + " = " + m.toString();
     });
 
+    
+    
+    
     get("/", (request, response) -> {
             Map<String, Object> attributes = new HashMap<>();
             attributes.put("message", "Hello World!");
@@ -43,6 +46,9 @@ public class Main {
             return new ModelAndView(attributes, "index.ftl");
         }, new FreeMarkerEngine());
 
+    
+    
+    
     get("/db", (req, res) -> {
       Connection connection = null;
       Map<String, Object> attributes = new HashMap<>();
@@ -69,36 +75,52 @@ public class Main {
       }
     }, new FreeMarkerEngine());
 
-    get("/api/invlist2", (req, res) -> {
+    
+    
+    
+    get("/printers2", (req, res) -> {
       Connection connection = null;
       Map<String, Object> attributes = new HashMap<>();
       try {
         connection = DatabaseUrl.extract().getConnection();
 
         Statement stmt = connection.createStatement();
-        ResultSet rs = stmt.executeQuery("SELECT * FROM inventory");
+        ResultSet rs = stmt.executeQuery("SELECT * FROM inventory, type where type=type_id and type=8");
 
-        ArrayList<String> output = new ArrayList<String>();
-          while (rs.next()) { 
-            output.add(rs.getString("owner"));
-            output.add(rs.getString("manufacturer"));
-            output.add(rs.getString("model"));
-            output.add(rs.getString("ip"));
-            output.add(rs.getString("serial"));
-            output.add(rs.getString("processor"));
-            output.add(rs.getString("ram"));
-            output.add(rs.getString("location"));
-          }
-
-          attributes.put("results", output);
-          return attributes;
-        } catch (Exception e) {
-          attributes.put("message", "There was an error: " + e);
-          return attributes;
-        } finally {
-          if (connection != null) try{connection.close();} catch(SQLException e){}
+        List<JSONObject> resList = new ArrayList<JSONObject>();
+        
+        // get column names
+        ResultSetMetaData rsMeta = rs.getMetaData();
+        int columnCnt = rsMeta.getColumnCount();
+        List<String> columnNames = new ArrayList<String>();
+        for(int i=1;i<=columnCnt;i++) {
+            columnNames.add(rsMeta.getColumnName(i).toUpperCase());
         }
-      }, gson::toJson);
+        
+        //get data
+        while(rs.next()) { // convert each object to an human readable JSON object
+            JSONObject obj = new JSONObject();
+            for(int i=1;i<=columnCnt;i++) {
+                String key = columnNames.get(i - 1);
+                String value = rs.getString(i);
+                obj.put(key, value);
+            }
+            resList.add(obj);
+        }
+        String json = resList.toString();
+        
+        attributes.put("results", json);
+        return new ModelAndView(resList, "printers.ftl");
+      } catch (Exception e) {
+        attributes.put("message", "There was an error: " + e);
+        return new ModelAndView(attributes, "error.ftl");
+      } finally {
+        if (connection != null) try{connection.close();} catch(SQLException e){}
+      }
+    }, new FreeMarkerEngine());
+    
+    
+    
     
     get("/api/invlist", (req, res) -> {
       Connection connection = null;
@@ -139,6 +161,41 @@ public class Main {
         }
       });
   
+    
+    
+    
+    get("/printers", (req, res) -> {
+      Connection connection = null;
+      Map<String, Object> attributes = new HashMap<>();
+      try {
+        connection = DatabaseUrl.extract().getConnection();
+
+        Statement stmt = connection.createStatement();
+        ResultSet rs = stmt.executeQuery("SELECT * FROM inventory where type=8");
+        
+        //Get data from inventory sql table
+        ArrayList<String> output = new ArrayList<String>();
+          while (rs.next()) { 
+            output.add(rs.getString("owner"));
+            output.add(rs.getString("manufacturer"));
+            output.add(rs.getString("model"));
+            output.add(rs.getString("ip_address"));
+            output.add(rs.getString("serial"));
+            output.add(rs.getString("location"));
+          }
+        
+        //push data to freemarker page
+        attributes.put("results", output);
+        return new ModelAndView(attributes, "printers.ftl");
+      } catch (Exception e) {
+        attributes.put("message", "There was an error: " + e);
+        return new ModelAndView(attributes, "error.ftl");
+      } finally {
+        if (connection != null) try{connection.close();} catch(SQLException e){}
+      }
+    }, new FreeMarkerEngine());
+    
+    
   }
 
 }
