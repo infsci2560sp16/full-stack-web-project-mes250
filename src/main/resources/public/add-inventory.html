@@ -34,17 +34,16 @@
 		</div> <!-- header-gradient -->
 	</div> <!-- header -->
 
-    <h2>Add new device to the inventory.</h2>
+    <h2 id="tbldesc">Add new device to the inventory.</h2>
   	<br>
     *Required fields
     <br>
 	<form>
-	<p><label for="Owner">Owner:</label> <input id="OWNER" type="text" /></p>
-	<p><label for="DeviceName">*Device Name:</label> <input id="DeviceName"  type="text" /></p>
-	<p><label for="Manufacturer">*Manufacturer:</label> <input id="MANUFACTURER"  type="text" /></p>
-	<p><label for="Model">*Model:</label> <input id="MODEL" type="text" /></p>
-	<p><label for="Type">*Type:</label> <select name="TYPE" id="TYPE">
-		<option value="0"></option>
+	<p><label for="owner">Owner:</label> <input id="owner" type="text" /></p>
+	<p><label for="deviceName">*Device Name:</label> <input id="deviceName"  type="text" /></p>
+	<p><label for="manufacturer">*Manufacturer:</label> <input id="manufacturer"  type="text" /></p>
+	<p><label for="model">*Model:</label> <input id="model" type="text" /></p>
+	<p><label for="type">*Type:</label> <select name="type" id="type">
 		<option value="1">Workstation</option>
     	<option value="2">Laptop</option>
     	<option value="3">Switch</option>
@@ -55,11 +54,11 @@
     	<option value="8">Printer</option>
     	<option value="9">Lab Equipment</option>
   		</select></p>
-	<p><label for="IP">IP Address:</label> <input id="IP_ADDRESS"  type="text" /></p>
-	<p><label for="Serial">*Serial:</label> <input id="SERIAL" type="text" /></p>
-	<p><label for="Processor">*Processor:</label> <input id="PROCESSOR"  type="text" /></p>
-	<p><label for="RAM">*RAM:</label> <input id="RAM"  type="text" /></p>
-	<p><label for="Location">Location:</label> <input id="LOCATION" type="text" /></p>
+	<p><label for="ip_address">IP Address:</label> <input id="ip_address"  type="text" /></p>
+	<p><label for="serial">*Serial:</label> <input id="serial" type="text" /></p>
+	<p><label for="processor">*Processor:</label> <input id="processor"  type="text" /></p>
+	<p><label for="ram">*RAM:</label> <input id="ram"  type="text" /></p>
+	<p><label for="location">Location:</label> <input id="location" type="text" /></p>
 	<br>
 	<input type="button" value="Add Device" onclick="insert()" />
 	</form>
@@ -81,7 +80,6 @@
     $('#inventory').DataTable()
     });
 	</script>
-    </div>
     <br>
     <br>
     <hr />
