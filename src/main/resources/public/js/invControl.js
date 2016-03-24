@@ -1,6 +1,6 @@
 function getData() {
     $.ajax({
-        url: 'http://localhost:5000/api/invlist',
+        url: 'https://stark-earth-7570.herokuapp.com/api/invlist',
     	type: 'GET',
     	dataType: 'json',
         success : handleData
