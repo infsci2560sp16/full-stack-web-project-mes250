@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+ <aboutus xmlns="http://www.w3schools.com"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://www.w3schools.com file:///Users/mes250/Web/GitHub/full-stack-web-project-mes250/src/main/resources/public/AboutUs.xsd">
+
+    <purpose>FITIM was created to help IT professionals track and manage their devices.  This is an ever growing issue as more and more devices are used in the world.</purpose>
+    <year>2016</year> 
+
+    <creators>
+        <name>Michael Singer</name>
+        <title>Project Lead, Programmer</title>
+        <year>2015</year>
+    </creators>
+    <creators>
+        <name>Jane Doe</name>
+        <title>Programmer</title>
+        <year>2016</year>
+    </creators>
+    <creators>
+        <name>John Doe</name>
+        <title>Programmer</title>
+        <year>2016</year>
+    </creators>
+</aboutus>
