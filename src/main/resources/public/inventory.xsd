@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Results">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Row" maxOccurs="unbounded" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:byte" name="inv_id"/>
+              <xs:element type="xs:string" name="owner"/>
+              <xs:element type="xs:string" name="device_name"/>
+              <xs:element type="xs:string" name="manufacturer"/>
+              <xs:element type="xs:string" name="model"/>
+              <xs:element type="xs:byte" name="type"/>
+              <xs:element type="xs:string" name="ip_address"/>
+              <xs:element type="xs:string" name="serial"/>
+              <xs:element type="xs:string" name="processor"/>
+              <xs:element type="xs:byte" name="ram"/>
+              <xs:element type="xs:string" name="location"/>
+              <xs:element type="xs:byte" name="type_id"/>
+              <xs:element type="xs:string" name="type_desc"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

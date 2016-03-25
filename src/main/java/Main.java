@@ -27,12 +27,14 @@ import com.heroku.sdk.jdbc.DatabaseUrl;
 import com.google.gson.Gson;
 import java.util.List;
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+
 public class Main {
 
   public static void main(String[] args) {
-      
-    Gson gson = new Gson();
-      
+          
     port(Integer.valueOf(System.getenv("PORT")));
     staticFileLocation("/public");
 
@@ -44,16 +46,12 @@ public class Main {
       return "E=mc^2: " + energy + " = " + m.toString();
     });
 
-    
     get("/", (request, response) -> {
             Map<String, Object> attributes = new HashMap<>();
             attributes.put("message", "Hello World!");
 
             return new ModelAndView(attributes, "index.ftl");
         }, new FreeMarkerEngine());
-
-    
-    
     
     get("/db", (req, res) -> {
       Connection connection = null;
@@ -134,18 +132,20 @@ public class Main {
         Statement stmt = connection.createStatement();
         ResultSet rs = stmt.executeQuery("SELECT * FROM inventory, type where type=type_id");
         
-        //Get column count of rs table
+        //Get column count of resultset
         ResultSetMetaData rsmd = rs.getMetaData();
         int colCount = rsmd.getColumnCount();
         
         //create new document
-        DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+        DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();        
         DocumentBuilder builder = factory.newDocumentBuilder();
         Document doc = builder.newDocument();
+
+        //create new element for sql results
         Element results = doc.createElement("Results");
         doc.appendChild(results);
         
-        //create each row as xml with column name tags
+        //create each row and make column name tags as element
         while (rs.next()) {
             Element row = doc.createElement("Row");
             results.appendChild(row);
@@ -157,7 +157,12 @@ public class Main {
                     row.appendChild(node);
                 }//end for
         }//end while
-      
+        
+        //Add name space to root element as attribute
+        Element documentElement = doc.getDocumentElement();
+        documentElement.setAttribute("xmlns:xsi", "http://www.w3.org/2001/XMLSchema-instance");
+        documentElement.setAttribute("xsi:schemaLocation", "http://stark-earth-7570.herokuapp.com/inventory.xsd");
+        
         //output xml document
         return (getDocumentAsXml(doc));
           
@@ -199,7 +204,25 @@ public class Main {
       } finally {
         if (connection != null) try{connection.close();} catch(SQLException e){}
       }
-    }, new FreeMarkerEngine());
+    }, new FreeMarkerEngine()
+    ); //end printers
+    
+    
+    get("/api/inventory.xsd", (req, res) -> {
+      Map<String, Object> attributes = new HashMap<>();
+      res.type("application/xml"); //Return as XML
+      try {
+      String content = new String(Files.readAllBytes(Paths.get("src/main/resources/public", "inventory.xsd")));
+      
+      return content; 
+          
+        } catch (Exception e) {
+          attributes.put("message", "There was an error: " + e);
+          return attributes;
+        } finally {
+          
+        }
+      });//End api/inventory.xsd
     
   }//end Main
 
@@ -212,12 +235,12 @@ public class Main {
     Transformer transformer = tf.newTransformer();
     transformer.setOutputProperty(OutputKeys.METHOD, "xml");
     transformer.setOutputProperty(OutputKeys.ENCODING,"ISO-8859-1");
-    transformer.setOutputProperty
-       ("{http://xml.apache.org/xslt}indent-amount", "4");
+    transformer.setOutputProperty("{http://xml.apache.org/xslt}indent-amount", "4");
     transformer.setOutputProperty(OutputKeys.INDENT, "yes");
     java.io.StringWriter sw = new java.io.StringWriter();
     StreamResult sr = new StreamResult(sw);
     transformer.transform(domSource, sr);
     return sw.toString();
   }//end getDocumentAsXML
+
 }//End class Main
