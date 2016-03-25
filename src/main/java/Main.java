@@ -84,6 +84,9 @@ public class Main {
     get("/api/invlist", (req, res) -> {
       Connection connection = null;
       res.type("application/json"); //Return as JSON
+      res.header("Access-Control-Allow-Origin", "http://stark-earth-7570.herokuapp.com");
+      res.header("Access-Control-Allow-Methods", "GET,POST,PUT,DELETE,OPTIONS");
+      res.header("Access-Control-Allow-Headers", "Content-Type");
       
       Map<String, Object> attributes = new HashMap<>();
       try {
