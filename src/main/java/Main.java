@@ -2,6 +2,14 @@ import java.sql.*;
 import java.util.*;
 import org.json.JSONObject;
 
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.transform.*;
+import javax.xml.transform.stream.*;
+import javax.xml.transform.dom.*;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+
 import java.net.URI;
 import java.net.URISyntaxException;
 
@@ -36,8 +44,6 @@ public class Main {
       return "E=mc^2: " + energy + " = " + m.toString();
     });
 
-    
-    
     
     get("/", (request, response) -> {
             Map<String, Object> attributes = new HashMap<>();
@@ -74,66 +80,22 @@ public class Main {
         if (connection != null) try{connection.close();} catch(SQLException e){}
       }
     }, new FreeMarkerEngine());
-
-    
-    
-    
-    get("/printers2", (req, res) -> {
-      Connection connection = null;
-      Map<String, Object> attributes = new HashMap<>();
-      try {
-        connection = DatabaseUrl.extract().getConnection();
-
-        Statement stmt = connection.createStatement();
-        ResultSet rs = stmt.executeQuery("SELECT * FROM inventory, type where type=type_id and type=8");
-
-        List<JSONObject> resList = new ArrayList<JSONObject>();
-        
-        // get column names
-        ResultSetMetaData rsMeta = rs.getMetaData();
-        int columnCnt = rsMeta.getColumnCount();
-        List<String> columnNames = new ArrayList<String>();
-        for(int i=1;i<=columnCnt;i++) {
-            columnNames.add(rsMeta.getColumnName(i).toUpperCase());
-        }
-        
-        //get data
-        while(rs.next()) { // convert each object to an human readable JSON object
-            JSONObject obj = new JSONObject();
-            for(int i=1;i<=columnCnt;i++) {
-                String key = columnNames.get(i - 1);
-                String value = rs.getString(i);
-                obj.put(key, value);
-            }
-            resList.add(obj);
-        }
-        String json = resList.toString();
-        
-        attributes.put("results", json);
-        return new ModelAndView(resList, "printers.ftl");
-      } catch (Exception e) {
-        attributes.put("message", "There was an error: " + e);
-        return new ModelAndView(attributes, "error.ftl");
-      } finally {
-        if (connection != null) try{connection.close();} catch(SQLException e){}
-      }
-    }, new FreeMarkerEngine());
-    
     
     
     
     get("/api/invlist", (req, res) -> {
       Connection connection = null;
+      res.type("application/json"); //Return as JSON
+      
       Map<String, Object> attributes = new HashMap<>();
       try {
+        //Connect to Database and execute SQL Query
         connection = DatabaseUrl.extract().getConnection();
-
         Statement stmt = connection.createStatement();
         ResultSet rs = stmt.executeQuery("SELECT * FROM inventory, type where type=type_id");
         
         List<JSONObject> resList = new ArrayList<JSONObject>();
-        
-        // get column names
+        // get column names to attach to each value
         ResultSetMetaData rsMeta = rs.getMetaData();
         int columnCnt = rsMeta.getColumnCount();
         List<String> columnNames = new ArrayList<String>();
@@ -141,7 +103,7 @@ public class Main {
             columnNames.add(rsMeta.getColumnName(i).toUpperCase());
         }
         
-        //get data
+        //get data or values and attach column name
         while(rs.next()) { // convert each object to an human readable JSON object
             JSONObject obj = new JSONObject();
             for(int i=1;i<=columnCnt;i++) {
@@ -149,7 +111,7 @@ public class Main {
                 String value = rs.getString(i);
                 obj.put(key, value);
             }
-            resList.add(obj);
+            resList.add(obj); //Add to ArrayList
         }
         return resList;
           
@@ -159,10 +121,54 @@ public class Main {
         } finally {
           if (connection != null) try{connection.close();} catch(SQLException e){}
         }
-      });
+      });//End api/invlist
+    
+    get("/api/invlistXML", (req, res) -> {
+      Connection connection = null;
+      res.type("application/xml"); //Return as XML
+      
+      Map<String, Object> attributes = new HashMap<>();
+      try {
+        //Connect to Database and execute SQL Query
+        connection = DatabaseUrl.extract().getConnection();
+        Statement stmt = connection.createStatement();
+        ResultSet rs = stmt.executeQuery("SELECT * FROM inventory, type where type=type_id");
+        
+        //Get column count of rs table
+        ResultSetMetaData rsmd = rs.getMetaData();
+        int colCount = rsmd.getColumnCount();
+        
+        //create new document
+        DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+        DocumentBuilder builder = factory.newDocumentBuilder();
+        Document doc = builder.newDocument();
+        Element results = doc.createElement("Results");
+        doc.appendChild(results);
+        
+        //create each row as xml with column name tags
+        while (rs.next()) {
+            Element row = doc.createElement("Row");
+            results.appendChild(row);
+                for (int ii = 1; ii <= colCount; ii++) {
+                    String columnName = rsmd.getColumnName(ii);
+                    Object value = rs.getObject(ii);
+                    Element node = doc.createElement(columnName);
+                    node.appendChild(doc.createTextNode(value.toString()));
+                    row.appendChild(node);
+                }//end for
+        }//end while
+      
+        //output xml document
+        return (getDocumentAsXml(doc));
+          
+        } catch (Exception e) {
+          attributes.put("message", "There was an error: " + e);
+          return attributes;
+        } finally {
+          if (connection != null) try{connection.close();} catch(SQLException e){}
+        }
+      });//End api/invlistXML
   
-    
-    
     
     get("/printers", (req, res) -> {
       Connection connection = null;
@@ -195,7 +201,23 @@ public class Main {
       }
     }, new FreeMarkerEngine());
     
-    
-  }
+  }//end Main
 
-}
+  public static String getDocumentAsXml(Document doc)
+      throws TransformerConfigurationException, TransformerException {
+    
+    //Add the XML formatting to doc
+    DOMSource domSource = new DOMSource(doc);
+    TransformerFactory tf = TransformerFactory.newInstance();
+    Transformer transformer = tf.newTransformer();
+    transformer.setOutputProperty(OutputKeys.METHOD, "xml");
+    transformer.setOutputProperty(OutputKeys.ENCODING,"ISO-8859-1");
+    transformer.setOutputProperty
+       ("{http://xml.apache.org/xslt}indent-amount", "4");
+    transformer.setOutputProperty(OutputKeys.INDENT, "yes");
+    java.io.StringWriter sw = new java.io.StringWriter();
+    StreamResult sr = new StreamResult(sw);
+    transformer.transform(domSource, sr);
+    return sw.toString();
+  }//end getDocumentAsXML
+}//End class Main
