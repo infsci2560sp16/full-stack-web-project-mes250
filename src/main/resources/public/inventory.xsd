@@ -1,28 +1,124 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://stark-earth-7570.herokuapp.com/schema/inventory" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:element name="inventory">
-    <xs:complexType>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" 
+           targetNamespace="http://stark-earth-7570.herokuapp.com/schema/inventory" 
+           xmlns:xs="http://www.w3.org/2001/XMLSchema">
+   
+                    
+                  
+    <xs:element name="inventory">
+      <xs:complexType>
       <xs:sequence>
         <xs:element name="device" maxOccurs="unbounded" minOccurs="0">
           <xs:complexType>
             <xs:sequence>
-              <xs:element type="xs:byte" name="inv_id"/>
-              <xs:element type="xs:string" name="owner"/>
-              <xs:element type="xs:string" name="device_name"/>
-              <xs:element type="xs:string" name="manufacturer"/>
-              <xs:element type="xs:string" name="model"/>
-              <xs:element type="xs:byte" name="type"/>
-              <xs:element type="xs:string" name="ip_address"/>
-              <xs:element type="xs:string" name="serial"/>
-              <xs:element type="xs:string" name="processor"/>
-              <xs:element type="xs:byte" name="ram"/>
-              <xs:element type="xs:string" name="location"/>
-              <xs:element type="xs:byte" name="type_id"/>
-              <xs:element type="xs:string" name="type_desc"/>
+              <xs:element name="inv_id">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:integer">
+                    <xs:minInclusive value="1"/>
+                    <xs:maxInclusive value="99999"/>
+                    </xs:restriction>
+                  </xs:simpleType>
+              </xs:element>
+              <xs:element name="owner">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                    <xs:maxLength value = "40"/>
+                    </xs:restriction>
+                  </xs:simpleType>
+              </xs:element>
+              <xs:element name="device_name">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                    <xs:maxLength value = "35"/>
+                    </xs:restriction>
+                  </xs:simpleType>
+              </xs:element>
+              <xs:element name="manufacturer">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                    <xs:maxLength value = "35"/>
+                    </xs:restriction>
+                  </xs:simpleType>
+              </xs:element>
+              <xs:element  name="model">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                    <xs:maxLength value = "35"/>
+                    </xs:restriction>
+                  </xs:simpleType>
+              </xs:element>
+              <xs:element name="type">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:byte">
+                    <xs:minInclusive value="1"/>
+                    <xs:maxInclusive value="15"/>
+                    </xs:restriction>
+                  </xs:simpleType>
+              </xs:element>
+              <xs:element name="ip_address">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                    <xs:maxLength value = "15"/>
+                    </xs:restriction>
+                  </xs:simpleType>
+              </xs:element>
+              <xs:element name="serial">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                    <xs:maxLength value = "25"/>
+                    </xs:restriction>
+                  </xs:simpleType>
+              </xs:element>
+              <xs:element name="processor">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                    <xs:maxLength value = "40"/>
+                    </xs:restriction>
+                  </xs:simpleType>
+              </xs:element>
+              
+              <xs:element name="ram" >
+                  <xs:simpleType>
+                    <xs:union>
+                      <xs:simpleType>
+                        <xs:restriction base='xs:string'>
+                          <xs:length value='0'/>
+                        </xs:restriction>
+                      </xs:simpleType>
+                      <xs:simpleType>
+                        <xs:restriction base='xs:integer'>
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:union>
+                  </xs:simpleType>
+              </xs:element>
+                  
+              <xs:element name="location">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                    <xs:maxLength value = "35"/>
+                    </xs:restriction>
+                  </xs:simpleType>
+              </xs:element>
+              <xs:element name="type_id">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:byte">
+                    <xs:minInclusive value="1"/>
+                    <xs:maxInclusive value="15"/>
+                    </xs:restriction>
+                  </xs:simpleType>
+              </xs:element>
+              <xs:element name="type_desc">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                    <xs:maxLength value = "40"/>
+                    </xs:restriction>
+                  </xs:simpleType>
+              </xs:element>
             </xs:sequence>
           </xs:complexType>
-        </xs:element>
-      </xs:sequence>
+        </xs:element> 
+      </xs:sequence>  
     </xs:complexType>
   </xs:element>
 </xs:schema>
