@@ -142,12 +142,12 @@ public class Main {
         Document doc = builder.newDocument();
 
         //create new element for sql results
-        Element results = doc.createElement("Results");
+        Element results = doc.createElement("inventory");
         doc.appendChild(results);
         
         //create each row and make column name tags as element
         while (rs.next()) {
-            Element row = doc.createElement("Row");
+            Element row = doc.createElement("device");
             results.appendChild(row);
                 for (int ii = 1; ii <= colCount; ii++) {
                     String columnName = rsmd.getColumnName(ii);
@@ -160,8 +160,9 @@ public class Main {
         
         //Add name space to root element as attribute
         Element documentElement = doc.getDocumentElement();
+        documentElement.setAttribute("xmlns", "http://stark-earth-7570.herokuapp.com/schema/inventory");
         documentElement.setAttribute("xmlns:xsi", "http://www.w3.org/2001/XMLSchema-instance");
-        documentElement.setAttribute("xsi:schemaLocation", "http://stark-earth-7570.herokuapp.com/inventory.xsd");
+        documentElement.setAttribute("xsi:schemaLocation", "http://stark-earth-7570.herokuapp.com/schema/inventory http://stark-earth-7570.herokuapp.com/schema/inventory/inventory.xsd");
         
         //output xml document
         return (getDocumentAsXml(doc));
@@ -208,7 +209,7 @@ public class Main {
     ); //end printers
     
     
-    get("/api/inventory.xsd", (req, res) -> {
+    get("/schema/inventory/inventory.xsd", (req, res) -> {
       Map<String, Object> attributes = new HashMap<>();
       res.type("application/xml"); //Return as XML
       try {
