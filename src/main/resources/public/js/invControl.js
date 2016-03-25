@@ -17,7 +17,7 @@ function handleData(data) {
 
 function getDataXML() {
     $.ajax({
-        url: 'https://stark-earth-7570.herokuapp.com/api/invlistXML',
+        url: 'http://localhost:5000/api/invlistXML',
     	type: 'GET',
     	dataType: 'XML',
         success : handleDataXML
@@ -25,11 +25,19 @@ function getDataXML() {
 }
 
 function handleDataXML(data) {
-    var trHTML = '';
-        $.each(data, function (i, item) {
-            trHTML += '<tr><td>' + item.OWNER + '</td><td>' + item.DEVICE_NAME + '</td><td>' + item.MANUFACTURER + '</td><td>' + item.MODEL + '</td><td>' + item.TYPE_DESC + '</td><td>' + item.IP_ADDRESS + '</td><td>' + item.SERIAL + '</td><td>' + item.PROCESSOR + '</td><td>' + item.RAM + '</td><td>' + item.LOCATION + '</td></tr>';
-        });
-        $('#inventory').append(trHTML);
+    $(data).find('device').each(function(){	
+    var owner = $(this).find('owner').text();
+    var device_name = $(this).find('device_name').text();
+    var manufacturer = $(this).find('manufacturer').text();
+    var model = $(this).find('model').text();
+    var type = $(this).find('type').text();
+    var ip_address = $(this).find('ip_address').text();
+    var serial = $(this).find('serial').text();
+    var processor = $(this).find('processor').text();
+    var ram = $(this).find('ram').text();
+    var location = $(this).find('location').text();
+    $('<tr></tr>').html('<td>'+owner+'</td><td>'+device_name+'</td><td>'+manufacturer+'</td><td>'+model+'</td><td>'+type+'</td><td>'+ip_address+'</td><td>'+serial+'</td><td>'+processor+'</td><td>'+ram+'</td><td>'+location+'</td>').appendTo('#inventory');
+   });
 }
 
 function generateTableRetire() {
