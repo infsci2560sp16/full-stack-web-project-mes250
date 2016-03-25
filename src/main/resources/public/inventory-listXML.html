@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="stylesheets/inventory.css">
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+<script type="text/javascript" src="js/invControl.js"></script>
+<!--Used http://datatables.net for advanced table sort-->
+<script type="text/javascript" src="https://cdn.datatables.net/t/dt/jq-2.2.0,pdfmake-0.1.18,dt-1.10.11,b-1.1.2,b-html5-1.1.2/datatables.min.js"></script>
+<link rel="stylesheet" type="text/css" href="stylesheets/datatable.css"/>
+<title>Main Inventory</title>
+</head>
+<body>
+	
+    <div class="nav">
+    <ul>
+        <li><a href="login.html">Login</a></li>
+        <li>
+            <a href="inventory-list.html">Inventory</a>
+            <ul>
+                <li><a href="add-inventory.html">Add Device</a></li>
+                <li><a href="delete-inventory.html">Delete Devices</a></li>
+                <li><a href="retire-inventory.html">Retire Devices</a></li>
+            </ul>
+        </li>
+        <li><a href="contact-us.html">Contact Us</a></li>
+    </ul>
+	</div>
+
+    <div class="header">
+	<div class="header-shadow"></div>
+		<div class="header-gradient">
+		<br>
+		<h1>Device Inventory</h1>
+		</div> <!-- header-gradient -->
+	</div> <!-- header -->
+	<br>
+	<h2 id="tbldesc">All devices and their attributes are listed in the table below.  Sort columns by clicking on the column name.</h2>
+    <br>
+    <table id="inventory" class="display" aria-describedby="tbldesc">
+    	<thead>
+    		<tr><th>Owner</th><th>Device Name</th><th>Manufacturer</th><th>Model</th><th>Type</th><th>IP Address</th><th>Serial</th><th>Processor</th><th>RAM</th><th>Location</th></tr>
+    	</thead>
+    	<tbody>
+    	
+    	</tbody>
+    </table>
+    
+    
+   	
+    <script>
+    getDataXML();
+    $(document).ajaxStop(function() {
+    $('#inventory').DataTable()
+    });
+	</script>
+    
+</body>
+</html>
