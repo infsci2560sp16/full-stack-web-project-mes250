@@ -17,7 +17,7 @@ function handleData(data) {
 
 function getDataXML() {
     $.ajax({
-        url: 'http://localhost:5000/api/invlistXML',
+        url: 'https://stark-earth-7570.herokuapp.com/api/invlistXML',
     	type: 'GET',
     	dataType: 'XML',
         success : handleDataXML
