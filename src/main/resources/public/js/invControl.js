@@ -1,7 +1,8 @@
 function getData() {
     $.ajax({
-        url: 'localhost:5000/api/invlist',
-    	type: 'GET',
+        //url: 'localhost:5000/api/invlist',
+    	url: 'https://stark-earth-7570.herokuapp.com/api/invlist',
+        type: 'GET',
     	dataType: 'json',
         success : handleData
     });
@@ -17,6 +18,7 @@ function handleData(data) {
 
 function getDataXML() {
     $.ajax({
+        //url: 'localhost:5000/api/invlistXML',
         url: 'https://stark-earth-7570.herokuapp.com/api/invlistXML',
     	type: 'GET',
     	dataType: 'XML',
