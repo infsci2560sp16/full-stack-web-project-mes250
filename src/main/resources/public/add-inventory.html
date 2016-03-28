@@ -2,12 +2,11 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script type="text/javascript" src="js/JSON.js"></script>
+<script type="text/javascript" src="js/invAdd.js"></script>
 <link rel="stylesheet" type="text/css" href="stylesheets/inventory.css">
-<script type="text/javascript" src="js/invControl.js"></script>
-<script type="text/javascript" src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
-<!--Used http://datatables.net for advanced table sort-->
-<script type="text/javascript" src="https://cdn.datatables.net/t/dt/jq-2.2.0,pdfmake-0.1.18,dt-1.10.11,b-1.1.2,b-html5-1.1.2/datatables.min.js"></script>
-<link rel="stylesheet" type="text/css" href="stylesheets/datatable.css"/>
+
 <title>Main Inventory</title>
 </head>
 <body>
@@ -38,11 +37,11 @@
   	<br>
     *Required fields
     <br>
-	<form>
-	<p><label for="owner">Owner:</label> <input id="owner" type="text" /></p>
-	<p><label for="deviceName">*Device Name:</label> <input id="deviceName"  type="text" /></p>
-	<p><label for="manufacturer">*Manufacturer:</label> <input id="manufacturer"  type="text" /></p>
-	<p><label for="model">*Model:</label> <input id="model" type="text" /></p>
+	<form name="form" id="form">
+	<p><label for="owner">Owner:</label> <input name="owner" id="owner" type="text" value=""/></p>
+	<p><label for="deviceName">*Device Name:</label> <input name="device_name" id="deviceName"  type="text" value=""/></p>
+	<p><label for="manufacturer">*Manufacturer:</label> <input name="manufacturer" id="manufacturer"  type="text" value=""/></p>
+	<p><label for="model">*Model:</label> <input name="model" id="model" type="text" value=""/></p>
 	<p><label for="type">*Type:</label> <select name="type" id="type">
 		<option value="1">Workstation</option>
     	<option value="2">Laptop</option>
@@ -54,18 +53,22 @@
     	<option value="8">Printer</option>
     	<option value="9">Lab Equipment</option>
   		</select></p>
-	<p><label for="ip_address">IP Address:</label> <input id="ip_address"  type="text" /></p>
-	<p><label for="serial">*Serial:</label> <input id="serial" type="text" /></p>
-	<p><label for="processor">*Processor:</label> <input id="processor"  type="text" /></p>
-	<p><label for="ram">*RAM:</label> <input id="ram"  type="text" /></p>
-	<p><label for="location">Location:</label> <input id="location" type="text" /></p>
+	<p><label for="ip_address">IP Address:</label> <input name="ip_address" id="ip_address"  type="text" value=""/></p>
+	<p><label for="serial">*Serial:</label> <input name="serial" id="serial" type="text" value=""/></p>
+	<p><label for="processor">*Processor:</label> <input name="processor" id="processor"  type="text" value=""/></p>
+	<p><label for="ram">*RAM:</label> <input name="ram" id="ram"  type="text" value=""/></p>
+	<p><label for="location">Location:</label> <input name="location" id="location" type="text" value=""/></p>
 	<br>
-	<input type="button" value="Add Device" onclick="insert()" />
+	<input type="submit" id="input" name="submit" value="Add Device" />
 	</form>
 	<br>
 	<hr />
 	<br>
+	<h2>JSON</h2>
+	<div class="results"></div>
+	
     <br>
+    <!--
     <table id="inventory" class="display" aria-describedby="tbldesc">
     	<thead>
     		<tr><th>Owner</th><th>Device Name</th><th>Manufacturer</th><th>Model</th><th>Type</th><th>IP Address</th><th>Serial</th><th>Processor</th><th>RAM</th><th>Location</th></tr>
@@ -80,6 +83,7 @@
     $('#inventory').DataTable()
     });
 	</script>
+	-->
     <br>
     <br>
     <hr />

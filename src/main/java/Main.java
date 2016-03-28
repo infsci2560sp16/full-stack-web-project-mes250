@@ -231,6 +231,42 @@ public class Main {
         }
       });//End api/inventory.xsd
     
+      
+      post("/api/invadd", (req, res) -> {
+      Connection connection = null;
+      res.type("application/json"); //Return as JSON
+      res.header("Access-Control-Allow-Origin", "http://stark-earth-7570.herokuapp.com");
+      res.header("Access-Control-Allow-Methods", "GET,POST,PUT,DELETE,OPTIONS");
+      res.header("Access-Control-Allow-Headers", "Content-Type");
+      
+      Map<String, Object> attributes = new HashMap<>();
+      try {
+        JSONObject obj = new JSONObject(req.body());
+        String owner = obj.getString("owner");
+        String device_name = obj.getString("device_name");
+        String manufacturer = obj.getString("manufacturer");
+        String model = obj.getString("model");
+        int type = obj.getInt("type");
+        
+        
+        connection = DatabaseUrl.extract().getConnection();
+        Statement stmt = connection.createStatement();
+        int n = stmt.executeUpdate("INSERT INTO inventory " + 
+                "(owner, device_name, manufacturer, model, type, ip_address, serial, processor, ram, location) " +
+                "VALUES (\"" + owner + "\",\"" + device_name + "\",\"" + manufacturer + "\",\"" + model + "\"," + type + ")");
+                //"VALUES (" + owner + "," + device_name + "," + manufacturer + "," + model + "," + type + "," + ip_address + "," + serial + "," + processor + "," + ram+ "," + location + ")");
+       
+
+      return n;
+      } catch (Exception e) {
+        attributes.put("message", "There was an error: " + e);
+        return new ModelAndView(attributes, "error.ftl");
+      } finally {
+        if (connection != null) try{connection.close();} catch(SQLException e){}
+      }
+    });
+    
+    
   }//end Main
 
   public static String getDocumentAsXml(Document doc)
