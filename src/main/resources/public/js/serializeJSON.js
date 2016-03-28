@@ -2,7 +2,6 @@
   SerializeJSON jQuery plugin.
   https://github.com/marioizquierdo/jquery.serializeJSON
   version 2.7.2 (Dec, 2015)
-
   Copyright (c) 2012, 2015 Mario Izquierdo
   Dual licensed under the MIT (http://www.opensource.org/licenses/mit-license.php)
   and GPL (http://www.opensource.org/licenses/gpl-license.php) licenses.
@@ -84,7 +83,8 @@
       var opt, validOpts, defaultOptions, optWithDefault, parseAll, f;
       f = $.serializeJSON;
 
-      if (options === null) { options = {}; }   // options ||= {}
+      if (options == null) { options = {}; }   // jshint ignore:line
+      // options ||= {}
       defaultOptions = f.defaultOptions || {}; // defaultOptions
 
       // Make sure that the user didn't misspell an option
@@ -126,7 +126,8 @@
         parsedVal = Number(valStr);
       } else if (opts.parseBooleans && (valStr === "true" || valStr === "false")) { // auto: boolean
         parsedVal = (valStr === "true");
-      } else if (opts.parseNulls    && valStr === "null") { // auto: null
+      } else if (opts.parseNulls    && valStr == "null") { // jshint ignore:line 
+          // auto: null
         parsedVal = null;
       }
       if (opts.parseWithFunction && !type) { // custom parse function (apply after previous parsing options, but not if there's a specific type)
@@ -150,7 +151,7 @@
     // and/or the data-unchecked-value attribute of the inputs.
     readCheckboxUncheckedValues: function (formAsArray, opts, $form) {
       var selector, $uncheckedCheckboxes, $el, dataUncheckedValue, f;
-      if (opts === null) { opts = {}; }
+      if (opts == null) { opts = {}; } // jshint ignore:line
       f = $.serializeJSON;
 
       selector = 'input[type=checkbox][name]:not(:checked):not([disabled])';
@@ -175,7 +176,7 @@
     //   "foo[bar]:null" =>  {nameWithNoType: "foo[bar]", type: "null"}
     extractTypeAndNameWithNoType: function(name) {
       var match;
-      if (match = name.match(/(.*):([^:]+)$/)) { // jshint ignore:line
+      if (match = name.match(/(.*):([^:]+)$/)) {// jshint ignore:line
         return {nameWithNoType: match[1], type: match[2]};
       } else {
         return {nameWithNoType: name, type: null};
@@ -243,7 +244,7 @@
     //
     deepSet: function (o, keys, value, opts) {
       var key, nextKey, tail, lastIdx, lastVal, f;
-      if (opts === null) { opts = {}; }
+      if (opts == null) { opts = {}; }// jshint ignore:line
       f = $.serializeJSON;
       if (f.isUndefined(o)) { throw new Error("ArgumentError: param 'o' expected to be an object or array, found undefined"); }
       if (!keys || keys.length === 0) { throw new Error("ArgumentError: param 'keys' expected to be an array with least one element"); }

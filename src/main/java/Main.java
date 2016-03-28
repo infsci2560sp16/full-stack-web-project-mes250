@@ -233,36 +233,58 @@ public class Main {
     
       
       post("/api/invadd", (req, res) -> {
-      Connection connection = null;
-      res.type("application/json"); //Return as JSON
-      res.header("Access-Control-Allow-Origin", "http://stark-earth-7570.herokuapp.com");
-      res.header("Access-Control-Allow-Methods", "GET,POST,PUT,DELETE,OPTIONS");
-      res.header("Access-Control-Allow-Headers", "Content-Type");
+        res.header("Access-Control-Allow-Origin", "http://stark-earth-7570.herokuapp.com");
+        //res.header("Access-Control-Allow-Origin", "http://localhost:5000");
+        res.header("Access-Control-Allow-Methods", "GET,POST,PUT,DELETE,OPTIONS");
+        res.header("Access-Control-Allow-Headers", "Content-Type");
+        Connection connection = null;
       
-      Map<String, Object> attributes = new HashMap<>();
+        //**Testing**
+        //System.out.println(req.body());
       try {
         JSONObject obj = new JSONObject(req.body());
-        String owner = obj.getString("owner");
-        String device_name = obj.getString("device_name");
-        String manufacturer = obj.getString("manufacturer");
-        String model = obj.getString("model");
-        int type = obj.getInt("type");
-        
-        
-        connection = DatabaseUrl.extract().getConnection();
-        Statement stmt = connection.createStatement();
-        int n = stmt.executeUpdate("INSERT INTO inventory " + 
-                "(owner, device_name, manufacturer, model, type, ip_address, serial, processor, ram, location) " +
-                "VALUES (\"" + owner + "\",\"" + device_name + "\",\"" + manufacturer + "\",\"" + model + "\"," + type + ")");
-                //"VALUES (" + owner + "," + device_name + "," + manufacturer + "," + model + "," + type + "," + ip_address + "," + serial + "," + processor + "," + ram+ "," + location + ")");
-       
+        String owner = obj.getString("OWNER");
+        String device_name = obj.getString("DEVICE_NAME");
+        String manufacturer = obj.getString("MANUFACTURER");
+        String model = obj.getString("MODEL");
+        int type = obj.getInt("TYPE");
+        String serial = obj.getString("SERIAL");
+        String ip_address = obj.getString("IP_ADDRESS");
+        String processor = obj.getString("PROCESSOR");
+        int ram = obj.getInt("RAM");
+        String location = obj.getString("LOCATION");
 
-      return n;
+         //**Testing**
+       System.out.println(owner);
+       System.out.println(device_name);
+       System.out.println(manufacturer);
+       System.out.println(model);
+       System.out.println(type);
+       System.out.println(serial);
+       System.out.println(ip_address);
+       System.out.println(processor);
+       System.out.println(ram);
+       System.out.println(location);
+       
+       
+       String sql = "INSERT INTO inventory (owner, device_name, manufacturer, model, type, serial, ip_address, processor, ram, location) VALUES ('" 
+               + owner + "','" + device_name + "','" + manufacturer + "','" + model + "'," + type + ",'" + serial 
+               + "','" + ip_address + "','" + processor + "'," + ram +",'" + location + "')";
+       
+       //**Testing**
+       //System.out.println(sql);
+       
+       connection = DatabaseUrl.extract().getConnection();
+       Statement stmt = connection.createStatement();
+       stmt.executeUpdate(sql); 
+       
+       res.status(200);
+       return res;
       } catch (Exception e) {
-        attributes.put("message", "There was an error: " + e);
-        return new ModelAndView(attributes, "error.ftl");
-      } finally {
-        if (connection != null) try{connection.close();} catch(SQLException e){}
+        res.status(500);
+        return e.getMessage();
+      } finally {  
+        
       }
     });
     
