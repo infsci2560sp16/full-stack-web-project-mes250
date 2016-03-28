@@ -37,6 +37,7 @@ public class Main {
           
     port(Integer.valueOf(System.getenv("PORT")));
     staticFileLocation("/public");
+    CorsFilter.apply();
 
     get("/hello", (req, res) -> {
       RelativisticModel.select();
@@ -84,9 +85,9 @@ public class Main {
     get("/api/invlist", (req, res) -> {
       Connection connection = null;
       res.type("application/json"); //Return as JSON
-      res.header("Access-Control-Allow-Origin", "http://stark-earth-7570.herokuapp.com");
-      res.header("Access-Control-Allow-Methods", "GET,POST,PUT,DELETE,OPTIONS");
-      res.header("Access-Control-Allow-Headers", "Content-Type");
+      //res.header("Access-Control-Allow-Origin", "http://stark-earth-7570.herokuapp.com");
+      //res.header("Access-Control-Allow-Methods", "GET,POST,PUT,DELETE,OPTIONS");
+      //res.header("Access-Control-Allow-Headers", "Content-Type");
       
       Map<String, Object> attributes = new HashMap<>();
       try {
@@ -127,9 +128,9 @@ public class Main {
     get("/api/invlistXML", (req, res) -> {
       Connection connection = null;
       res.type("application/xml"); //Return as XML
-      res.header("Access-Control-Allow-Origin", "http://stark-earth-7570.herokuapp.com");
-      res.header("Access-Control-Allow-Methods", "GET,POST,PUT,DELETE,OPTIONS");
-      res.header("Access-Control-Allow-Headers", "Content-Type");
+      //res.header("Access-Control-Allow-Origin", "http://stark-earth-7570.herokuapp.com");
+      //res.header("Access-Control-Allow-Methods", "GET,POST,PUT,DELETE,OPTIONS");
+      //res.header("Access-Control-Allow-Headers", "Content-Type");
       
       Map<String, Object> attributes = new HashMap<>();
       try {
@@ -233,10 +234,6 @@ public class Main {
     
       
       post("/api/invadd", (req, res) -> {
-        res.header("Access-Control-Allow-Origin", "http://stark-earth-7570.herokuapp.com");
-        //res.header("Access-Control-Allow-Origin", "http://localhost:5000");
-        res.header("Access-Control-Allow-Methods", "GET,POST,PUT,DELETE,OPTIONS");
-        res.header("Access-Control-Allow-Headers", "Content-Type");
         Connection connection = null;
       
         //**Testing**
@@ -307,5 +304,5 @@ public class Main {
     transformer.transform(domSource, sr);
     return sw.toString();
   }//end getDocumentAsXML
-
+   
 }//End class Main
