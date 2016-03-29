@@ -44,9 +44,10 @@ $(document).ready(function(){
             console.log(send);
             
             $.ajax({
-                //url: "http://localhost:5000/api/invadd",
-                url: 'https://stark-earth-7570.herokuapp.com/api/invadd', 
+                url: "http://localhost:5000/api/invadd",
+                //url: 'https://stark-earth-7570.herokuapp.com/api/invadd', 
                 type: "POST",
+                datatype: "json",
                 headers: {'Content-Type':undefined},
                 data: send,
                 error: function(xhr, error) {

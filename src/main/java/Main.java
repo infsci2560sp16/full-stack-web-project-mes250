@@ -276,7 +276,7 @@ public class Main {
        stmt.executeUpdate(sql); 
        
        res.status(200);
-       return res;
+       return req.body();
       } catch (Exception e) {
         res.status(500);
         return e.getMessage();
