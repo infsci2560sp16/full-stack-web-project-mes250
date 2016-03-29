@@ -48,7 +48,6 @@ $(document).ready(function(){
                 url: 'https://stark-earth-7570.herokuapp.com/api/invadd', 
                 type: "POST",
                 datatype: "json",
-                headers: {'Content-Type':undefined},
                 data: send,
                 error: function(xhr, error) {
                        alert('Error!  Status = ' + xhr.status + ' Message = ' + error);
