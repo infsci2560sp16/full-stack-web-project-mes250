@@ -267,16 +267,16 @@ public class Main {
         String location = obj.getString("LOCATION");
 
          //**Testing**
-       System.out.println(owner);
-       System.out.println(device_name);
-       System.out.println(manufacturer);
-       System.out.println(model);
-       System.out.println(type);
-       System.out.println(serial);
-       System.out.println(ip_address);
-       System.out.println(processor);
-       System.out.println(ram);
-       System.out.println(location);
+//       System.out.println(owner);
+//       System.out.println(device_name);
+//       System.out.println(manufacturer);
+//       System.out.println(model);
+//       System.out.println(type);
+//       System.out.println(serial);
+//       System.out.println(ip_address);
+//       System.out.println(processor);
+//       System.out.println(ram);
+//       System.out.println(location);
        
        
        String sql = "INSERT INTO inventory (owner, device_name, manufacturer, model, type, serial, ip_address, processor, ram, location) VALUES ('" 
