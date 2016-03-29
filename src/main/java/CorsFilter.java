@@ -32,6 +32,7 @@ public class CorsFilter {
             public void handle(Request request, Response response) throws Exception {
                 corsHeaders.forEach((key, value) -> {
                     response.header(key, value);
+                    response.status(200);
                 });
             }
         };
