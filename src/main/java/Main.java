@@ -38,6 +38,21 @@ public class Main {
     port(Integer.valueOf(System.getenv("PORT")));
     staticFileLocation("/public");
     CorsFilter.apply();
+    
+    options("/*", (request,response)->{
+ 
+    String accessControlRequestHeaders = request.headers("Access-Control-Request-Headers");
+    if (accessControlRequestHeaders != null) {
+        response.header("Access-Control-Allow-Headers", accessControlRequestHeaders);
+    }
+ 
+    String accessControlRequestMethod = request.headers("Access-Control-Request-Method");
+    if(accessControlRequestMethod != null){
+    response.header("Access-Control-Allow-Methods", accessControlRequestMethod);
+    }
+ 
+    return "OK";
+    });
 
     get("/hello", (req, res) -> {
       RelativisticModel.select();

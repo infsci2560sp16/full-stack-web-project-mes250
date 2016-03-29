@@ -18,8 +18,7 @@ public class CorsFilter {
      private static final HashMap<String, String> corsHeaders = new HashMap<String, String>();
     
     static {
-        corsHeaders.put("Access-Control-Allow-Methods", "GET,PUT,POST,DELETE,HEAD,PATCH,OPTIONS");
-        //corsHeaders.put("Access-Control-Allow-Methods", "GET,PUT,POST,DELETE,OPTIONS");
+        corsHeaders.put("Access-Control-Allow-Methods", "GET,PUT,POST,DELETE,OPTIONS");
         corsHeaders.put("Access-Control-Allow-Origin", "http://stark-earth-7570.herokuapp.com");
         //corsHeaders.put("Access-Control-Allow-Origin", "http://localhost:5000");
         corsHeaders.put("Access-Control-Allow-Headers", "Content-Type,Authorization,X-Requested-With,Content-Length,Accept,Origin,");
@@ -30,9 +29,10 @@ public class CorsFilter {
         Filter filter = new Filter() {
             @Override
             public void handle(Request request, Response response) throws Exception {
+                response.status(200);
                 corsHeaders.forEach((key, value) -> {
                     response.header(key, value);
-                    response.status(200);
+                    
                 });
             }
         };
