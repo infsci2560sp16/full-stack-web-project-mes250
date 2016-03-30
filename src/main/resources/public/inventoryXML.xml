@@ -1,2277 +1,2286 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
-
 
 <inventory xmlns="http://stark-earth-7570.herokuapp.com/schema/inventory" 
            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-           xsi:schemaLocation="http://stark-earth-7570.herokuapp.com/schema/inventory file:/Users/mike/Web/GitHub/full-stack-web-project-mes250/src/main/resources/public/inventory.xsd">
-<device>
-<inv_id>1</inv_id>
-<owner>Andrea Durst</owner>
-<device_name>HGEN-LT-133</device_name>
-<manufacturer>Dell</manufacturer>
-<model>Lattitude E6540</model>
-<type>2</type>
-<ip_address>192.168.0.1</ip_address>
-<serial>JTZGD12</serial>
-<processor>Intel Core i7-4800MQ 2.70GHz</processor>
-<ram>16</ram>
-<location>A305</location>
-<type_id>2</type_id>
-<type_desc>Laptop</type_desc>
-</device>
-<device>
-<inv_id>2</inv_id>
-<owner>Andrea Durst</owner>
-<device_name>HGEN-LT-Durst</device_name>
-<manufacturer>Microsoft</manufacturer>
-<model>Surface Pro 3</model>
-<type>2</type>
-<ip_address>192.168.0.2</ip_address>
-<serial>33015251353</serial>
-<processor>Intel Core i5 2.7 GHz</processor>
-<ram>8</ram>
-<location>A305</location>
-<type_id>2</type_id>
-<type_desc>Laptop</type_desc>
-</device>
-<device>
-<inv_id>3</inv_id>
-<owner>Angel Daily</owner>
-<device_name>norbut</device_name>
-<manufacturer>Dell</manufacturer>
-<model>OptiPlex 7010</model>
-<type>1</type>
-<ip_address>192.168.0.3</ip_address>
-<serial>CNNPNW1</serial>
-<processor>Intel Core i7-3770 3.40GHz</processor>
-<ram>6</ram>
-<location>A306</location>
-<type_id>1</type_id>
-<type_desc>Workstation</type_desc>
-</device>
-<device>
-<inv_id>4</inv_id>
-<owner>Angel Daily</owner>
-<device_name>HGEN-WKS-194</device_name>
-<manufacturer>Dell</manufacturer>
-<model>OptiPlex 980</model>
-<type>1</type>
-<ip_address>192.168.0.4</ip_address>
-<serial>BX8PDQ1</serial>
-<processor>Intel Core i7 870 2.93GHz</processor>
-<ram>8</ram>
-<location>A309</location>
-<type_id>1</type_id>
-<type_desc>Workstation</type_desc>
-</device>
-<device>
-<inv_id>5</inv_id>
-<owner>Beth Roman</owner>
-<device_name>default</device_name>
-<manufacturer>Apple</manufacturer>
-<model>iMac</model>
-<type>1</type>
-<ip_address>192.168.0.5</ip_address>
-<serial>123456789</serial>
-<processor>Intel Core i5 2.7 GHz</processor>
-<ram>8</ram>
-<location>A309</location>
-<type_id>1</type_id>
-<type_desc>Workstation</type_desc>
-</device>
-<device>
-<inv_id>6</inv_id>
-<owner>Beth Roman</owner>
-<device_name>HGEN-RLab-2</device_name>
-<manufacturer>Apple</manufacturer>
-<model>iMac</model>
-<type>1</type>
-<ip_address>192.168.0.6</ip_address>
-<serial>YM0230R3DMV</serial>
-<processor>Intel Core i5 2.7 GHz</processor>
-<ram>8</ram>
-<location>A300</location>
-<type_id>1</type_id>
-<type_desc>Workstation</type_desc>
-</device>
-<device>
-<inv_id>7</inv_id>
-<owner>Beth Roman</owner>
-<device_name>romanpc</device_name>
-<manufacturer>Dell</manufacturer>
-<model>Precision T1600</model>
-<type>1</type>
-<ip_address>192.168.0.7</ip_address>
-<serial>DGVFLS1</serial>
-<processor>Intel Xeon E31205</processor>
-<ram>16</ram>
-<location>A300</location>
-<type_id>1</type_id>
-<type_desc>Workstation</type_desc>
-</device>
-<device>
-<inv_id>8</inv_id>
-<owner>Beth Roman</owner>
-<device_name>default</device_name>
-<manufacturer>Dell</manufacturer>
-<model>Dimension E520</model>
-<type>1</type>
-<ip_address>192.168.0.8</ip_address>
-<serial>9X16DC1</serial>
-<processor>Intel Pentium 4 3.20GHz</processor>
-<ram>2</ram>
-<location>A300</location>
-<type_id>1</type_id>
-<type_desc>Workstation</type_desc>
-</device>
-<device>
-<inv_id>9</inv_id>
-<owner>Beth Roman</owner>
-<device_name>default</device_name>
-<manufacturer>Lexmark</manufacturer>
-<model>Lexmark MS310dn</model>
-<type>8</type>
-<ip_address>192.168.0.9</ip_address>
-<serial>451432LM0WRW7-98-0</serial>
-<processor>Intel Core i5 2.7 GHz</processor>
-<ram>128</ram>
-<location>3rd FLR Annex</location>
-<type_id>8</type_id>
-<type_desc>Printer</type_desc>
-</device>
-<device>
-<inv_id>10</inv_id>
-<owner>Betsy Gettig</owner>
-<device_name>default</device_name>
-<manufacturer>Apple</manufacturer>
-<model>MacBook Pro</model>
-<type>2</type>
-<ip_address>192.168.0.10</ip_address>
-<serial>C02M21AGFD58</serial>
-<processor>Intel Core i5 2.7 GHz</processor>
-<ram>8</ram>
-<location>A300</location>
-<type_id>2</type_id>
-<type_desc>Laptop</type_desc>
-</device>
-<device>
-<inv_id>11</inv_id>
-<owner>Candace Kammerer</owner>
-<device_name>HGEN-Candy2</device_name>
-<manufacturer>Apple</manufacturer>
-<model>iMac</model>
-<type>1</type>
-<ip_address>192.168.0.11</ip_address>
-<serial>D25L90Y0DNMP</serial>
-<processor>Intel Core i7 3.4 GHz</processor>
-<ram>16</ram>
-<location>619</location>
-<type_id>1</type_id>
-<type_desc>Workstation</type_desc>
-</device>
-<device>
-<inv_id>12</inv_id>
-<owner>Candace Kammerer</owner>
-<device_name/>
-<manufacturer>Apple</manufacturer>
-<model>MacBook Air</model>
-<type>2</type>
-<ip_address>192.168.0.12</ip_address>
-<serial>123456789</serial>
-<processor>Intel Core i5 2.7 GHz</processor>
-<ram>8</ram>
-<location>A300</location>
-<type_id>2</type_id>
-<type_desc>Laptop</type_desc>
-</device>
-<device>
-<inv_id>13</inv_id>
-<owner>Dan Weeks</owner>
-<device_name>thymine</device_name>
-<manufacturer>Apple</manufacturer>
-<model>Mac Mini</model>
-<type>1</type>
-<ip_address>192.168.0.13</ip_address>
-<serial>D49A20DE1EBC</serial>
-<processor>Intel Core i7 3.4 GHz</processor>
-<ram>8</ram>
-<location>614</location>
-<type_id>1</type_id>
-<type_desc>Workstation</type_desc>
-</device>
-<device>
-<inv_id>14</inv_id>
-<owner>Dan Weeks</owner>
-<device_name>basesequence</device_name>
-<manufacturer>Apple</manufacturer>
-<model>iMac</model>
-<type>1</type>
-<ip_address>192.168.0.14</ip_address>
-<serial>D25JF0Y8DHJW</serial>
-<processor>Intel Core i7 3.4 GHz</processor>
-<ram>16</ram>
-<location>4000 Cube</location>
-<type_id>1</type_id>
-<type_desc>Workstation</type_desc>
-</device>
-<device>
-<inv_id>15</inv_id>
-<owner>Dan Weeks</owner>
-<device_name>apple-time-caps</device_name>
-<manufacturer>Apple</manufacturer>
-<model>Time Capsule</model>
-<type>5</type>
-<ip_address>192.168.0.15</ip_address>
-<serial>123456789</serial>
-<processor>Intel Core i7 3.4 GHz</processor>
-<ram/>
-<location>A725</location>
-<type_id>5</type_id>
-<type_desc>Physical Server</type_desc>
-</device>
-<device>
-<inv_id>16</inv_id>
-<owner>Dan Weeks</owner>
-<device_name>Sherlock</device_name>
-<manufacturer>Apple</manufacturer>
-<model>Mac Pro</model>
-<type>1</type>
-<ip_address>192.168.0.16</ip_address>
-<serial>C07KJ06PF4MH</serial>
-<processor>6-Core Intel Xeon 3.06 GHz</processor>
-<ram>32</ram>
-<location>A303</location>
-<type_id>1</type_id>
-<type_desc>Workstation</type_desc>
-</device>
-<device>
-<inv_id>17</inv_id>
-<owner>Dan Weeks</owner>
-<device_name>penrose</device_name>
-<manufacturer>Apple</manufacturer>
-<model>Mac Pro</model>
-<type>1</type>
-<ip_address>192.168.0.17</ip_address>
-<serial>1F5B325421</serial>
-<processor>Intel Core i7 3.4 GHz</processor>
-<ram/>
-<location>A303</location>
-<type_id>1</type_id>
-<type_desc>Workstation</type_desc>
-</device>
-<device>
-<inv_id>18</inv_id>
-<owner>Dan Weeks</owner>
-<device_name>watson</device_name>
-<manufacturer>Apple</manufacturer>
-<model>Mac mini</model>
-<type>1</type>
-<ip_address>192.168.0.18</ip_address>
-<serial>C07KF0BVDWYN</serial>
-<processor>Intel Core i7 2.3 GHz</processor>
-<ram>4</ram>
-<location>A303</location>
-<type_id>1</type_id>
-<type_desc>Workstation</type_desc>
-</device>
-<device>
-<inv_id>19</inv_id>
-<owner>Dan Weeks</owner>
-<device_name>basepair</device_name>
-<manufacturer>Apple</manufacturer>
-<model>iMac</model>
-<type>1</type>
-<ip_address>192.168.0.19</ip_address>
-<serial>D25GX0EMDHJV</serial>
-<processor>Intel Core i5 2.7 GHz</processor>
-<ram>16</ram>
-<location>614</location>
-<type_id>1</type_id>
-<type_desc>Workstation</type_desc>
-</device>
-<device>
-<inv_id>20</inv_id>
-<owner>Dan Weeks</owner>
-<device_name>HGEN-LT-Weeks</device_name>
-<manufacturer>Apple</manufacturer>
-<model>MacBook Air</model>
-<type>2</type>
-<ip_address>192.168.0.20</ip_address>
-<serial>C02Q604GGFWL</serial>
-<processor>Intel Core i7</processor>
-<ram>8</ram>
-<location>A300</location>
-<type_id>2</type_id>
-<type_desc>Laptop</type_desc>
-</device>
-<device>
-<inv_id>21</inv_id>
-<owner>David Finegold</owner>
-<device_name>default</device_name>
-<manufacturer>Apple</manufacturer>
-<model>Mac Pro</model>
-<type>1</type>
-<ip_address>192.168.0.21</ip_address>
-<serial>123456789</serial>
-<processor>Intel Core i7 3.4 GHz</processor>
-<ram>8</ram>
-<location>A728</location>
-<type_id>1</type_id>
-<type_desc>Workstation</type_desc>
-</device>
-<device>
-<inv_id>22</inv_id>
-<owner>David Lassige</owner>
-<device_name>hgen-david-193</device_name>
-<manufacturer>Dell</manufacturer>
-<model>OptiPlex 9010</model>
-<type>1</type>
-<ip_address>192.168.0.22</ip_address>
-<serial>J21SQW1</serial>
-<processor>Intel Core i7-3770 3.40GHz</processor>
-<ram>16</ram>
-<location>A307</location>
-<type_id>1</type_id>
-<type_desc>Workstation</type_desc>
-</device>
-<device>
-<inv_id>23</inv_id>
-<owner>Department</owner>
-<device_name>HGEN-LT-Shared</device_name>
-<manufacturer>Apple</manufacturer>
-<model>MacBook Pro</model>
-<type>2</type>
-<ip_address>192.168.0.28</ip_address>
-<serial>C02PXEDSFVH3</serial>
-<processor>Inte Core i5</processor>
-<ram>8</ram>
-<location>A306</location>
-<type_id>2</type_id>
-<type_desc>Laptop</type_desc>
-</device>
-<device>
-<inv_id>24</inv_id>
-<owner>Department</owner>
-<device_name>HGEN-DELL-Shared</device_name>
-<manufacturer>Dell</manufacturer>
-<model>Latitude E5450</model>
-<type>2</type>
-<ip_address>192.168.0.29</ip_address>
-<serial>JG7Z062</serial>
-<processor>Intel Core i5</processor>
-<ram>8</ram>
-<location>A300</location>
-<type_id>2</type_id>
-<type_desc>Laptop</type_desc>
-</device>
-<device>
-<inv_id>25</inv_id>
-<owner>Department</owner>
-<device_name>hgenlab-color-8</device_name>
-<manufacturer>HP</manufacturer>
-<model>Color LaserJet CP3525</model>
-<type>8</type>
-<ip_address>192.168.0.24</ip_address>
-<serial>JPCCC830LG</serial>
-<processor/>
-<ram/>
-<location>A300</location>
-<type_id>8</type_id>
-<type_desc>Printer</type_desc>
-</device>
-<device>
-<inv_id>26</inv_id>
-<owner>Department</owner>
-<device_name>hgenlab-8</device_name>
-<manufacturer>HP</manufacturer>
-<model>LaserJet P4515</model>
-<type>8</type>
-<ip_address>192.168.0.25</ip_address>
-<serial>CNDYC03704</serial>
-<processor/>
-<ram/>
-<location>A300</location>
-<type_id>8</type_id>
-<type_desc>Printer</type_desc>
-</device>
-<device>
-<inv_id>27</inv_id>
-<owner>Department</owner>
-<device_name>default</device_name>
-<manufacturer>HP</manufacturer>
-<model>Color LaserJet 4650</model>
-<type>8</type>
-<ip_address>192.168.0.26</ip_address>
-<serial>JPKAD52855</serial>
-<processor/>
-<ram/>
-<location>4000 Hallway</location>
-<type_id>8</type_id>
-<type_desc>Printer</type_desc>
-</device>
-<device>
-<inv_id>28</inv_id>
-<owner>Department</owner>
-<device_name>default</device_name>
-<manufacturer>HP</manufacturer>
-<model>LaserJet 4200</model>
-<type>8</type>
-<ip_address>192.168.0.27</ip_address>
-<serial>USGNN43092</serial>
-<processor/>
-<ram/>
-<location>4000 Hallway</location>
-<type_id>8</type_id>
-<type_desc>Printer</type_desc>
-</device>
-<device>
-<inv_id>29</inv_id>
-<owner>Department</owner>
-<device_name>aficio sp 5210sr</device_name>
-<manufacturer>Ricoh</manufacturer>
-<model>Aficio SP 5210SR</model>
-<type>8</type>
-<ip_address>192.168.0.23</ip_address>
-<serial>S9239600291</serial>
-<processor/>
-<ram>1</ram>
-<location>4000 Hallway</location>
-<type_id>8</type_id>
-<type_desc>Printer</type_desc>
-</device>
-<device>
-<inv_id>30</inv_id>
-<owner>Department</owner>
-<device_name>Sharp Copier</device_name>
-<manufacturer>Sharp</manufacturer>
-<model>SHARP MX-M363N</model>
-<type>8</type>
-<ip_address>192.168.0.30</ip_address>
-<serial>9501850500</serial>
-<processor/>
-<ram>1</ram>
-<location>A300</location>
-<type_id>8</type_id>
-<type_desc>Printer</type_desc>
-</device>
-<device>
-<inv_id>31</inv_id>
-<owner>Dietrich Stephan</owner>
-<device_name>hgen-stephan</device_name>
-<manufacturer>Lenovo</manufacturer>
-<model>ThinkPad X230</model>
-<type>2</type>
-<ip_address>192.168.0.31</ip_address>
-<serial>PK1D94K</serial>
-<processor>Intel Core i7-3520M 2.90GHz</processor>
-<ram>8</ram>
-<location>A718</location>
-<type_id>2</type_id>
-<type_desc>Laptop</type_desc>
-</device>
-<device>
-<inv_id>32</inv_id>
-<owner>Dietrich Stephan Lab</owner>
-<device_name>default</device_name>
-<manufacturer>MiSeq</manufacturer>
-<model/>
-<type>9</type>
-<ip_address>192.168.0.33</ip_address>
-<serial>123456789</serial>
-<processor>Intel Core i7</processor>
-<ram/>
-<location>A300</location>
-<type_id>9</type_id>
-<type_desc>Lab Equipment</type_desc>
-</device>
-<device>
-<inv_id>33</inv_id>
-<owner>Eleanor Feingold</owner>
-<device_name>feingold2</device_name>
-<manufacturer>Apple</manufacturer>
-<model>iMac</model>
-<type>1</type>
-<ip_address>192.168.0.34</ip_address>
-<serial>D25G90LXDHJV</serial>
-<processor>Intel Core i5 2.7 GHz</processor>
-<ram>4</ram>
-<location>638</location>
-<type_id>1</type_id>
-<type_desc>Workstation</type_desc>
-</device>
-<device>
-<inv_id>34</inv_id>
-<owner>Front Desk</owner>
-<device_name>hgen-ulab-146</device_name>
-<manufacturer>Dell</manufacturer>
-<model>OptiPlex 3010</model>
-<type>1</type>
-<ip_address>192.168.0.35</ip_address>
-<serial>CRZ4H02</serial>
-<processor>Intel Core i5-3470 3.20GHz</processor>
-<ram>4</ram>
-<location>A300</location>
-<type_id>1</type_id>
-<type_desc>Workstation</type_desc>
-</device>
-<device>
-<inv_id>35</inv_id>
-<owner>Ilyas Kamboh</owner>
-<device_name>Kamboh-MacBook</device_name>
-<manufacturer>Apple</manufacturer>
-<model>MacBook Pro</model>
-<type>2</type>
-<ip_address>192.168.0.37</ip_address>
-<serial>C02KQ04WFFRR</serial>
-<processor>Intel Core i7 3 GHz</processor>
-<ram>8</ram>
-<location>A311</location>
-<type_id>2</type_id>
-<type_desc>Laptop</type_desc>
-</device>
-<device>
-<inv_id>36</inv_id>
-<owner>Ilyas Kamboh</owner>
-<device_name>hgen-kamboh</device_name>
-<manufacturer>Dell</manufacturer>
-<model>OptiPlex 9020</model>
-<type>1</type>
-<ip_address>192.168.0.36</ip_address>
-<serial>1NC8K02</serial>
-<processor>Intel Core i7-4770 3.40GHz</processor>
-<ram>16</ram>
-<location>A311</location>
-<type_id>1</type_id>
-<type_desc>Workstation</type_desc>
-</device>
-<device>
-<inv_id>37</inv_id>
-<owner>Ilyas Kamboh</owner>
-<device_name>kambohoffice-8</device_name>
-<manufacturer>HP</manufacturer>
-<model>LaserJet 1320 series</model>
-<type>8</type>
-<ip_address>192.168.0.38</ip_address>
-<serial>CNBC48F2LF</serial>
-<processor/>
-<ram/>
-<location>A311</location>
-<type_id>8</type_id>
-<type_desc>Printer</type_desc>
-</device>
-<device>
-<inv_id>38</inv_id>
-<owner>Ilyas Kamboh Colleague</owner>
-<device_name>default</device_name>
-<manufacturer>Apple</manufacturer>
-<model>MacBook Pro</model>
-<type>2</type>
-<ip_address>192.168.0.39</ip_address>
-<serial>C02R36RGFVH5</serial>
-<processor>Intel Core i5</processor>
-<ram>8</ram>
-<location>A300</location>
-<type_id>2</type_id>
-<type_desc>Laptop</type_desc>
-</device>
-<device>
-<inv_id>39</inv_id>
-<owner>Ilyas Kamboh Lab</owner>
-<device_name>kamboh-lab-mac</device_name>
-<manufacturer>Apple</manufacturer>
-<model>iMac</model>
-<type>1</type>
-<ip_address>192.168.0.41</ip_address>
-<serial>QP7200PZVUY</serial>
-<processor>Intel Core 2 Duo 2 GHz</processor>
-<ram>2</ram>
-<location>3RD FLR ANNEX - 2AB WINDOW</location>
-<type_id>1</type_id>
-<type_desc>Workstation</type_desc>
-</device>
-<device>
-<inv_id>40</inv_id>
-<owner>Ilyas Kamboh Lab</owner>
-<device_name>Kamboh Lab 11</device_name>
-<manufacturer>Dell</manufacturer>
-<model>OptiPlex 9020</model>
-<type>1</type>
-<ip_address>192.168.0.40</ip_address>
-<serial>J63JGQ1</serial>
-<processor>Intel Core i7-4770 3.40GHz</processor>
-<ram>8</ram>
-<location>3RD FLR ANNEX - 2D</location>
-<type_id>1</type_id>
-<type_desc>Workstation</type_desc>
-</device>
-<device>
-<inv_id>41</inv_id>
-<owner>Ilyas Kamboh Lab</owner>
-<device_name>kamboh_lab_2-pc</device_name>
-<manufacturer>Dell</manufacturer>
-<model>OptiPlex 9020</model>
-<type>1</type>
-<ip_address>192.168.0.42</ip_address>
-<serial>7N87KM1</serial>
-<processor>Intel Core i7-4770 3.40GHz</processor>
-<ram>8</ram>
-<location>3RD FLR ANNEX - 2BC WINDOW</location>
-<type_id>1</type_id>
-<type_desc>Workstation</type_desc>
-</device>
-<device>
-<inv_id>42</inv_id>
-<owner>Ilyas Kamboh Lab</owner>
-<device_name>kambohlab-n-3</device_name>
-<manufacturer>Dell</manufacturer>
-<model>OptiPlex 9020</model>
-<type>1</type>
-<ip_address>192.168.0.43</ip_address>
-<serial>CZPV1R1</serial>
-<processor>Intel Core i7-4770 3.40GHz</processor>
-<ram>8</ram>
-<location>3RD FLR ANNEX - 2D</location>
-<type_id>1</type_id>
-<type_desc>Workstation</type_desc>
-</device>
-<device>
-<inv_id>43</inv_id>
-<owner>Ilyas Kamboh Lab</owner>
-<device_name>kamboh_lab_1-pc</device_name>
-<manufacturer>Dell</manufacturer>
-<model>OptiPlex 9020</model>
-<type>1</type>
-<ip_address>192.168.0.44</ip_address>
-<serial>7N88KM1</serial>
-<processor>Intel Core i7-4770 3.40GHz</processor>
-<ram>8</ram>
-<location>3RD FLR ANNEX - 2AB WINDOW</location>
-<type_id>1</type_id>
-<type_desc>Workstation</type_desc>
-</device>
-<device>
-<inv_id>44</inv_id>
-<owner>Ilyas Kamboh Lab</owner>
-<device_name>kambohlab-n-4</device_name>
-<manufacturer>Dell</manufacturer>
-<model>OptiPlex 9020</model>
-<type>1</type>
-<ip_address>192.168.0.45</ip_address>
-<serial>123456789</serial>
-<processor>Intel Core i7-4770 3.40GHz</processor>
-<ram>8</ram>
-<location>3RD FLR ANNEX - 2D</location>
-<type_id>1</type_id>
-<type_desc>Workstation</type_desc>
-</device>
-<device>
-<inv_id>45</inv_id>
-<owner>Ilyas Kamboh Lab</owner>
-<device_name>kambohlab-pc</device_name>
-<manufacturer>Dell</manufacturer>
-<model>OptiPlex 9020</model>
-<type>1</type>
-<ip_address>192.168.0.46</ip_address>
-<serial>123456789</serial>
-<processor>Intel Core i7-4770 3.40GHz</processor>
-<ram>8</ram>
-<location>3RD FLR ANNEX - 2BC WINDOW</location>
-<type_id>1</type_id>
-<type_desc>Workstation</type_desc>
-</device>
-<device>
-<inv_id>46</inv_id>
-<owner>Ilyas Kamboh Lab</owner>
-<device_name>Kamboh Lab 12</device_name>
-<manufacturer>Dell</manufacturer>
-<model>OptiPlex 9020</model>
-<type>1</type>
-<ip_address>192.168.0.47</ip_address>
-<serial>6S42Q31</serial>
-<processor>Intel Core i7-4770 3.40GHz</processor>
-<ram>8</ram>
-<location>3RD FLR ANNEX</location>
-<type_id>1</type_id>
-<type_desc>Workstation</type_desc>
-</device>
-<device>
-<inv_id>47</inv_id>
-<owner>Ilyas Kamboh Lab</owner>
-<device_name>kamboh_lab_n1</device_name>
-<manufacturer>Dell</manufacturer>
-<model>Optiplex 780</model>
-<type>1</type>
-<ip_address>192.168.0.48</ip_address>
-<serial>J63JGQ1</serial>
-<processor>Intel Core i7-4770 3.40GHz</processor>
-<ram>8</ram>
-<location>A300</location>
-<type_id>1</type_id>
-<type_desc>Workstation</type_desc>
-</device>
-<device>
-<inv_id>48</inv_id>
-<owner>Ilyas Kamboh Lab</owner>
-<device_name>kambohlab-8</device_name>
-<manufacturer>HP</manufacturer>
-<model>LaserJet P4014</model>
-<type>8</type>
-<ip_address>192.168.0.49</ip_address>
-<serial>JPDF008121</serial>
-<processor/>
-<ram/>
-<location>3RD FLR ANNEX - 2D</location>
-<type_id>8</type_id>
-<type_desc>Printer</type_desc>
-</device>
-<device>
-<inv_id>49</inv_id>
-<owner>Ilyas Kamboh Lab</owner>
-<device_name>kamboh-lab-8</device_name>
-<manufacturer>HP</manufacturer>
-<model>Color LaserJet CP4005</model>
-<type>8</type>
-<ip_address>192.168.0.50</ip_address>
-<serial>JPRLB58760</serial>
-<processor/>
-<ram/>
-<location>3RD FLR ANNEX - 2D</location>
-<type_id>8</type_id>
-<type_desc>Printer</type_desc>
-</device>
-<device>
-<inv_id>50</inv_id>
-<owner>IT</owner>
-<device_name>mobil4</device_name>
-<manufacturer>Apple</manufacturer>
-<model>AirPort</model>
-<type>4</type>
-<ip_address>192.168.0.53</ip_address>
-<serial>24AB81B82BB1</serial>
-<processor/>
-<ram>8</ram>
-<location>A725</location>
-<type_id>4</type_id>
-<type_desc>Router</type_desc>
-</device>
-<device>
-<inv_id>51</inv_id>
-<owner>IT</owner>
-<device_name>nucleus</device_name>
-<manufacturer>Apple</manufacturer>
-<model>Mac Pro</model>
-<type>1</type>
-<ip_address>192.168.0.54</ip_address>
-<serial>G88391BXXYL</serial>
-<processor>2x3.2GHz Quad-Core Intel Xeon</processor>
-<ram>16</ram>
-<location>A725</location>
-<type_id>1</type_id>
-<type_desc>Workstation</type_desc>
-</device>
-<device>
-<inv_id>52</inv_id>
-<owner>IT</owner>
-<device_name>duval</device_name>
-<manufacturer>Apple</manufacturer>
-<model>Mac Pro</model>
-<type>5</type>
-<ip_address>192.168.0.56</ip_address>
-<serial>G88391C1XYL</serial>
-<processor>Quad-Core Intel Xeon 3.2 GHz</processor>
-<ram>16</ram>
-<location>710</location>
-<type_id>5</type_id>
-<type_desc>Physical Server</type_desc>
-</device>
-<device>
-<inv_id>53</inv_id>
-<owner>IT</owner>
-<device_name>framingham</device_name>
-<manufacturer>Apple</manufacturer>
-<model>Mac Pro</model>
-<type>5</type>
-<ip_address>192.168.0.59</ip_address>
-<serial>H09302PU20H</serial>
-<processor>Quad-Core Intel Xeon 2.93 GHz</processor>
-<ram>32</ram>
-<location>5 Room</location>
-<type_id>5</type_id>
-<type_desc>Physical Server</type_desc>
-</device>
-<device>
-<inv_id>54</inv_id>
-<owner>IT</owner>
-<device_name>geneva</device_name>
-<manufacturer>Apple</manufacturer>
-<model>Xserve</model>
-<type>5</type>
-<ip_address>192.168.0.60</ip_address>
-<serial>H092927P6HS</serial>
-<processor>Quad-Core Intel Xeon 2.93 GHz</processor>
-<ram>24</ram>
-<location>5 Room</location>
-<type_id>5</type_id>
-<type_desc>Physical Server</type_desc>
-</device>
-<device>
-<inv_id>55</inv_id>
-<owner>IT</owner>
-<device_name>node3</device_name>
-<manufacturer>Apple</manufacturer>
-<model>Mac Pro</model>
-<type>5</type>
-<ip_address>192.168.0.65</ip_address>
-<serial>YM7520MN0GP</serial>
-<processor>Dual-Core Intel Xeon 3 GHz</processor>
-<ram>8</ram>
-<location>5 Room</location>
-<type_id>5</type_id>
-<type_desc>Physical Server</type_desc>
-</device>
-<device>
-<inv_id>56</inv_id>
-<owner>IT</owner>
-<device_name>gattaca</device_name>
-<manufacturer>Apple</manufacturer>
-<model>Mac Pro</model>
-<type>5</type>
-<ip_address>192.168.0.66</ip_address>
-<serial>G88391BWXYL</serial>
-<processor>Quad-Core Intel Xeon 3.2 GHz</processor>
-<ram>16</ram>
-<location>5 Room</location>
-<type_id>5</type_id>
-<type_desc>Physical Server</type_desc>
-</device>
-<device>
-<inv_id>57</inv_id>
-<owner>IT</owner>
-<device_name>HGEN-DeptMac-2</device_name>
-<manufacturer>Apple</manufacturer>
-<model>MacBook</model>
-<type>2</type>
-<ip_address>192.168.0.82</ip_address>
-<serial>4H63816DU9D</serial>
-<processor>Intel Core Duo 1.83 GHz</processor>
-<ram>1</ram>
-<location>A300</location>
-<type_id>2</type_id>
-<type_desc>Laptop</type_desc>
-</device>
-<device>
-<inv_id>58</inv_id>
-<owner>IT</owner>
-<device_name>Fisher</device_name>
-<manufacturer>Apple</manufacturer>
-<model>Mini</model>
-<type>5</type>
-<ip_address>192.168.0.89</ip_address>
-<serial>C07MP09HDY3J</serial>
-<processor>Intel Core i7</processor>
-<ram>8</ram>
-<location>5 Room</location>
-<type_id>5</type_id>
-<type_desc>Physical Server</type_desc>
-</device>
-<device>
-<inv_id>59</inv_id>
-<owner>IT</owner>
-<device_name>Zabbix</device_name>
-<manufacturer>Apple</manufacturer>
-<model>Mac Pro</model>
-<type>5</type>
-<ip_address>192.168.0.90</ip_address>
-<serial>123456789</serial>
-<processor>Intel Core i7-4770 3.40GHz</processor>
-<ram>16</ram>
-<location>A300</location>
-<type_id>5</type_id>
-<type_desc>Physical Server</type_desc>
-</device>
-<device>
-<inv_id>60</inv_id>
-<owner>IT</owner>
-<device_name>Test 3 1</device_name>
-<manufacturer>Asante Tech</manufacturer>
-<model>GX5-2400W</model>
-<type>3</type>
-<ip_address>192.168.0.51</ip_address>
-<serial>94D4308F</serial>
-<processor/>
-<ram/>
-<location>A725</location>
-<type_id>3</type_id>
-<type_desc>Switch</type_desc>
-</device>
-<device>
-<inv_id>61</inv_id>
-<owner>IT</owner>
-<device_name>Test 3 2</device_name>
-<manufacturer>Asante Tech</manufacturer>
-<model>GX5-2400W</model>
-<type>3</type>
-<ip_address>192.168.0.52</ip_address>
-<serial>94D42FEF</serial>
-<processor/>
-<ram/>
-<location>A725</location>
-<type_id>3</type_id>
-<type_desc>Switch</type_desc>
-</device>
-<device>
-<inv_id>62</inv_id>
-<owner>IT</owner>
-<device_name>Secure 5 3</device_name>
-<manufacturer>Asante Tech</manufacturer>
-<model>GX5-2400W</model>
-<type>3</type>
-<ip_address>192.168.0.81</ip_address>
-<serial>94D42FF8</serial>
-<processor/>
-<ram/>
-<location>5 Room</location>
-<type_id>3</type_id>
-<type_desc>Switch</type_desc>
-</device>
-<device>
-<inv_id>63</inv_id>
-<owner>IT</owner>
-<device_name>xylene</device_name>
-<manufacturer>ASUSTeK Computer</manufacturer>
-<model>Z9PR-D12 Series</model>
-<type>6</type>
-<ip_address>192.168.0.68</ip_address>
-<serial>10BF481FADD9</serial>
-<processor>Intel Xeon E5-2620 0 2.00GHz</processor>
-<ram>64</ram>
-<location>5 Room</location>
-<type_id>6</type_id>
-<type_desc>Virtual Server</type_desc>
-</device>
-<device>
-<inv_id>64</inv_id>
-<owner>IT</owner>
-<device_name>pyroxene</device_name>
-<manufacturer>ASUSTeK Computer</manufacturer>
-<model>Z9PR-D12 Series</model>
-<type>5</type>
-<ip_address>192.168.0.69</ip_address>
-<serial>10BF481FAE97</serial>
-<processor>Intel Xeon E5-2620 0 2.00GHz</processor>
-<ram>64</ram>
-<location>5 Room</location>
-<type_id>5</type_id>
-<type_desc>Physical Server</type_desc>
-</device>
-<device>
-<inv_id>65</inv_id>
-<owner>IT</owner>
-<device_name>acetate</device_name>
-<manufacturer>ASUSTeK Computer</manufacturer>
-<model>Z9PR-D12 Series</model>
-<type>5</type>
-<ip_address>192.168.0.71</ip_address>
-<serial>10BF481FAF59</serial>
-<processor>Intel Xeon E5-2620 0 2.00GHz</processor>
-<ram>64</ram>
-<location>5 Room</location>
-<type_id>5</type_id>
-<type_desc>Physical Server</type_desc>
-</device>
-<device>
-<inv_id>66</inv_id>
-<owner>IT</owner>
-<device_name>benzene</device_name>
-<manufacturer>ASUSTeK Computer</manufacturer>
-<model>Z9PR-D12 Series</model>
-<type>5</type>
-<ip_address>192.168.0.80</ip_address>
-<serial>123456789</serial>
-<processor>Intel Xeon E5-2620 0 2.00GHz</processor>
-<ram>64</ram>
-<location>5 Room</location>
-<type_id>5</type_id>
-<type_desc>Physical Server</type_desc>
-</device>
-<device>
-<inv_id>67</inv_id>
-<owner>IT</owner>
-<device_name>hgen-spwrks-2</device_name>
-<manufacturer>Dell</manufacturer>
-<model>Inspiron 530</model>
-<type>1</type>
-<ip_address>192.168.0.57</ip_address>
-<serial>4P997F1</serial>
-<processor>Intel Core2 6420 2.13GHz</processor>
-<ram>4</ram>
-<location>626B</location>
-<type_id>1</type_id>
-<type_desc>Workstation</type_desc>
-</device>
-<device>
-<inv_id>68</inv_id>
-<owner>IT</owner>
-<device_name>node1</device_name>
-<manufacturer>Dell</manufacturer>
-<model>PowerEdge R300</model>
-<type>5</type>
-<ip_address>192.168.0.67</ip_address>
-<serial>1L83QG1</serial>
-<processor>Intel Xeon X5460 3.16GHz</processor>
-<ram>3</ram>
-<location>5 Room</location>
-<type_id>5</type_id>
-<type_desc>Physical Server</type_desc>
-</device>
-<device>
-<inv_id>69</inv_id>
-<owner>IT</owner>
-<device_name>thorium</device_name>
-<manufacturer>Dell</manufacturer>
-<model>PowerEdge T300</model>
-<type>5</type>
-<ip_address>192.168.0.73</ip_address>
-<serial>C33XLG1</serial>
-<processor>Intel Xeon X3323 2.50GHz</processor>
-<ram>4</ram>
-<location>5 Room</location>
-<type_id>5</type_id>
-<type_desc>Physical Server</type_desc>
-</device>
-<device>
-<inv_id>70</inv_id>
-<owner>IT</owner>
-<device_name>hgen-cr-a312</device_name>
-<manufacturer>Dell</manufacturer>
-<model>OptiPlex 9020</model>
-<type>1</type>
-<ip_address>192.168.0.83</ip_address>
-<serial>96H89Z1</serial>
-<processor>Intel Core i7-4770 3.40GHz</processor>
-<ram>8</ram>
-<location>A312</location>
-<type_id>1</type_id>
-<type_desc>Workstation</type_desc>
-</device>
-<device>
-<inv_id>71</inv_id>
-<owner>IT</owner>
-<device_name>IDM-SpiceWorks</device_name>
-<manufacturer>Dell</manufacturer>
-<model>OptiPlex 990</model>
-<type>1</type>
-<ip_address>192.168.0.84</ip_address>
-<serial>BYX0NS1</serial>
-<processor>Intel Core i5-2500 3.30GHz</processor>
-<ram>8</ram>
-<location>A725</location>
-<type_id>1</type_id>
-<type_desc>Workstation</type_desc>
-</device>
-<device>
-<inv_id>72</inv_id>
-<owner>IT</owner>
-<device_name>HGEN-DellAD</device_name>
-<manufacturer>Dell</manufacturer>
-<model>OptiPlex 3010</model>
-<type>1</type>
-<ip_address>192.168.0.85</ip_address>
-<serial>5S7WDZ1</serial>
-<processor>Intel Core i3-3240 3.40GHz</processor>
-<ram>4</ram>
-<location>A310A</location>
-<type_id>1</type_id>
-<type_desc>Workstation</type_desc>
-</device>
-<device>
-<inv_id>73</inv_id>
-<owner>IT</owner>
-<device_name>HGEN-Backup1</device_name>
-<manufacturer>Dell</manufacturer>
-<model>Precision T1700</model>
-<type>5</type>
-<ip_address>192.168.0.87</ip_address>
-<serial>49XKQ22</serial>
-<processor>Intel Xeon E3-1245</processor>
-<ram>16</ram>
-<location>5 Room</location>
-<type_id>5</type_id>
-<type_desc>Physical Server</type_desc>
-</device>
-<device>
-<inv_id>74</inv_id>
-<owner>IT</owner>
-<device_name>HGEN-Backup2</device_name>
-<manufacturer>Dell</manufacturer>
-<model>Precision T1700</model>
-<type>5</type>
-<ip_address>192.168.0.88</ip_address>
-<serial>49XJQ22</serial>
-<processor>Intel Xeon E3-1245</processor>
-<ram>16</ram>
-<location>Deans IT</location>
-<type_id>5</type_id>
-<type_desc>Physical Server</type_desc>
-</device>
-<device>
-<inv_id>75</inv_id>
-<owner>IT</owner>
-<device_name>it-8</device_name>
-<manufacturer>HP</manufacturer>
-<model>LaserJet 4200</model>
-<type>8</type>
-<ip_address>192.168.0.86</ip_address>
-<serial>USGNN43092</serial>
-<processor/>
-<ram/>
-<location>A725</location>
-<type_id>8</type_id>
-<type_desc>Printer</type_desc>
-</device>
-<device>
-<inv_id>76</inv_id>
-<owner>IT</owner>
-<device_name>hgen-display</device_name>
-<manufacturer>NEC</manufacturer>
-<model/>
-<type>1</type>
-<ip_address>192.168.0.55</ip_address>
-<serial>f1f31c3327</serial>
-<processor>AMD G-T56N</processor>
-<ram>2</ram>
-<location>A300</location>
-<type_id>1</type_id>
-<type_desc>Workstation</type_desc>
-</device>
-<device>
-<inv_id>77</inv_id>
-<owner>IT</owner>
-<device_name>Node1 Storage</device_name>
-<manufacturer>Promise Tech</manufacturer>
-<model/>
-<type>7</type>
-<ip_address>192.168.0.79</ip_address>
-<serial>1554058FC</serial>
-<processor/>
-<ram>16</ram>
-<location>5 Room</location>
-<type_id>7</type_id>
-<type_desc>RAID Storage</type_desc>
-</device>
-<device>
-<inv_id>78</inv_id>
-<owner>IT</owner>
-<device_name>Magnesium</device_name>
-<manufacturer>Xen</manufacturer>
-<model/>
-<type>6</type>
-<ip_address>192.168.0.58</ip_address>
-<serial>123456789</serial>
-<processor/>
-<ram>16</ram>
-<location>VM</location>
-<type_id>6</type_id>
-<type_desc>Virtual Server</type_desc>
-</device>
-<device>
-<inv_id>79</inv_id>
-<owner>IT</owner>
-<device_name>naps2</device_name>
-<manufacturer>Xen</manufacturer>
-<model/>
-<type>6</type>
-<ip_address>192.168.0.61</ip_address>
-<serial>123456789</serial>
-<processor>Intel Xeon E5-2620 0 2.00GHz</processor>
-<ram>1</ram>
-<location>VM</location>
-<type_id>6</type_id>
-<type_desc>Virtual Server</type_desc>
-</device>
-<device>
-<inv_id>80</inv_id>
-<owner>IT</owner>
-<device_name>Ketone</device_name>
-<manufacturer>Xen</manufacturer>
-<model/>
-<type>6</type>
-<ip_address>192.168.0.62</ip_address>
-<serial>123456789</serial>
-<processor/>
-<ram>4</ram>
-<location>VM</location>
-<type_id>6</type_id>
-<type_desc>Virtual Server</type_desc>
-</device>
-<device>
-<inv_id>81</inv_id>
-<owner>IT</owner>
-<device_name>sybase</device_name>
-<manufacturer>Xen</manufacturer>
-<model/>
-<type>6</type>
-<ip_address>192.168.0.63</ip_address>
-<serial>123456789</serial>
-<processor>Intel Xeon E5-2620 0 2.00GHz</processor>
-<ram>9</ram>
-<location>VM</location>
-<type_id>6</type_id>
-<type_desc>Virtual Server</type_desc>
-</device>
-<device>
-<inv_id>82</inv_id>
-<owner>IT</owner>
-<device_name>Acetylene</device_name>
-<manufacturer>Xen</manufacturer>
-<model/>
-<type>6</type>
-<ip_address>192.168.0.64</ip_address>
-<serial>123456789</serial>
-<processor/>
-<ram>4</ram>
-<location>VM</location>
-<type_id>6</type_id>
-<type_desc>Virtual Server</type_desc>
-</device>
-<device>
-<inv_id>83</inv_id>
-<owner>IT</owner>
-<device_name>logan</device_name>
-<manufacturer>Xen</manufacturer>
-<model/>
-<type>6</type>
-<ip_address>192.168.0.70</ip_address>
-<serial>A659612FE40</serial>
-<processor>Intel Xeon E5-2620 0 2.00GHz</processor>
-<ram>6</ram>
-<location>VM</location>
-<type_id>6</type_id>
-<type_desc>Virtual Server</type_desc>
-</device>
-<device>
-<inv_id>84</inv_id>
-<owner>IT</owner>
-<device_name>titanium</device_name>
-<manufacturer>Xen</manufacturer>
-<model/>
-<type>6</type>
-<ip_address>192.168.0.72</ip_address>
-<serial>123456789</serial>
-<processor>Intel Xeon E5-2620 0 2.00GHz</processor>
-<ram>6</ram>
-<location>VM</location>
-<type_id>6</type_id>
-<type_desc>Virtual Server</type_desc>
-</device>
-<device>
-<inv_id>85</inv_id>
-<owner>IT</owner>
-<device_name>barium</device_name>
-<manufacturer>Xen</manufacturer>
-<model/>
-<type>6</type>
-<ip_address>192.168.0.74</ip_address>
-<serial>123456789</serial>
-<processor>Intel Xeon E5-2620 0 2.00GHz</processor>
-<ram>6</ram>
-<location>VM</location>
-<type_id>6</type_id>
-<type_desc>Virtual Server</type_desc>
-</device>
-<device>
-<inv_id>86</inv_id>
-<owner>IT</owner>
-<device_name>cutislaxa</device_name>
-<manufacturer>Xen</manufacturer>
-<model/>
-<type>6</type>
-<ip_address>192.168.0.75</ip_address>
-<serial>123456789</serial>
-<processor>Intel Xeon E5-2620 0 2.00GHz</processor>
-<ram>4</ram>
-<location>VM</location>
-<type_id>6</type_id>
-<type_desc>Virtual Server</type_desc>
-</device>
-<device>
-<inv_id>87</inv_id>
-<owner>IT</owner>
-<device_name>Progeny</device_name>
-<manufacturer>Xen</manufacturer>
-<model/>
-<type>6</type>
-<ip_address>192.168.0.76</ip_address>
-<serial>123456789</serial>
-<processor/>
-<ram>4</ram>
-<location>VM</location>
-<type_id>6</type_id>
-<type_desc>Virtual Server</type_desc>
-</device>
-<device>
-<inv_id>88</inv_id>
-<owner>IT</owner>
-<device_name>Progeny</device_name>
-<manufacturer>Xen</manufacturer>
-<model/>
-<type>6</type>
-<ip_address>192.168.0.77</ip_address>
-<serial>123456789</serial>
-<processor>Intel Xeon E5-2620 0 2.00GHz</processor>
-<ram>4</ram>
-<location>VM</location>
-<type_id>6</type_id>
-<type_desc>Virtual Server</type_desc>
-</device>
-<device>
-<inv_id>89</inv_id>
-<owner>IT</owner>
-<device_name>Forrest</device_name>
-<manufacturer>Xen</manufacturer>
-<model/>
-<type>6</type>
-<ip_address>192.168.0.78</ip_address>
-<serial>123456789</serial>
-<processor/>
-<ram>4</ram>
-<location>VM</location>
-<type_id>6</type_id>
-<type_desc>Virtual Server</type_desc>
-</device>
-<device>
-<inv_id>90</inv_id>
-<owner>Jen Heinemann</owner>
-<device_name>hgen-jen</device_name>
-<manufacturer>Dell</manufacturer>
-<model>Latitude E6440</model>
-<type>2</type>
-<ip_address>192.168.0.91</ip_address>
-<serial>DS8YTY1</serial>
-<processor>Intel Core i7-4600M 2.90GHz</processor>
-<ram>8</ram>
-<location>A300</location>
-<type_id>2</type_id>
-<type_desc>Laptop</type_desc>
-</device>
-<device>
-<inv_id>91</inv_id>
-<owner>Jessica Roberts</owner>
-<device_name>HGEN-WKS-188</device_name>
-<manufacturer>Dell</manufacturer>
-<model>OptiPlex 7010</model>
-<type>1</type>
-<ip_address>192.168.0.92</ip_address>
-<serial>B156ZV1</serial>
-<processor>Intel Core i7-3770S 3.10GHz</processor>
-<ram>16</ram>
-<location>A310A</location>
-<type_id>1</type_id>
-<type_desc>Workstation</type_desc>
-</device>
-<device>
-<inv_id>92</inv_id>
-<owner>Jessica Roberts</owner>
-<device_name>HGEN-LT-Asst</device_name>
-<manufacturer>Dell</manufacturer>
-<model>Lattitude E6330</model>
-<type>2</type>
-<ip_address>192.168.0.93</ip_address>
-<serial>FSK8TZ1</serial>
-<processor>Intel Core i7</processor>
-<ram>8</ram>
-<location>A310A</location>
-<type_id>2</type_id>
-<type_desc>Laptop</type_desc>
-</device>
-<device>
-<inv_id>93</inv_id>
-<owner>John Shaffer</owner>
-<device_name>john-pc</device_name>
-<manufacturer>Dell</manufacturer>
-<model>OptiPlex 390</model>
-<type>1</type>
-<ip_address>192.168.0.94</ip_address>
-<serial>HCFGJQ1</serial>
-<processor>Intel Core i3-2100 3.10GHz</processor>
-<ram>8</ram>
-<location>A739?</location>
-<type_id>1</type_id>
-<type_desc>Workstation</type_desc>
-</device>
-<device>
-<inv_id>94</inv_id>
-<owner>Kammerer - Jatinder</owner>
-<device_name>HGEN-LT-Jatinder</device_name>
-<manufacturer>Apple</manufacturer>
-<model>MacBook Pro</model>
-<type>2</type>
-<ip_address>192.168.0.95</ip_address>
-<serial>C02Q60DNG8WL</serial>
-<processor>Intel Core i7</processor>
-<ram>16</ram>
-<location>4TH FLR ANNEX - Cube</location>
-<type_id>2</type_id>
-<type_desc>Laptop</type_desc>
-</device>
-<device>
-<inv_id>95</inv_id>
-<owner>Michael Barmada</owner>
-<device_name>obelix</device_name>
-<manufacturer>Apple</manufacturer>
-<model>Mac Pro</model>
-<type>1</type>
-<ip_address>192.168.0.96</ip_address>
-<serial>123456789</serial>
-<processor>Intel Core i7-4770 3.40GHz</processor>
-<ram>32</ram>
-<location>4010A</location>
-<type_id>1</type_id>
-<type_desc>Workstation</type_desc>
-</device>
-<device>
-<inv_id>96</inv_id>
-<owner>Michael Singer</owner>
-<device_name>it-dell-9010</device_name>
-<manufacturer>Dell</manufacturer>
-<model>OptiPlex 9010</model>
-<type>1</type>
-<ip_address>192.168.0.97</ip_address>
-<serial>6BY3SW1</serial>
-<processor>Intel Core i7-3770 3.40GHz</processor>
-<ram>8</ram>
-<location>A725</location>
-<type_id>1</type_id>
-<type_desc>Workstation</type_desc>
-</device>
-<device>
-<inv_id>97</inv_id>
-<owner>Mike Singer</owner>
-<device_name>sensaphone</device_name>
-<manufacturer>Apple</manufacturer>
-<model>Mac Pro</model>
-<type>1</type>
-<ip_address>192.168.0.98</ip_address>
-<serial>F5KMN0K2F9VN</serial>
-<processor>Quad-Core Intel Xeon E5</processor>
-<ram>32</ram>
-<location>A725 Crabtree</location>
-<type_id>1</type_id>
-<type_desc>Workstation</type_desc>
-</device>
-<device>
-<inv_id>98</inv_id>
-<owner>Noel Harrie</owner>
-<device_name>noel-pc</device_name>
-<manufacturer>Dell</manufacturer>
-<model>OptiPlex 790</model>
-<type>1</type>
-<ip_address>192.168.0.99</ip_address>
-<serial>BQFHTV1</serial>
-<processor>Intel Core i5-2400 3.10GHz</processor>
-<ram>16</ram>
-<location>A302</location>
-<type_id>1</type_id>
-<type_desc>Workstation</type_desc>
-</device>
-<device>
-<inv_id>99</inv_id>
-<owner>Padiath Lab</owner>
-<device_name>hgen-plab-224</device_name>
-<manufacturer>Dell</manufacturer>
-<model>OptiPlex 780</model>
-<type>1</type>
-<ip_address>192.168.0.100</ip_address>
-<serial>7Q6KFQ1</serial>
-<processor>Intel Core2 Duo E7500 2.93GHz</processor>
-<ram>4</ram>
-<location>3RD FLR ANNEX - 5AB WINDOW</location>
-<type_id>1</type_id>
-<type_desc>Workstation</type_desc>
-</device>
-<device>
-<inv_id>100</inv_id>
-<owner>Padiath Lab</owner>
-<device_name>hgen-plab-230</device_name>
-<manufacturer>Dell</manufacturer>
-<model>OptiPlex 3010</model>
-<type>1</type>
-<ip_address>192.168.0.101</ip_address>
-<serial>66JFXV1</serial>
-<processor>Intel Core i5-3470 3.20GHz</processor>
-<ram>6</ram>
-<location>3RD FLR ANNEX - 5CB WINDOW</location>
-<type_id>1</type_id>
-<type_desc>Workstation</type_desc>
-</device>
-<device>
-<inv_id>101</inv_id>
-<owner>Quasar Padiath</owner>
-<device_name>HGEN-Padiath</device_name>
-<manufacturer>Apple</manufacturer>
-<model>iMac</model>
-<type>1</type>
-<ip_address>192.168.0.102</ip_address>
-<serial>QP0520X0DNN</serial>
-<processor>Intel Core i3 3.2 GHz</processor>
-<ram>12</ram>
-<location>4060G</location>
-<type_id>1</type_id>
-<type_desc>Workstation</type_desc>
-</device>
-<device>
-<inv_id>102</inv_id>
-<owner>Robert Baron</owner>
-<device_name>anagenesis</device_name>
-<manufacturer>Apple</manufacturer>
-<model>iMac</model>
-<type>1</type>
-<ip_address>192.168.0.103</ip_address>
-<serial>26BB6828A0</serial>
-<processor>Intel Core i7-4770 3.40GHz</processor>
-<ram>8</ram>
-<location>A218</location>
-<type_id>1</type_id>
-<type_desc>Workstation</type_desc>
-</device>
-<device>
-<inv_id>103</inv_id>
-<owner>Robert Ferrell</owner>
-<device_name>hgen-ferrell140</device_name>
-<manufacturer>Dell</manufacturer>
-<model>OptiPlex 7010</model>
-<type>1</type>
-<ip_address>192.168.0.104</ip_address>
-<serial>CNNQNW1</serial>
-<processor>Intel Core i7-3770 3.40GHz</processor>
-<ram>6</ram>
-<location>A304</location>
-<type_id>1</type_id>
-<type_desc>Workstation</type_desc>
-</device>
-<device>
-<inv_id>104</inv_id>
-<owner>Robert Ferrell Lab</owner>
-<device_name>Ferrell HP1320</device_name>
-<manufacturer>HP</manufacturer>
-<model>LaserJet 1320 series</model>
-<type>8</type>
-<ip_address>192.168.0.105</ip_address>
-<serial>1185D65B2D</serial>
-<processor/>
-<ram/>
-<location>3RD FLR ANNEX - 5CD WINDOW</location>
-<type_id>8</type_id>
-<type_desc>Printer</type_desc>
-</device>
-<device>
-<inv_id>105</inv_id>
-<owner>Robert Ferrell Lab</owner>
-<device_name>ferrell-lab-color-8</device_name>
-<manufacturer>HP</manufacturer>
-<model>Color LaserJet 3600</model>
-<type>8</type>
-<ip_address>192.168.0.106</ip_address>
-<serial>CNWBF18611</serial>
-<processor/>
-<ram/>
-<location>3RD FLR ANNEX - 5CD WINDOW</location>
-<type_id>8</type_id>
-<type_desc>Printer</type_desc>
-</device>
-<device>
-<inv_id>106</inv_id>
-<owner>Robin Grubs</owner>
-<device_name>grubs</device_name>
-<manufacturer>Dell</manufacturer>
-<model>Latitude E6330</model>
-<type>2</type>
-<ip_address>192.168.0.107</ip_address>
-<serial>G56YYW1</serial>
-<processor>Intel Core i7-3520M 2.90GHz</processor>
-<ram>16</ram>
-<location>A305</location>
-<type_id>2</type_id>
-<type_desc>Laptop</type_desc>
-</device>
-<device>
-<inv_id>107</inv_id>
-<owner>Roman Lab</owner>
-<device_name>HGEN-Rlab-3</device_name>
-<manufacturer>Apple</manufacturer>
-<model>iMac</model>
-<type>1</type>
-<ip_address>192.168.0.108</ip_address>
-<serial>W87491ECX88</serial>
-<processor>Intel Core i7-4770 3.40GHz</processor>
-<ram>8</ram>
-<location>A300</location>
-<type_id>1</type_id>
-<type_desc>Workstation</type_desc>
-</device>
-<device>
-<inv_id>108</inv_id>
-<owner>Ryan Evans</owner>
-<device_name>methyl</device_name>
-<manufacturer>Apple</manufacturer>
-<model>Mac Pro</model>
-<type>1</type>
-<ip_address>192.168.0.109</ip_address>
-<serial>123456789</serial>
-<processor>Intel Core i7-4770 3.40GHz</processor>
-<ram>32</ram>
-<location>A725</location>
-<type_id>1</type_id>
-<type_desc>Workstation</type_desc>
-</device>
-<device>
-<inv_id>109</inv_id>
-<owner>Ryan Minster</owner>
-<device_name>rminster</device_name>
-<manufacturer>Apple</manufacturer>
-<model>iMac</model>
-<type>1</type>
-<ip_address>192.168.0.110</ip_address>
-<serial>D25GX0ENDHJV</serial>
-<processor>Intel Core i5 2.7 GHz</processor>
-<ram>16</ram>
-<location>728</location>
-<type_id>1</type_id>
-<type_desc>Workstation</type_desc>
-</device>
-<device>
-<inv_id>110</inv_id>
-<owner>Ryan Minster</owner>
-<device_name>default</device_name>
-<manufacturer>Apple</manufacturer>
-<model>MacBook Pro</model>
-<type>2</type>
-<ip_address>192.168.0.111</ip_address>
-<serial>C02PQ701G8WM</serial>
-<processor>Intel Core i7</processor>
-<ram>16</ram>
-<location>A302</location>
-<type_id>2</type_id>
-<type_desc>Laptop</type_desc>
-</device>
-<device>
-<inv_id>111</inv_id>
-<owner>Spare</owner>
-<device_name>default</device_name>
-<manufacturer>Apple</manufacturer>
-<model>Mac Pro</model>
-<type>1</type>
-<ip_address>192.168.0.112</ip_address>
-<serial>G87120MGUPZ</serial>
-<processor>Dual-Core Intel Xeon 2.66 GHz</processor>
-<ram>14</ram>
-<location>A300</location>
-<type_id>1</type_id>
-<type_desc>Workstation</type_desc>
-</device>
-<device>
-<inv_id>112</inv_id>
-<owner>Stephan Lab</owner>
-<device_name>HGEN-SLAB-151</device_name>
-<manufacturer>Dell</manufacturer>
-<model>Optiplex 9020</model>
-<type>1</type>
-<ip_address>192.168.0.113</ip_address>
-<serial>JNV1M02</serial>
-<processor>Intel Core i7-4770 3.40GHz</processor>
-<ram>8</ram>
-<location>3rd FLR ANNEX</location>
-<type_id>1</type_id>
-<type_desc>Workstation</type_desc>
-</device>
-<device>
-<inv_id>113</inv_id>
-<owner>students</owner>
-<device_name>HGEN-MacLab-01</device_name>
-<manufacturer>Apple</manufacturer>
-<model>MacBook Pro</model>
-<type>2</type>
-<ip_address>192.168.0.114</ip_address>
-<serial>C1MKLBDMDTY3</serial>
-<processor>Intel Core i5 2.5 GHz</processor>
-<ram>4</ram>
-<location>A312</location>
-<type_id>2</type_id>
-<type_desc>Laptop</type_desc>
-</device>
-<device>
-<inv_id>114</inv_id>
-<owner>students</owner>
-<device_name>HGEN-MacLab-02</device_name>
-<manufacturer>Apple</manufacturer>
-<model>MacBook Pro</model>
-<type>2</type>
-<ip_address>192.168.0.115</ip_address>
-<serial>C1MKLBAQDTY3</serial>
-<processor>Intel Core i5 2.5 GHz</processor>
-<ram>4</ram>
-<location>A312</location>
-<type_id>2</type_id>
-<type_desc>Laptop</type_desc>
-</device>
-<device>
-<inv_id>115</inv_id>
-<owner>students</owner>
-<device_name>HGEN-MacLab-03</device_name>
-<manufacturer>Apple</manufacturer>
-<model>MacBook Pro</model>
-<type>2</type>
-<ip_address>192.168.0.116</ip_address>
-<serial>C1MKLB9QDTY3</serial>
-<processor>Intel Core i5 2.5 GHz</processor>
-<ram>4</ram>
-<location>A312</location>
-<type_id>2</type_id>
-<type_desc>Laptop</type_desc>
-</device>
-<device>
-<inv_id>116</inv_id>
-<owner>students</owner>
-<device_name>HGEN-MacLab-04</device_name>
-<manufacturer>Apple</manufacturer>
-<model>MacBook Pro</model>
-<type>2</type>
-<ip_address>192.168.0.117</ip_address>
-<serial>C1MKLBBMDTY3</serial>
-<processor>Intel Core i5 2.5 GHz</processor>
-<ram>4</ram>
-<location>A312</location>
-<type_id>2</type_id>
-<type_desc>Laptop</type_desc>
-</device>
-<device>
-<inv_id>117</inv_id>
-<owner>students</owner>
-<device_name>HGEN-MacLab-06</device_name>
-<manufacturer>Apple</manufacturer>
-<model>MacBook Pro</model>
-<type>2</type>
-<ip_address>192.168.0.118</ip_address>
-<serial>CPWKJ0SMDTY3</serial>
-<processor>Intel Core i5 2.5 GHz</processor>
-<ram>4</ram>
-<location>A312</location>
-<type_id>2</type_id>
-<type_desc>Laptop</type_desc>
-</device>
-<device>
-<inv_id>118</inv_id>
-<owner>students</owner>
-<device_name>HGEN-MacLab-07</device_name>
-<manufacturer>Apple</manufacturer>
-<model>MacBook Pro</model>
-<type>2</type>
-<ip_address>192.168.0.119</ip_address>
-<serial>CPWKJ1KADTY3</serial>
-<processor>Intel Core i5 2.5 GHz</processor>
-<ram>4</ram>
-<location>A312</location>
-<type_id>2</type_id>
-<type_desc>Laptop</type_desc>
-</device>
-<device>
-<inv_id>119</inv_id>
-<owner>students</owner>
-<device_name>HGEN-MacLab-08</device_name>
-<manufacturer>Apple</manufacturer>
-<model>MacBook Pro</model>
-<type>2</type>
-<ip_address>192.168.0.120</ip_address>
-<serial>CPWKJ1LYDTY3</serial>
-<processor>Intel Core i5 2.5 GHz</processor>
-<ram>4</ram>
-<location>A312</location>
-<type_id>2</type_id>
-<type_desc>Laptop</type_desc>
-</device>
-<device>
-<inv_id>120</inv_id>
-<owner>students</owner>
-<device_name>HGEN-MacLab-09</device_name>
-<manufacturer>Apple</manufacturer>
-<model>MacBook</model>
-<type>2</type>
-<ip_address>192.168.0.121</ip_address>
-<serial>W801404FFYT</serial>
-<processor>Intel Core 2 Duo 2.26 GHz</processor>
-<ram>4</ram>
-<location>A312</location>
-<type_id>2</type_id>
-<type_desc>Laptop</type_desc>
-</device>
-<device>
-<inv_id>121</inv_id>
-<owner>students</owner>
-<device_name>HGEN-MacLab-10</device_name>
-<manufacturer>Apple</manufacturer>
-<model>MacBook</model>
-<type>2</type>
-<ip_address>192.168.0.122</ip_address>
-<serial>W801404BFYT</serial>
-<processor>Intel Core 2 Duo 2.26 GHz</processor>
-<ram>4</ram>
-<location>A312</location>
-<type_id>2</type_id>
-<type_desc>Laptop</type_desc>
-</device>
-<device>
-<inv_id>122</inv_id>
-<owner>students</owner>
-<device_name>HGEN-MacLab-12</device_name>
-<manufacturer>Apple</manufacturer>
-<model>MacBook</model>
-<type>2</type>
-<ip_address>192.168.0.123</ip_address>
-<serial>W801404CFYT</serial>
-<processor>Intel Core 2 Duo 2.26 GHz</processor>
-<ram>4</ram>
-<location>A312</location>
-<type_id>2</type_id>
-<type_desc>Laptop</type_desc>
-</device>
-<device>
-<inv_id>123</inv_id>
-<owner>students</owner>
-<device_name>HGEN-MacLab-05</device_name>
-<manufacturer>Apple</manufacturer>
-<model>MacBook Pro</model>
-<type>2</type>
-<ip_address>192.168.0.124</ip_address>
-<serial>C1MKLBCGDTY3</serial>
-<processor>Intel Core i5 2.5 GHz</processor>
-<ram>4</ram>
-<location>A312</location>
-<type_id>2</type_id>
-<type_desc>Laptop</type_desc>
-</device>
-<device>
-<inv_id>124</inv_id>
-<owner>students</owner>
-<device_name>HGEN-MacLab-11</device_name>
-<manufacturer>Apple</manufacturer>
-<model>MacBook</model>
-<type>2</type>
-<ip_address>192.168.0.125</ip_address>
-<serial>W801404DFYT</serial>
-<processor>Intel Core 2 Duo 2.26 GHz</processor>
-<ram>4</ram>
-<location>A312</location>
-<type_id>2</type_id>
-<type_desc>Laptop</type_desc>
-</device>
-<device>
-<inv_id>125</inv_id>
-<owner>Susanne Gollin</owner>
-<device_name>gollin</device_name>
-<manufacturer>Apple</manufacturer>
-<model>iMac</model>
-<type>1</type>
-<ip_address>192.168.0.126</ip_address>
-<serial>22412BD4F2</serial>
-<processor>Intel Core i5 2.9 GHz</processor>
-<ram>8</ram>
-<location>4008</location>
-<type_id>1</type_id>
-<type_desc>Workstation</type_desc>
-</device>
-<device>
-<inv_id>126</inv_id>
-<owner>Susanne Gollin</owner>
-<device_name>Susannes-Macbook-Air</device_name>
-<manufacturer>Apple</manufacturer>
-<model>MacBook Air</model>
-<type>2</type>
-<ip_address>192.168.0.127</ip_address>
-<serial>C1MPL67NG944</serial>
-<processor>Intel Core i7</processor>
-<ram>8</ram>
-<location>A300</location>
-<type_id>2</type_id>
-<type_desc>Laptop</type_desc>
-</device>
-<device>
-<inv_id>127</inv_id>
-<owner>Susanne Gollin Lab</owner>
-<device_name>HGEN-GLab-147</device_name>
-<manufacturer>Apple</manufacturer>
-<model>iMac</model>
-<type>1</type>
-<ip_address>192.168.0.128</ip_address>
-<serial>QP9190EX0TJ</serial>
-<processor>Intel Core 2 Duo 2.66 GHz</processor>
-<ram>4</ram>
-<location>3RD FLR ANNEX - 5AB WINDOW</location>
-<type_id>1</type_id>
-<type_desc>Workstation</type_desc>
-</device>
-<device>
-<inv_id>128</inv_id>
-<owner>Susanne Gollin Lab</owner>
-<device_name>hgen-glab-148</device_name>
-<manufacturer>Dell</manufacturer>
-<model>OptiPlex 170L</model>
-<type>1</type>
-<ip_address>192.168.0.129</ip_address>
-<serial>B6XM291</serial>
-<processor>Intel Pentium 4 3.20GHz</processor>
-<ram>2</ram>
-<location>3RD FLR ANNEX - 5A</location>
-<type_id>1</type_id>
-<type_desc>Workstation</type_desc>
-</device>
-<device>
-<inv_id>129</inv_id>
-<owner>Susanne Gollin Lab</owner>
-<device_name>cyto1</device_name>
-<manufacturer>Dell</manufacturer>
-<model>Optiplex GX270</model>
-<type>1</type>
-<ip_address>192.168.0.130</ip_address>
-<serial>123456789</serial>
-<processor>Intel Core i5 2.9 GHz</processor>
-<ram>8</ram>
-<location>3RD FLR ANNEX - 3060B</location>
-<type_id>1</type_id>
-<type_desc>Workstation</type_desc>
-</device>
-<device>
-<inv_id>130</inv_id>
-<owner>Susanne Gollin Lab</owner>
-<device_name>Gollen Lab 1</device_name>
-<manufacturer>Dell</manufacturer>
-<model>Optiplex GX270</model>
-<type>1</type>
-<ip_address>192.168.0.131</ip_address>
-<serial>602lg51</serial>
-<processor>Intel Core i5 2.9 GHz</processor>
-<ram>8</ram>
-<location>A300</location>
-<type_id>1</type_id>
-<type_desc>Workstation</type_desc>
-</device>
-<device>
-<inv_id>131</inv_id>
-<owner>Susanne Gollin Lab</owner>
-<device_name>Gollen Lab 2</device_name>
-<manufacturer>Dell</manufacturer>
-<model>Latitude D510</model>
-<type>1</type>
-<ip_address>192.168.0.132</ip_address>
-<serial>210ct71</serial>
-<processor>Intel Core i5 2.9 GHz</processor>
-<ram>8</ram>
-<location>A300</location>
-<type_id>1</type_id>
-<type_desc>Workstation</type_desc>
-</device>
-<device>
-<inv_id>132</inv_id>
-<owner>Xingbin Wang</owner>
-<device_name>exons</device_name>
-<manufacturer>Apple</manufacturer>
-<model/>
-<type>1</type>
-<ip_address>192.168.0.133</ip_address>
-<serial>58B035A4CC30</serial>
-<processor>Intel Core i5 2.9 GHz</processor>
-<ram>8</ram>
-<location>4060E</location>
-<type_id>1</type_id>
-<type_desc>Workstation</type_desc>
-</device>
-<device>
-<inv_id>133</inv_id>
-<owner>Xingbin Wang</owner>
-<device_name>HGEN-LT-176</device_name>
-<manufacturer>Dell</manufacturer>
-<model>Lattitude E5550</model>
-<type>2</type>
-<ip_address>192.168.0.134</ip_address>
-<serial>4770T32</serial>
-<processor>Intel Core i7-5600U</processor>
-<ram>16</ram>
-<location>4060E</location>
-<type_id>2</type_id>
-<type_desc>Laptop</type_desc>
-</device>
-<device>
-<inv_id>134</inv_id>
-<owner>Yesim Demirci</owner>
-<device_name>default</device_name>
-<manufacturer>Dell</manufacturer>
-<model>Precision</model>
-<type>1</type>
-<ip_address>192.168.0.135</ip_address>
-<serial>123456789</serial>
-<processor>Intel Core i5 2.9 GHz</processor>
-<ram>8</ram>
-<location>4010</location>
-<type_id>1</type_id>
-<type_desc>Workstation</type_desc>
-</device>
-<device>
-<inv_id>135</inv_id>
-<owner>Zolt Urban Lab</owner>
-<device_name>urban-8</device_name>
-<manufacturer>HP</manufacturer>
-<model>Color LaserJet CP4005</model>
-<type>8</type>
-<ip_address>192.168.0.136</ip_address>
-<serial>JP8RD38590</serial>
-<processor/>
-<ram/>
-<location>3RD FLR ANNEX - 3A FLOOR</location>
-<type_id>8</type_id>
-<type_desc>Printer</type_desc>
-</device>
-<device>
-<inv_id>136</inv_id>
-<owner>Zolt Urban Lab</owner>
-<device_name>Urban BW 8</device_name>
-<manufacturer>HP</manufacturer>
-<model>LaserJet P2055dn</model>
-<type>8</type>
-<ip_address>192.168.0.137</ip_address>
-<serial>CNB9033096</serial>
-<processor/>
-<ram/>
-<location>3RD FLR ANNEX - 3AB WINDOW</location>
-<type_id>8</type_id>
-<type_desc>Printer</type_desc>
-</device>
-<device>
-<inv_id>137</inv_id>
-<owner>Zsolt Urban</owner>
-<device_name>mutation</device_name>
-<manufacturer>Apple</manufacturer>
-<model>iMac</model>
-<type>1</type>
-<ip_address>192.168.0.138</ip_address>
-<serial>QP0040LFB9S</serial>
-<processor>Intel Core 2 Duo 3.33 GHz</processor>
-<ram>4</ram>
-<location>A217</location>
-<type_id>1</type_id>
-<type_desc>Workstation</type_desc>
-</device>
-<device>
-<inv_id>138</inv_id>
-<owner>Zsolt Urban</owner>
-<device_name>hgen-urban</device_name>
-<manufacturer>Apple</manufacturer>
-<model>MacBook Pro</model>
-<type>2</type>
-<ip_address>192.168.0.140</ip_address>
-<serial>C02KL03ZDR55</serial>
-<processor>Intel Core i5 2.9 GHz</processor>
-<ram>8</ram>
-<location>A308</location>
-<type_id>2</type_id>
-<type_desc>Laptop</type_desc>
-</device>
-<device>
-<inv_id>139</inv_id>
-<owner>Zsolt Urban</owner>
-<device_name>hgen-kara</device_name>
-<manufacturer>Dell</manufacturer>
-<model>Lattitude E5550</model>
-<type>2</type>
-<ip_address>192.168.0.139</ip_address>
-<serial>123456789</serial>
-<processor>Intel Core i5 2.9 GHz</processor>
-<ram>8</ram>
-<location>A217</location>
-<type_id>2</type_id>
-<type_desc>Laptop</type_desc>
-</device>
-<device>
-<inv_id>140</inv_id>
-<owner>Zsolt Urban</owner>
-<device_name>default</device_name>
-<manufacturer>HP</manufacturer>
-<model>LaserJet 1200</model>
-<type>8</type>
-<ip_address>192.168.0.141</ip_address>
-<serial>123456789</serial>
-<processor/>
-<ram/>
-<location>A217</location>
-<type_id>8</type_id>
-<type_desc>Printer</type_desc>
-</device>
-<device>
-<inv_id>141</inv_id>
-<owner>Zsolt Urban</owner>
-<device_name>a218-8</device_name>
-<manufacturer>HP</manufacturer>
-<model>LaserJet 1300n</model>
-<type>8</type>
-<ip_address>192.168.0.142</ip_address>
-<serial>CNBB027211</serial>
-<processor/>
-<ram/>
-<location>A218</location>
-<type_id>8</type_id>
-<type_desc>Printer</type_desc>
-</device>
-<device>
-<inv_id>142</inv_id>
-<owner>Zsolt Urban</owner>
-<device_name>Levine 8</device_name>
-<manufacturer>HP</manufacturer>
-<model>LaserJet 1220</model>
-<type>8</type>
-<ip_address>192.168.0.143</ip_address>
-<serial>CNCG032576</serial>
-<processor/>
-<ram/>
-<location>A217</location>
-<type_id>8</type_id>
-<type_desc>Printer</type_desc>
-</device>
-<device>
-<inv_id>143</inv_id>
-<owner>Zsolt Urban Lab</owner>
-<device_name>amplication</device_name>
-<manufacturer>Apple</manufacturer>
-<model>iMac</model>
-<type>1</type>
-<ip_address>192.168.0.144</ip_address>
-<serial>D25KJ0V2DNMM</serial>
-<processor>Intel Core i5 2.9 GHz</processor>
-<ram>16</ram>
-<location>3RD FLR ANNEX - 3CD WINDOW</location>
-<type_id>1</type_id>
-<type_desc>Workstation</type_desc>
-</device>
-<device>
-<inv_id>144</inv_id>
-<owner>Zsolt Urban Lab</owner>
-<device_name>cosmid</device_name>
-<manufacturer>Apple</manufacturer>
-<model>iMac</model>
-<type>1</type>
-<ip_address>192.168.0.150</ip_address>
-<serial>H00420S9E86</serial>
-<processor>Intel Core i5 660 3.33GHz</processor>
-<ram>8</ram>
-<location>3RD FLR ANNEX - 3AB WINDOW</location>
-<type_id>1</type_id>
-<type_desc>Workstation</type_desc>
-</device>
-<device>
-<inv_id>145</inv_id>
-<owner>Zsolt Urban Lab</owner>
-<device_name>platereader</device_name>
-<manufacturer>Dell</manufacturer>
-<model>OptiPlex 980</model>
-<type>1</type>
-<ip_address>192.168.0.145</ip_address>
-<serial>2C09Y41</serial>
-<processor>Intel Core i5 660 3.33GHz</processor>
-<ram>8</ram>
-<location>3RD FLR ANNEX - 3060D</location>
-<type_id>1</type_id>
-<type_desc>Workstation</type_desc>
-</device>
-<device>
-<inv_id>146</inv_id>
-<owner>Zsolt Urban Lab</owner>
-<device_name>nanodrop-pc</device_name>
-<manufacturer>Dell</manufacturer>
-<model>OptiPlex 980</model>
-<type>1</type>
-<ip_address>192.168.0.146</ip_address>
-<serial>123456789</serial>
-<processor>Intel Core i5 660 3.33GHz</processor>
-<ram>8</ram>
-<location>3RD FLR ANNEX - 3060D</location>
-<type_id>1</type_id>
-<type_desc>Workstation</type_desc>
-</device>
-<device>
-<inv_id>147</inv_id>
-<owner>Zsolt Urban Lab</owner>
-<device_name>hgen-ulab-207</device_name>
-<manufacturer>Dell</manufacturer>
-<model>OptiPlex 980</model>
-<type>1</type>
-<ip_address>192.168.0.147</ip_address>
-<serial>3ZT9FQ1</serial>
-<processor>Intel Core i5 660 3.33GHz</processor>
-<ram>8</ram>
-<location>3RD FLR ANNEX - 3CD WINDOW</location>
-<type_id>1</type_id>
-<type_desc>Workstation</type_desc>
-</device>
-<device>
-<inv_id>148</inv_id>
-<owner>Zsolt Urban Lab</owner>
-<device_name>hgen-ulab-208</device_name>
-<manufacturer>Dell</manufacturer>
-<model>OptiPlex 780</model>
-<type>1</type>
-<ip_address>192.168.0.148</ip_address>
-<serial>CNSLZL1</serial>
-<processor>Intel Core2 Duo E8500 3.16GHz</processor>
-<ram>4</ram>
-<location>3RD FLR ANNEX - 3AB WINDOW</location>
-<type_id>1</type_id>
-<type_desc>Workstation</type_desc>
-</device>
-<device>
-<inv_id>149</inv_id>
-<owner>Zsolt Urban Lab</owner>
-<device_name>Urban Lab 1 1</device_name>
-<manufacturer>Dell</manufacturer>
-<model>Optiplex 390</model>
-<type>1</type>
-<ip_address>192.168.0.151</ip_address>
-<serial>Cdsltv1</serial>
-<processor>Intel Core i5 660 3.33GHz</processor>
-<ram>8</ram>
-<location>A720</location>
-<type_id>1</type_id>
-<type_desc>Workstation</type_desc>
-</device>
-<device>
-<inv_id>150</inv_id>
-<owner>Zsolt Urban Lab</owner>
-<device_name>Urban Lab 1 2</device_name>
-<manufacturer>Dell</manufacturer>
-<model>Optiplex GX270</model>
-<type>1</type>
-<ip_address>192.168.0.152</ip_address>
-<serial>2c09y41</serial>
-<processor>Intel Core i5 660 3.33GHz</processor>
-<ram>8</ram>
-<location>A720</location>
-<type_id>1</type_id>
-<type_desc>Workstation</type_desc>
-</device>
-<device>
-<inv_id>151</inv_id>
-<owner>Zsolt Urban Lab</owner>
-<device_name>default</device_name>
-<manufacturer>Thermaltake</manufacturer>
-<model/>
-<type>1</type>
-<ip_address>192.168.0.149</ip_address>
-<serial>123456789</serial>
-<processor>Intel Core i5 660 3.33GHz</processor>
-<ram>8</ram>
-<location>3RD FLR ANNEX - 3060B</location>
-<type_id>1</type_id>
-<type_desc>Workstation</type_desc>
-</device>
+           xsi:schemaLocation="http://stark-earth-7570.herokuapp.com/schema/inventory file:/Users/mes250/Web/GitHub/full-stack-web-project-mes250/src/main/resources/public/inventory.xsd">
+    <device>
+        <inv_id>1</inv_id>
+        <owner>Andrea Durst</owner>
+        <device_name>HGEN-LT-133</device_name>
+        <manufacturer>Dell</manufacturer>
+        <model>Lattitude E6540</model>
+        <type>2</type>
+        <ip_address>192.168.0.1</ip_address>
+        <serial>JTZGD12</serial>
+        <processor>Intel Core i7-4800MQ 2.70GHz</processor>
+        <ram>16</ram>
+        <location>A305</location>
+        <type_id>2</type_id>
+        <type_desc>Laptop</type_desc>
+    </device>
+    <device>
+        <inv_id>2</inv_id>
+        <owner>Andrea Durst</owner>
+        <device_name>HGEN-LT-Durst</device_name>
+        <manufacturer>Microsoft</manufacturer>
+        <model>Surface Pro 3</model>
+        <type>2</type>
+        <ip_address>192.168.0.2</ip_address>
+        <serial>33015251353</serial>
+        <processor>Intel Core i5 2.7 GHz</processor>
+        <ram>8</ram>
+        <location>A305</location>
+        <type_id>2</type_id>
+        <type_desc>Laptop</type_desc>
+    </device>
+    <device>
+        <inv_id>3</inv_id>
+        <owner>Angel Daily</owner>
+        <device_name>norbut</device_name>
+        <manufacturer>Dell</manufacturer>
+        <model>OptiPlex 7010</model>
+        <type>1</type>
+        <ip_address>192.168.0.3</ip_address>
+        <serial>CNNPNW1</serial>
+        <processor>Intel Core i7-3770 3.40GHz</processor>
+        <ram>6</ram>
+        <location>A306</location>
+        <type_id>1</type_id>
+        <type_desc>Workstation</type_desc>
+    </device>
+    <device>
+        <inv_id>4</inv_id>
+        <owner>Angel Daily</owner>
+        <device_name>HGEN-WKS-194</device_name>
+        <manufacturer>Dell</manufacturer>
+        <model>OptiPlex 980</model>
+        <type>1</type>
+        <ip_address>192.168.0.4</ip_address>
+        <serial>BX8PDQ1</serial>
+        <processor>Intel Core i7 870 2.93GHz</processor>
+        <ram>8</ram>
+        <location>A309</location>
+        <type_id>1</type_id>
+        <type_desc>Workstation</type_desc>
+    </device>
+    <device>
+        <inv_id>5</inv_id>
+        <owner>Beth Roman</owner>
+        <device_name>default</device_name>
+        <manufacturer>Apple</manufacturer>
+        <model>iMac</model>
+        <type>1</type>
+        <ip_address>192.168.0.5</ip_address>
+        <serial>123456789</serial>
+        <processor>Intel Core i5 2.7 GHz</processor>
+        <ram>8</ram>
+        <location>A309</location>
+        <type_id>1</type_id>
+        <type_desc>Workstation</type_desc>
+    </device>
+    <device>
+        <inv_id>6</inv_id>
+        <owner>Beth Roman</owner>
+        <device_name>HGEN-RLab-2</device_name>
+        <manufacturer>Apple</manufacturer>
+        <model>iMac</model>
+        <type>1</type>
+        <ip_address>192.168.0.6</ip_address>
+        <serial>YM0230R3DMV</serial>
+        <processor>Intel Core i5 2.7 GHz</processor>
+        <ram>8</ram>
+        <location>A300</location>
+        <type_id>1</type_id>
+        <type_desc>Workstation</type_desc>
+    </device>
+    <device>
+        <inv_id>7</inv_id>
+        <owner>Beth Roman</owner>
+        <device_name>romanpc</device_name>
+        <manufacturer>Dell</manufacturer>
+        <model>Precision T1600</model>
+        <type>1</type>
+        <ip_address>192.168.0.7</ip_address>
+        <serial>DGVFLS1</serial>
+        <processor>Intel Xeon E31205</processor>
+        <ram>16</ram>
+        <location>A300</location>
+        <type_id>1</type_id>
+        <type_desc>Workstation</type_desc>
+    </device>
+    <device>
+        <inv_id>8</inv_id>
+        <owner>Beth Roman</owner>
+        <device_name>default</device_name>
+        <manufacturer>Dell</manufacturer>
+        <model>Dimension E520</model>
+        <type>1</type>
+        <ip_address>192.168.0.8</ip_address>
+        <serial>9X16DC1</serial>
+        <processor>Intel Pentium 4 3.20GHz</processor>
+        <ram>2</ram>
+        <location>A300</location>
+        <type_id>1</type_id>
+        <type_desc>Workstation</type_desc>
+    </device>
+    <device>
+        <inv_id>9</inv_id>
+        <owner>Beth Roman</owner>
+        <device_name>default</device_name>
+        <manufacturer>Lexmark</manufacturer>
+        <model>Lexmark MS310dn</model>
+        <type>8</type>
+        <ip_address>192.168.0.9</ip_address>
+        <serial>451432LM0WRW7-98-0</serial>
+        <processor>Intel Core i5 2.7 GHz</processor>
+        <ram>128</ram>
+        <location>3rd FLR Annex</location>
+        <type_id>8</type_id>
+        <type_desc>Printer</type_desc>
+    </device>
+    <device>
+        <inv_id>10</inv_id>
+        <owner>Betsy Gettig</owner>
+        <device_name>default</device_name>
+        <manufacturer>Apple</manufacturer>
+        <model>MacBook Pro</model>
+        <type>2</type>
+        <ip_address>192.168.0.10</ip_address>
+        <serial>C02M21AGFD58</serial>
+        <processor>Intel Core i5 2.7 GHz</processor>
+        <ram>8</ram>
+        <location>A300</location>
+        <type_id>2</type_id>
+        <type_desc>Laptop</type_desc>
+    </device>
+    <device>
+        <inv_id>11</inv_id>
+        <owner>Candace Kammerer</owner>
+        <device_name>HGEN-Candy2</device_name>
+        <manufacturer>Apple</manufacturer>
+        <model>iMac</model>
+        <type>1</type>
+        <ip_address>192.168.0.11</ip_address>
+        <serial>D25L90Y0DNMP</serial>
+        <processor>Intel Core i7 3.4 GHz</processor>
+        <ram>16</ram>
+        <location>619</location>
+        <type_id>1</type_id>
+        <type_desc>Workstation</type_desc>
+    </device>
+    <device>
+        <inv_id>12</inv_id>
+        <owner>Candace Kammerer</owner>
+        <device_name/>
+        <manufacturer>Apple</manufacturer>
+        <model>MacBook Air</model>
+        <type>2</type>
+        <ip_address>192.168.0.12</ip_address>
+        <serial>123456789</serial>
+        <processor>Intel Core i5 2.7 GHz</processor>
+        <ram>8</ram>
+        <location>A300</location>
+        <type_id>2</type_id>
+        <type_desc>Laptop</type_desc>
+    </device>
+    <device>
+        <inv_id>13</inv_id>
+        <owner>Dan Weeks</owner>
+        <device_name>thymine</device_name>
+        <manufacturer>Apple</manufacturer>
+        <model>Mac Mini</model>
+        <type>1</type>
+        <ip_address>192.168.0.13</ip_address>
+        <serial>D49A20DE1EBC</serial>
+        <processor>Intel Core i7 3.4 GHz</processor>
+        <ram>8</ram>
+        <location>614</location>
+        <type_id>1</type_id>
+        <type_desc>Workstation</type_desc>
+    </device>
+    <device>
+        <inv_id>14</inv_id>
+        <owner>Dan Weeks</owner>
+        <device_name>basesequence</device_name>
+        <manufacturer>Apple</manufacturer>
+        <model>iMac</model>
+        <type>1</type>
+        <ip_address>192.168.0.14</ip_address>
+        <serial>D25JF0Y8DHJW</serial>
+        <processor>Intel Core i7 3.4 GHz</processor>
+        <ram>16</ram>
+        <location>4000 Cube</location>
+        <type_id>1</type_id>
+        <type_desc>Workstation</type_desc>
+    </device>
+    <device>
+        <inv_id>15</inv_id>
+        <owner>Dan Weeks</owner>
+        <device_name>apple-time-caps</device_name>
+        <manufacturer>Apple</manufacturer>
+        <model>Time Capsule</model>
+        <type>5</type>
+        <ip_address>192.168.0.15</ip_address>
+        <serial>123456789</serial>
+        <processor>Intel Core i7 3.4 GHz</processor>
+        <ram/>
+        <location>A725</location>
+        <type_id>5</type_id>
+        <type_desc>Physical Server</type_desc>
+    </device>
+    <device>
+        <inv_id>16</inv_id>
+        <owner>Dan Weeks</owner>
+        <device_name>Sherlock</device_name>
+        <manufacturer>Apple</manufacturer>
+        <model>Mac Pro</model>
+        <type>1</type>
+        <ip_address>192.168.0.16</ip_address>
+        <serial>C07KJ06PF4MH</serial>
+        <processor>6-Core Intel Xeon 3.06 GHz</processor>
+        <ram>32</ram>
+        <location>A303</location>
+        <type_id>1</type_id>
+        <type_desc>Workstation</type_desc>
+    </device>
+    <device>
+        <inv_id>17</inv_id>
+        <owner>Dan Weeks</owner>
+        <device_name>penrose</device_name>
+        <manufacturer>Apple</manufacturer>
+        <model>Mac Pro</model>
+        <type>1</type>
+        <ip_address>192.168.0.17</ip_address>
+        <serial>1F5B325421</serial>
+        <processor>Intel Core i7 3.4 GHz</processor>
+        <ram/>
+        <location>A303</location>
+        <type_id>1</type_id>
+        <type_desc>Workstation</type_desc>
+    </device>
+    <device>
+        <inv_id>18</inv_id>
+        <owner>Dan Weeks</owner>
+        <device_name>watson</device_name>
+        <manufacturer>Apple</manufacturer>
+        <model>Mac mini</model>
+        <type>1</type>
+        <ip_address>192.168.0.18</ip_address>
+        <serial>C07KF0BVDWYN</serial>
+        <processor>Intel Core i7 2.3 GHz</processor>
+        <ram>4</ram>
+        <location>A303</location>
+        <type_id>1</type_id>
+        <type_desc>Workstation</type_desc>
+    </device>
+    <device>
+        <inv_id>19</inv_id>
+        <owner>Dan Weeks</owner>
+        <device_name>basepair</device_name>
+        <manufacturer>Apple</manufacturer>
+        <model>iMac</model>
+        <type>1</type>
+        <ip_address>192.168.0.19</ip_address>
+        <serial>D25GX0EMDHJV</serial>
+        <processor>Intel Core i5 2.7 GHz</processor>
+        <ram>16</ram>
+        <location>614</location>
+        <type_id>1</type_id>
+        <type_desc>Workstation</type_desc>
+    </device>
+    <device>
+        <inv_id>20</inv_id>
+        <owner>Dan Weeks</owner>
+        <device_name>HGEN-LT-Weeks</device_name>
+        <manufacturer>Apple</manufacturer>
+        <model>MacBook Air</model>
+        <type>2</type>
+        <ip_address>192.168.0.20</ip_address>
+        <serial>C02Q604GGFWL</serial>
+        <processor>Intel Core i7</processor>
+        <ram>8</ram>
+        <location>A300</location>
+        <type_id>2</type_id>
+        <type_desc>Laptop</type_desc>
+    </device>
+    <device>
+        <inv_id>21</inv_id>
+        <owner>David Finegold</owner>
+        <device_name>default</device_name>
+        <manufacturer>Apple</manufacturer>
+        <model>Mac Pro</model>
+        <type>1</type>
+        <ip_address>192.168.0.21</ip_address>
+        <serial>123456789</serial>
+        <processor>Intel Core i7 3.4 GHz</processor>
+        <ram>8</ram>
+        <location>A728</location>
+        <type_id>1</type_id>
+        <type_desc>Workstation</type_desc>
+    </device>
+    <device>
+        <inv_id>22</inv_id>
+        <owner>David Lassige</owner>
+        <device_name>hgen-david-193</device_name>
+        <manufacturer>Dell</manufacturer>
+        <model>OptiPlex 9010</model>
+        <type>1</type>
+        <ip_address>192.168.0.22</ip_address>
+        <serial>J21SQW1</serial>
+        <processor>Intel Core i7-3770 3.40GHz</processor>
+        <ram>16</ram>
+        <location>A307</location>
+        <type_id>1</type_id>
+        <type_desc>Workstation</type_desc>
+    </device>
+    <device>
+        <inv_id>23</inv_id>
+        <owner>Department</owner>
+        <device_name>HGEN-LT-Shared</device_name>
+        <manufacturer>Apple</manufacturer>
+        <model>MacBook Pro</model>
+        <type>2</type>
+        <ip_address>192.168.0.28</ip_address>
+        <serial>C02PXEDSFVH3</serial>
+        <processor>Inte Core i5</processor>
+        <ram>8</ram>
+        <location>A306</location>
+        <type_id>2</type_id>
+        <type_desc>Laptop</type_desc>
+    </device>
+    <device>
+        <inv_id>24</inv_id>
+        <owner>Department</owner>
+        <device_name>HGEN-DELL-Shared</device_name>
+        <manufacturer>Dell</manufacturer>
+        <model>Latitude E5450</model>
+        <type>2</type>
+        <ip_address>192.168.0.29</ip_address>
+        <serial>JG7Z062</serial>
+        <processor>Intel Core i5</processor>
+        <ram>8</ram>
+        <location>A300</location>
+        <type_id>2</type_id>
+        <type_desc>Laptop</type_desc>
+    </device>
+    <device>
+        <inv_id>25</inv_id>
+        <owner>Department</owner>
+        <device_name>hgenlab-color-8</device_name>
+        <manufacturer>HP</manufacturer>
+        <model>Color LaserJet CP3525</model>
+        <type>8</type>
+        <ip_address>192.168.0.24</ip_address>
+        <serial>JPCCC830LG</serial>
+        <processor/>
+        <ram/>
+        <location>A300</location>
+        <type_id>8</type_id>
+        <type_desc>Printer</type_desc>
+    </device>
+    <device>
+        <inv_id>26</inv_id>
+        <owner>Department</owner>
+        <device_name>hgenlab-8</device_name>
+        <manufacturer>HP</manufacturer>
+        <model>LaserJet P4515</model>
+        <type>8</type>
+        <ip_address>192.168.0.25</ip_address>
+        <serial>CNDYC03704</serial>
+        <processor/>
+        <ram/>
+        <location>A300</location>
+        <type_id>8</type_id>
+        <type_desc>Printer</type_desc>
+    </device>
+    <device>
+        <inv_id>27</inv_id>
+        <owner>Department</owner>
+        <device_name>default</device_name>
+        <manufacturer>HP</manufacturer>
+        <model>Color LaserJet 4650</model>
+        <type>8</type>
+        <ip_address>192.168.0.26</ip_address>
+        <serial>JPKAD52855</serial>
+        <processor/>
+        <ram/>
+        <location>4000 Hallway</location>
+        <type_id>8</type_id>
+        <type_desc>Printer</type_desc>
+    </device>
+    <device>
+        <inv_id>28</inv_id>
+        <owner>Department</owner>
+        <device_name>default</device_name>
+        <manufacturer>HP</manufacturer>
+        <model>LaserJet 4200</model>
+        <type>8</type>
+        <ip_address>192.168.0.27</ip_address>
+        <serial>USGNN43092</serial>
+        <processor/>
+        <ram/>
+        <location>4000 Hallway</location>
+        <type_id>8</type_id>
+        <type_desc>Printer</type_desc>
+    </device>
+    <device>
+        <inv_id>29</inv_id>
+        <owner>Department</owner>
+        <device_name>aficio sp 5210sr</device_name>
+        <manufacturer>Ricoh</manufacturer>
+        <model>Aficio SP 5210SR</model>
+        <type>8</type>
+        <ip_address>192.168.0.23</ip_address>
+        <serial>S9239600291</serial>
+        <processor/>
+        <ram>1</ram>
+        <location>4000 Hallway</location>
+        <type_id>8</type_id>
+        <type_desc>Printer</type_desc>
+    </device>
+    <device>
+        <inv_id>30</inv_id>
+        <owner>Department</owner>
+        <device_name>Sharp Copier</device_name>
+        <manufacturer>Sharp</manufacturer>
+        <model>SHARP MX-M363N</model>
+        <type>8</type>
+        <ip_address>192.168.0.30</ip_address>
+        <serial>9501850500</serial>
+        <processor/>
+        <ram>1</ram>
+        <location>A300</location>
+        <type_id>8</type_id>
+        <type_desc>Printer</type_desc>
+    </device>
+    <device>
+        <inv_id>31</inv_id>
+        <owner>Dietrich Stephan</owner>
+        <device_name>hgen-stephan</device_name>
+        <manufacturer>Lenovo</manufacturer>
+        <model>ThinkPad X230</model>
+        <type>2</type>
+        <ip_address>192.168.0.31</ip_address>
+        <serial>PK1D94K</serial>
+        <processor>Intel Core i7-3520M 2.90GHz</processor>
+        <ram>8</ram>
+        <location>A718</location>
+        <type_id>2</type_id>
+        <type_desc>Laptop</type_desc>
+    </device>
+    <device>
+        <inv_id>32</inv_id>
+        <owner>Dietrich Stephan Lab</owner>
+        <device_name>default</device_name>
+        <manufacturer>MiSeq</manufacturer>
+        <model/>
+        <type>9</type>
+        <ip_address>192.168.0.33</ip_address>
+        <serial>123456789</serial>
+        <processor>Intel Core i7</processor>
+        <ram/>
+        <location>A300</location>
+        <type_id>9</type_id>
+        <type_desc>Lab Equipment</type_desc>
+    </device>
+    <device>
+        <inv_id>33</inv_id>
+        <owner>Eleanor Feingold</owner>
+        <device_name>feingold2</device_name>
+        <manufacturer>Apple</manufacturer>
+        <model>iMac</model>
+        <type>1</type>
+        <ip_address>192.168.0.34</ip_address>
+        <serial>D25G90LXDHJV</serial>
+        <processor>Intel Core i5 2.7 GHz</processor>
+        <ram>4</ram>
+        <location>638</location>
+        <type_id>1</type_id>
+        <type_desc>Workstation</type_desc>
+    </device>
+    <device>
+        <inv_id>34</inv_id>
+        <owner>Front Desk</owner>
+        <device_name>hgen-ulab-146</device_name>
+        <manufacturer>Dell</manufacturer>
+        <model>OptiPlex 3010</model>
+        <type>1</type>
+        <ip_address>192.168.0.35</ip_address>
+        <serial>CRZ4H02</serial>
+        <processor>Intel Core i5-3470 3.20GHz</processor>
+        <ram>4</ram>
+        <location>A300</location>
+        <type_id>1</type_id>
+        <type_desc>Workstation</type_desc>
+    </device>
+    <device>
+        <inv_id>35</inv_id>
+        <owner>Ilyas Kamboh</owner>
+        <device_name>Kamboh-MacBook</device_name>
+        <manufacturer>Apple</manufacturer>
+        <model>MacBook Pro</model>
+        <type>2</type>
+        <ip_address>192.168.0.37</ip_address>
+        <serial>C02KQ04WFFRR</serial>
+        <processor>Intel Core i7 3 GHz</processor>
+        <ram>8</ram>
+        <location>A311</location>
+        <type_id>2</type_id>
+        <type_desc>Laptop</type_desc>
+    </device>
+    <device>
+        <inv_id>36</inv_id>
+        <owner>Ilyas Kamboh</owner>
+        <device_name>hgen-kamboh</device_name>
+        <manufacturer>Dell</manufacturer>
+        <model>OptiPlex 9020</model>
+        <type>1</type>
+        <ip_address>192.168.0.36</ip_address>
+        <serial>1NC8K02</serial>
+        <processor>Intel Core i7-4770 3.40GHz</processor>
+        <ram>16</ram>
+        <location>A311</location>
+        <type_id>1</type_id>
+        <type_desc>Workstation</type_desc>
+    </device>
+    <device>
+        <inv_id>37</inv_id>
+        <owner>Ilyas Kamboh</owner>
+        <device_name>kambohoffice-8</device_name>
+        <manufacturer>HP</manufacturer>
+        <model>LaserJet 1320 series</model>
+        <type>8</type>
+        <ip_address>192.168.0.38</ip_address>
+        <serial>CNBC48F2LF</serial>
+        <processor/>
+        <ram/>
+        <location>A311</location>
+        <type_id>8</type_id>
+        <type_desc>Printer</type_desc>
+    </device>
+    <device>
+        <inv_id>38</inv_id>
+        <owner>Ilyas Kamboh Colleague</owner>
+        <device_name>default</device_name>
+        <manufacturer>Apple</manufacturer>
+        <model>MacBook Pro</model>
+        <type>2</type>
+        <ip_address>192.168.0.39</ip_address>
+        <serial>C02R36RGFVH5</serial>
+        <processor>Intel Core i5</processor>
+        <ram>8</ram>
+        <location>A300</location>
+        <type_id>2</type_id>
+        <type_desc>Laptop</type_desc>
+    </device>
+    <device>
+        <inv_id>39</inv_id>
+        <owner>Ilyas Kamboh Lab</owner>
+        <device_name>kamboh-lab-mac</device_name>
+        <manufacturer>Apple</manufacturer>
+        <model>iMac</model>
+        <type>1</type>
+        <ip_address>192.168.0.41</ip_address>
+        <serial>QP7200PZVUY</serial>
+        <processor>Intel Core 2 Duo 2 GHz</processor>
+        <ram>2</ram>
+        <location>3RD FLR ANNEX - 2AB WINDOW</location>
+        <type_id>1</type_id>
+        <type_desc>Workstation</type_desc>
+    </device>
+    <device>
+        <inv_id>40</inv_id>
+        <owner>Ilyas Kamboh Lab</owner>
+        <device_name>Kamboh Lab 11</device_name>
+        <manufacturer>Dell</manufacturer>
+        <model>OptiPlex 9020</model>
+        <type>1</type>
+        <ip_address>192.168.0.40</ip_address>
+        <serial>J63JGQ1</serial>
+        <processor>Intel Core i7-4770 3.40GHz</processor>
+        <ram>8</ram>
+        <location>3RD FLR ANNEX - 2D</location>
+        <type_id>1</type_id>
+        <type_desc>Workstation</type_desc>
+    </device>
+    <device>
+        <inv_id>41</inv_id>
+        <owner>Ilyas Kamboh Lab</owner>
+        <device_name>kamboh_lab_2-pc</device_name>
+        <manufacturer>Dell</manufacturer>
+        <model>OptiPlex 9020</model>
+        <type>1</type>
+        <ip_address>192.168.0.42</ip_address>
+        <serial>7N87KM1</serial>
+        <processor>Intel Core i7-4770 3.40GHz</processor>
+        <ram>8</ram>
+        <location>3RD FLR ANNEX - 2BC WINDOW</location>
+        <type_id>1</type_id>
+        <type_desc>Workstation</type_desc>
+    </device>
+    <device>
+        <inv_id>42</inv_id>
+        <owner>Ilyas Kamboh Lab</owner>
+        <device_name>kambohlab-n-3</device_name>
+        <manufacturer>Dell</manufacturer>
+        <model>OptiPlex 9020</model>
+        <type>1</type>
+        <ip_address>192.168.0.43</ip_address>
+        <serial>CZPV1R1</serial>
+        <processor>Intel Core i7-4770 3.40GHz</processor>
+        <ram>8</ram>
+        <location>3RD FLR ANNEX - 2D</location>
+        <type_id>1</type_id>
+        <type_desc>Workstation</type_desc>
+    </device>
+    <device>
+        <inv_id>43</inv_id>
+        <owner>Ilyas Kamboh Lab</owner>
+        <device_name>kamboh_lab_1-pc</device_name>
+        <manufacturer>Dell</manufacturer>
+        <model>OptiPlex 9020</model>
+        <type>1</type>
+        <ip_address>192.168.0.44</ip_address>
+        <serial>7N88KM1</serial>
+        <processor>Intel Core i7-4770 3.40GHz</processor>
+        <ram>8</ram>
+        <location>3RD FLR ANNEX - 2AB WINDOW</location>
+        <type_id>1</type_id>
+        <type_desc>Workstation</type_desc>
+    </device>
+    <device>
+        <inv_id>44</inv_id>
+        <owner>Ilyas Kamboh Lab</owner>
+        <device_name>kambohlab-n-4</device_name>
+        <manufacturer>Dell</manufacturer>
+        <model>OptiPlex 9020</model>
+        <type>1</type>
+        <ip_address>192.168.0.45</ip_address>
+        <serial>123456789</serial>
+        <processor>Intel Core i7-4770 3.40GHz</processor>
+        <ram>8</ram>
+        <location>3RD FLR ANNEX - 2D</location>
+        <type_id>1</type_id>
+        <type_desc>Workstation</type_desc>
+    </device>
+    <device>
+        <inv_id>45</inv_id>
+        <owner>Ilyas Kamboh Lab</owner>
+        <device_name>kambohlab-pc</device_name>
+        <manufacturer>Dell</manufacturer>
+        <model>OptiPlex 9020</model>
+        <type>1</type>
+        <ip_address>192.168.0.46</ip_address>
+        <serial>123456789</serial>
+        <processor>Intel Core i7-4770 3.40GHz</processor>
+        <ram>8</ram>
+        <location>3RD FLR ANNEX - 2BC WINDOW</location>
+        <type_id>1</type_id>
+        <type_desc>Workstation</type_desc>
+    </device>
+    <device>
+        <inv_id>46</inv_id>
+        <owner>Ilyas Kamboh Lab</owner>
+        <device_name>Kamboh Lab 12</device_name>
+        <manufacturer>Dell</manufacturer>
+        <model>OptiPlex 9020</model>
+        <type>1</type>
+        <ip_address>192.168.0.47</ip_address>
+        <serial>6S42Q31</serial>
+        <processor>Intel Core i7-4770 3.40GHz</processor>
+        <ram>8</ram>
+        <location>3RD FLR ANNEX</location>
+        <type_id>1</type_id>
+        <type_desc>Workstation</type_desc>
+    </device>
+    <device>
+        <inv_id>47</inv_id>
+        <owner>Ilyas Kamboh Lab</owner>
+        <device_name>kamboh_lab_n1</device_name>
+        <manufacturer>Dell</manufacturer>
+        <model>Optiplex 780</model>
+        <type>1</type>
+        <ip_address>192.168.0.48</ip_address>
+        <serial>J63JGQ1</serial>
+        <processor>Intel Core i7-4770 3.40GHz</processor>
+        <ram>8</ram>
+        <location>A300</location>
+        <type_id>1</type_id>
+        <type_desc>Workstation</type_desc>
+    </device>
+    <device>
+        <inv_id>48</inv_id>
+        <owner>Ilyas Kamboh Lab</owner>
+        <device_name>kambohlab-8</device_name>
+        <manufacturer>HP</manufacturer>
+        <model>LaserJet P4014</model>
+        <type>8</type>
+        <ip_address>192.168.0.49</ip_address>
+        <serial>JPDF008121</serial>
+        <processor/>
+        <ram/>
+        <location>3RD FLR ANNEX - 2D</location>
+        <type_id>8</type_id>
+        <type_desc>Printer</type_desc>
+    </device>
+    <device>
+        <inv_id>49</inv_id>
+        <owner>Ilyas Kamboh Lab</owner>
+        <device_name>kamboh-lab-8</device_name>
+        <manufacturer>HP</manufacturer>
+        <model>Color LaserJet CP4005</model>
+        <type>8</type>
+        <ip_address>192.168.0.50</ip_address>
+        <serial>JPRLB58760</serial>
+        <processor/>
+        <ram/>
+        <location>3RD FLR ANNEX - 2D</location>
+        <type_id>8</type_id>
+        <type_desc>Printer</type_desc>
+    </device>
+    <device>
+        <inv_id>50</inv_id>
+        <owner>IT</owner>
+        <device_name>mobil4</device_name>
+        <manufacturer>Apple</manufacturer>
+        <model>AirPort</model>
+        <type>4</type>
+        <ip_address>192.168.0.53</ip_address>
+        <serial>24AB81B82BB1</serial>
+        <processor/>
+        <ram>8</ram>
+        <location>A725</location>
+        <type_id>4</type_id>
+        <type_desc>Router</type_desc>
+    </device>
+    <device>
+        <inv_id>51</inv_id>
+        <owner>IT</owner>
+        <device_name>nucleus</device_name>
+        <manufacturer>Apple</manufacturer>
+        <model>Mac Pro</model>
+        <type>1</type>
+        <ip_address>192.168.0.54</ip_address>
+        <serial>G88391BXXYL</serial>
+        <processor>2x3.2GHz Quad-Core Intel Xeon</processor>
+        <ram>16</ram>
+        <location>A725</location>
+        <type_id>1</type_id>
+        <type_desc>Workstation</type_desc>
+    </device>
+    <device>
+        <inv_id>52</inv_id>
+        <owner>IT</owner>
+        <device_name>duval</device_name>
+        <manufacturer>Apple</manufacturer>
+        <model>Mac Pro</model>
+        <type>5</type>
+        <ip_address>192.168.0.56</ip_address>
+        <serial>G88391C1XYL</serial>
+        <processor>Quad-Core Intel Xeon 3.2 GHz</processor>
+        <ram>16</ram>
+        <location>710</location>
+        <type_id>5</type_id>
+        <type_desc>Physical Server</type_desc>
+    </device>
+    <device>
+        <inv_id>53</inv_id>
+        <owner>IT</owner>
+        <device_name>framingham</device_name>
+        <manufacturer>Apple</manufacturer>
+        <model>Mac Pro</model>
+        <type>5</type>
+        <ip_address>192.168.0.59</ip_address>
+        <serial>H09302PU20H</serial>
+        <processor>Quad-Core Intel Xeon 2.93 GHz</processor>
+        <ram>32</ram>
+        <location>5 Room</location>
+        <type_id>5</type_id>
+        <type_desc>Physical Server</type_desc>
+    </device>
+    <device>
+        <inv_id>54</inv_id>
+        <owner>IT</owner>
+        <device_name>geneva</device_name>
+        <manufacturer>Apple</manufacturer>
+        <model>Xserve</model>
+        <type>5</type>
+        <ip_address>192.168.0.60</ip_address>
+        <serial>H092927P6HS</serial>
+        <processor>Quad-Core Intel Xeon 2.93 GHz</processor>
+        <ram>24</ram>
+        <location>5 Room</location>
+        <type_id>5</type_id>
+        <type_desc>Physical Server</type_desc>
+    </device>
+    <device>
+        <inv_id>55</inv_id>
+        <owner>IT</owner>
+        <device_name>node3</device_name>
+        <manufacturer>Apple</manufacturer>
+        <model>Mac Pro</model>
+        <type>5</type>
+        <ip_address>192.168.0.65</ip_address>
+        <serial>YM7520MN0GP</serial>
+        <processor>Dual-Core Intel Xeon 3 GHz</processor>
+        <ram>8</ram>
+        <location>5 Room</location>
+        <type_id>5</type_id>
+        <type_desc>Physical Server</type_desc>
+    </device>
+    <device>
+        <inv_id>56</inv_id>
+        <owner>IT</owner>
+        <device_name>gattaca</device_name>
+        <manufacturer>Apple</manufacturer>
+        <model>Mac Pro</model>
+        <type>5</type>
+        <ip_address>192.168.0.66</ip_address>
+        <serial>G88391BWXYL</serial>
+        <processor>Quad-Core Intel Xeon 3.2 GHz</processor>
+        <ram>16</ram>
+        <location>5 Room</location>
+        <type_id>5</type_id>
+        <type_desc>Physical Server</type_desc>
+    </device>
+    <device>
+        <inv_id>57</inv_id>
+        <owner>IT</owner>
+        <device_name>HGEN-DeptMac-2</device_name>
+        <manufacturer>Apple</manufacturer>
+        <model>MacBook</model>
+        <type>2</type>
+        <ip_address>192.168.0.82</ip_address>
+        <serial>4H63816DU9D</serial>
+        <processor>Intel Core Duo 1.83 GHz</processor>
+        <ram>1</ram>
+        <location>A300</location>
+        <type_id>2</type_id>
+        <type_desc>Laptop</type_desc>
+    </device>
+    <device>
+        <inv_id>58</inv_id>
+        <owner>IT</owner>
+        <device_name>Fisher</device_name>
+        <manufacturer>Apple</manufacturer>
+        <model>Mini</model>
+        <type>5</type>
+        <ip_address>192.168.0.89</ip_address>
+        <serial>C07MP09HDY3J</serial>
+        <processor>Intel Core i7</processor>
+        <ram>8</ram>
+        <location>5 Room</location>
+        <type_id>5</type_id>
+        <type_desc>Physical Server</type_desc>
+    </device>
+    <device>
+        <inv_id>59</inv_id>
+        <owner>IT</owner>
+        <device_name>Zabbix</device_name>
+        <manufacturer>Apple</manufacturer>
+        <model>Mac Pro</model>
+        <type>5</type>
+        <ip_address>192.168.0.90</ip_address>
+        <serial>123456789</serial>
+        <processor>Intel Core i7-4770 3.40GHz</processor>
+        <ram>16</ram>
+        <location>A300</location>
+        <type_id>5</type_id>
+        <type_desc>Physical Server</type_desc>
+    </device>
+    <device>
+        <inv_id>60</inv_id>
+        <owner>IT</owner>
+        <device_name>Test 3 1</device_name>
+        <manufacturer>Asante Tech</manufacturer>
+        <model>GX5-2400W</model>
+        <type>3</type>
+        <ip_address>192.168.0.51</ip_address>
+        <serial>94D4308F</serial>
+        <processor/>
+        <ram/>
+        <location>A725</location>
+        <type_id>3</type_id>
+        <type_desc>Switch</type_desc>
+    </device>
+    <device>
+        <inv_id>61</inv_id>
+        <owner>IT</owner>
+        <device_name>Test 3 2</device_name>
+        <manufacturer>Asante Tech</manufacturer>
+        <model>GX5-2400W</model>
+        <type>3</type>
+        <ip_address>192.168.0.52</ip_address>
+        <serial>94D42FEF</serial>
+        <processor/>
+        <ram/>
+        <location>A725</location>
+        <type_id>3</type_id>
+        <type_desc>Switch</type_desc>
+    </device>
+    <device>
+        <inv_id>62</inv_id>
+        <owner>IT</owner>
+        <device_name>Secure 5 3</device_name>
+        <manufacturer>Asante Tech</manufacturer>
+        <model>GX5-2400W</model>
+        <type>3</type>
+        <ip_address>192.168.0.81</ip_address>
+        <serial>94D42FF8</serial>
+        <processor/>
+        <ram/>
+        <location>5 Room</location>
+        <type_id>3</type_id>
+        <type_desc>Switch</type_desc>
+    </device>
+    <device>
+        <inv_id>63</inv_id>
+        <owner>IT</owner>
+        <device_name>xylene</device_name>
+        <manufacturer>ASUSTeK Computer</manufacturer>
+        <model>Z9PR-D12 Series</model>
+        <type>6</type>
+        <ip_address>192.168.0.68</ip_address>
+        <serial>10BF481FADD9</serial>
+        <processor>Intel Xeon E5-2620 0 2.00GHz</processor>
+        <ram>64</ram>
+        <location>5 Room</location>
+        <type_id>6</type_id>
+        <type_desc>Virtual Server</type_desc>
+    </device>
+    <device>
+        <inv_id>64</inv_id>
+        <owner>IT</owner>
+        <device_name>pyroxene</device_name>
+        <manufacturer>ASUSTeK Computer</manufacturer>
+        <model>Z9PR-D12 Series</model>
+        <type>5</type>
+        <ip_address>192.168.0.69</ip_address>
+        <serial>10BF481FAE97</serial>
+        <processor>Intel Xeon E5-2620 0 2.00GHz</processor>
+        <ram>64</ram>
+        <location>5 Room</location>
+        <type_id>5</type_id>
+        <type_desc>Physical Server</type_desc>
+    </device>
+    <device>
+        <inv_id>65</inv_id>
+        <owner>IT</owner>
+        <device_name>acetate</device_name>
+        <manufacturer>ASUSTeK Computer</manufacturer>
+        <model>Z9PR-D12 Series</model>
+        <type>5</type>
+        <ip_address>192.168.0.71</ip_address>
+        <serial>10BF481FAF59</serial>
+        <processor>Intel Xeon E5-2620 0 2.00GHz</processor>
+        <ram>64</ram>
+        <location>5 Room</location>
+        <type_id>5</type_id>
+        <type_desc>Physical Server</type_desc>
+    </device>
+    <device>
+        <inv_id>66</inv_id>
+        <owner>IT</owner>
+        <device_name>benzene</device_name>
+        <manufacturer>ASUSTeK Computer</manufacturer>
+        <model>Z9PR-D12 Series</model>
+        <type>5</type>
+        <ip_address>192.168.0.80</ip_address>
+        <serial>123456789</serial>
+        <processor>Intel Xeon E5-2620 0 2.00GHz</processor>
+        <ram>64</ram>
+        <location>5 Room</location>
+        <type_id>5</type_id>
+        <type_desc>Physical Server</type_desc>
+    </device>
+    <device>
+        <inv_id>67</inv_id>
+        <owner>IT</owner>
+        <device_name>hgen-spwrks-2</device_name>
+        <manufacturer>Dell</manufacturer>
+        <model>Inspiron 530</model>
+        <type>1</type>
+        <ip_address>192.168.0.57</ip_address>
+        <serial>4P997F1</serial>
+        <processor>Intel Core2 6420 2.13GHz</processor>
+        <ram>4</ram>
+        <location>626B</location>
+        <type_id>1</type_id>
+        <type_desc>Workstation</type_desc>
+    </device>
+    <device>
+        <inv_id>68</inv_id>
+        <owner>IT</owner>
+        <device_name>node1</device_name>
+        <manufacturer>Dell</manufacturer>
+        <model>PowerEdge R300</model>
+        <type>5</type>
+        <ip_address>192.168.0.67</ip_address>
+        <serial>1L83QG1</serial>
+        <processor>Intel Xeon X5460 3.16GHz</processor>
+        <ram>3</ram>
+        <location>5 Room</location>
+        <type_id>5</type_id>
+        <type_desc>Physical Server</type_desc>
+    </device>
+    <device>
+        <inv_id>69</inv_id>
+        <owner>IT</owner>
+        <device_name>thorium</device_name>
+        <manufacturer>Dell</manufacturer>
+        <model>PowerEdge T300</model>
+        <type>5</type>
+        <ip_address>192.168.0.73</ip_address>
+        <serial>C33XLG1</serial>
+        <processor>Intel Xeon X3323 2.50GHz</processor>
+        <ram>4</ram>
+        <location>5 Room</location>
+        <type_id>5</type_id>
+        <type_desc>Physical Server</type_desc>
+    </device>
+    <device>
+        <inv_id>70</inv_id>
+        <owner>IT</owner>
+        <device_name>hgen-cr-a312</device_name>
+        <manufacturer>Dell</manufacturer>
+        <model>OptiPlex 9020</model>
+        <type>1</type>
+        <ip_address>192.168.0.83</ip_address>
+        <serial>96H89Z1</serial>
+        <processor>Intel Core i7-4770 3.40GHz</processor>
+        <ram>8</ram>
+        <location>A312</location>
+        <type_id>1</type_id>
+        <type_desc>Workstation</type_desc>
+    </device>
+    <device>
+        <inv_id>71</inv_id>
+        <owner>IT</owner>
+        <device_name>IDM-SpiceWorks</device_name>
+        <manufacturer>Dell</manufacturer>
+        <model>OptiPlex 990</model>
+        <type>1</type>
+        <ip_address>192.168.0.84</ip_address>
+        <serial>BYX0NS1</serial>
+        <processor>Intel Core i5-2500 3.30GHz</processor>
+        <ram>8</ram>
+        <location>A725</location>
+        <type_id>1</type_id>
+        <type_desc>Workstation</type_desc>
+    </device>
+    <device>
+        <inv_id>72</inv_id>
+        <owner>IT</owner>
+        <device_name>HGEN-DellAD</device_name>
+        <manufacturer>Dell</manufacturer>
+        <model>OptiPlex 3010</model>
+        <type>1</type>
+        <ip_address>192.168.0.85</ip_address>
+        <serial>5S7WDZ1</serial>
+        <processor>Intel Core i3-3240 3.40GHz</processor>
+        <ram>4</ram>
+        <location>A310A</location>
+        <type_id>1</type_id>
+        <type_desc>Workstation</type_desc>
+    </device>
+    <device>
+        <inv_id>73</inv_id>
+        <owner>IT</owner>
+        <device_name>HGEN-Backup1</device_name>
+        <manufacturer>Dell</manufacturer>
+        <model>Precision T1700</model>
+        <type>5</type>
+        <ip_address>192.168.0.87</ip_address>
+        <serial>49XKQ22</serial>
+        <processor>Intel Xeon E3-1245</processor>
+        <ram>16</ram>
+        <location>5 Room</location>
+        <type_id>5</type_id>
+        <type_desc>Physical Server</type_desc>
+    </device>
+    <device>
+        <inv_id>74</inv_id>
+        <owner>IT</owner>
+        <device_name>HGEN-Backup2</device_name>
+        <manufacturer>Dell</manufacturer>
+        <model>Precision T1700</model>
+        <type>5</type>
+        <ip_address>192.168.0.88</ip_address>
+        <serial>49XJQ22</serial>
+        <processor>Intel Xeon E3-1245</processor>
+        <ram>16</ram>
+        <location>Deans IT</location>
+        <type_id>5</type_id>
+        <type_desc>Physical Server</type_desc>
+    </device>
+    <device>
+        <inv_id>75</inv_id>
+        <owner>IT</owner>
+        <device_name>it-8</device_name>
+        <manufacturer>HP</manufacturer>
+        <model>LaserJet 4200</model>
+        <type>8</type>
+        <ip_address>192.168.0.86</ip_address>
+        <serial>USGNN43092</serial>
+        <processor/>
+        <ram/>
+        <location>A725</location>
+        <type_id>8</type_id>
+        <type_desc>Printer</type_desc>
+    </device>
+    <device>
+        <inv_id>76</inv_id>
+        <owner>IT</owner>
+        <device_name>hgen-display</device_name>
+        <manufacturer>NEC</manufacturer>
+        <model/>
+        <type>1</type>
+        <ip_address>192.168.0.55</ip_address>
+        <serial>f1f31c3327</serial>
+        <processor>AMD G-T56N</processor>
+        <ram>2</ram>
+        <location>A300</location>
+        <type_id>1</type_id>
+        <type_desc>Workstation</type_desc>
+    </device>
+    <device>
+        <inv_id>77</inv_id>
+        <owner>IT</owner>
+        <device_name>Node1 Storage</device_name>
+        <manufacturer>Promise Tech</manufacturer>
+        <model/>
+        <type>7</type>
+        <ip_address>192.168.0.79</ip_address>
+        <serial>1554058FC</serial>
+        <processor/>
+        <ram>16</ram>
+        <location>5 Room</location>
+        <type_id>7</type_id>
+        <type_desc>RAID Storage</type_desc>
+    </device>
+    <device>
+        <inv_id>78</inv_id>
+        <owner>IT</owner>
+        <device_name>Magnesium</device_name>
+        <manufacturer>Xen</manufacturer>
+        <model/>
+        <type>6</type>
+        <ip_address>192.168.0.58</ip_address>
+        <serial>123456789</serial>
+        <processor/>
+        <ram>16</ram>
+        <location>VM</location>
+        <type_id>6</type_id>
+        <type_desc>Virtual Server</type_desc>
+    </device>
+    <device>
+        <inv_id>79</inv_id>
+        <owner>IT</owner>
+        <device_name>naps2</device_name>
+        <manufacturer>Xen</manufacturer>
+        <model/>
+        <type>6</type>
+        <ip_address>192.168.0.61</ip_address>
+        <serial>123456789</serial>
+        <processor>Intel Xeon E5-2620 0 2.00GHz</processor>
+        <ram>1</ram>
+        <location>VM</location>
+        <type_id>6</type_id>
+        <type_desc>Virtual Server</type_desc>
+    </device>
+    <device>
+        <inv_id>80</inv_id>
+        <owner>IT</owner>
+        <device_name>Ketone</device_name>
+        <manufacturer>Xen</manufacturer>
+        <model/>
+        <type>6</type>
+        <ip_address>192.168.0.62</ip_address>
+        <serial>123456789</serial>
+        <processor/>
+        <ram>4</ram>
+        <location>VM</location>
+        <type_id>6</type_id>
+        <type_desc>Virtual Server</type_desc>
+    </device>
+    <device>
+        <inv_id>81</inv_id>
+        <owner>IT</owner>
+        <device_name>sybase</device_name>
+        <manufacturer>Xen</manufacturer>
+        <model/>
+        <type>6</type>
+        <ip_address>192.168.0.63</ip_address>
+        <serial>123456789</serial>
+        <processor>Intel Xeon E5-2620 0 2.00GHz</processor>
+        <ram>9</ram>
+        <location>VM</location>
+        <type_id>6</type_id>
+        <type_desc>Virtual Server</type_desc>
+    </device>
+    <device>
+        <inv_id>82</inv_id>
+        <owner>IT</owner>
+        <device_name>Acetylene</device_name>
+        <manufacturer>Xen</manufacturer>
+        <model/>
+        <type>6</type>
+        <ip_address>192.168.0.64</ip_address>
+        <serial>123456789</serial>
+        <processor/>
+        <ram>4</ram>
+        <location>VM</location>
+        <type_id>6</type_id>
+        <type_desc>Virtual Server</type_desc>
+    </device>
+    <device>
+        <inv_id>83</inv_id>
+        <owner>IT</owner>
+        <device_name>logan</device_name>
+        <manufacturer>Xen</manufacturer>
+        <model/>
+        <type>6</type>
+        <ip_address>192.168.0.70</ip_address>
+        <serial>A659612FE40</serial>
+        <processor>Intel Xeon E5-2620 0 2.00GHz</processor>
+        <ram>6</ram>
+        <location>VM</location>
+        <type_id>6</type_id>
+        <type_desc>Virtual Server</type_desc>
+    </device>
+    <device>
+        <inv_id>84</inv_id>
+        <owner>IT</owner>
+        <device_name>titanium</device_name>
+        <manufacturer>Xen</manufacturer>
+        <model/>
+        <type>6</type>
+        <ip_address>192.168.0.72</ip_address>
+        <serial>123456789</serial>
+        <processor>Intel Xeon E5-2620 0 2.00GHz</processor>
+        <ram>6</ram>
+        <location>VM</location>
+        <type_id>6</type_id>
+        <type_desc>Virtual Server</type_desc>
+    </device>
+    <device>
+        <inv_id>85</inv_id>
+        <owner>IT</owner>
+        <device_name>barium</device_name>
+        <manufacturer>Xen</manufacturer>
+        <model/>
+        <type>6</type>
+        <ip_address>192.168.0.74</ip_address>
+        <serial>123456789</serial>
+        <processor>Intel Xeon E5-2620 0 2.00GHz</processor>
+        <ram>6</ram>
+        <location>VM</location>
+        <type_id>6</type_id>
+        <type_desc>Virtual Server</type_desc>
+    </device>
+    <device>
+        <inv_id>86</inv_id>
+        <owner>IT</owner>
+        <device_name>cutislaxa</device_name>
+        <manufacturer>Xen</manufacturer>
+        <model/>
+        <type>6</type>
+        <ip_address>192.168.0.75</ip_address>
+        <serial>123456789</serial>
+        <processor>Intel Xeon E5-2620 0 2.00GHz</processor>
+        <ram>4</ram>
+        <location>VM</location>
+        <type_id>6</type_id>
+        <type_desc>Virtual Server</type_desc>
+    </device>
+    <device>
+        <inv_id>87</inv_id>
+        <owner>IT</owner>
+        <device_name>Progeny</device_name>
+        <manufacturer>Xen</manufacturer>
+        <model/>
+        <type>6</type>
+        <ip_address>192.168.0.76</ip_address>
+        <serial>123456789</serial>
+        <processor/>
+        <ram>4</ram>
+        <location>VM</location>
+        <type_id>6</type_id>
+        <type_desc>Virtual Server</type_desc>
+    </device>
+    <device>
+        <inv_id>88</inv_id>
+        <owner>IT</owner>
+        <device_name>Progeny</device_name>
+        <manufacturer>Xen</manufacturer>
+        <model/>
+        <type>6</type>
+        <ip_address>192.168.0.77</ip_address>
+        <serial>123456789</serial>
+        <processor>Intel Xeon E5-2620 0 2.00GHz</processor>
+        <ram>4</ram>
+        <location>VM</location>
+        <type_id>6</type_id>
+        <type_desc>Virtual Server</type_desc>
+    </device>
+    <device>
+        <inv_id>89</inv_id>
+        <owner>IT</owner>
+        <device_name>Forrest</device_name>
+        <manufacturer>Xen</manufacturer>
+        <model/>
+        <type>6</type>
+        <ip_address>192.168.0.78</ip_address>
+        <serial>123456789</serial>
+        <processor/>
+        <ram>4</ram>
+        <location>VM</location>
+        <type_id>6</type_id>
+        <type_desc>Virtual Server</type_desc>
+    </device>
+    <device>
+        <inv_id>90</inv_id>
+        <owner>Jen Heinemann</owner>
+        <device_name>hgen-jen</device_name>
+        <manufacturer>Dell</manufacturer>
+        <model>Latitude E6440</model>
+        <type>2</type>
+        <ip_address>192.168.0.91</ip_address>
+        <serial>DS8YTY1</serial>
+        <processor>Intel Core i7-4600M 2.90GHz</processor>
+        <ram>8</ram>
+        <location>A300</location>
+        <type_id>2</type_id>
+        <type_desc>Laptop</type_desc>
+    </device>
+    <device>
+        <inv_id>91</inv_id>
+        <owner>Jessica Roberts</owner>
+        <device_name>HGEN-WKS-188</device_name>
+        <manufacturer>Dell</manufacturer>
+        <model>OptiPlex 7010</model>
+        <type>1</type>
+        <ip_address>192.168.0.92</ip_address>
+        <serial>B156ZV1</serial>
+        <processor>Intel Core i7-3770S 3.10GHz</processor>
+        <ram>16</ram>
+        <location>A310A</location>
+        <type_id>1</type_id>
+        <type_desc>Workstation</type_desc>
+    </device>
+    <device>
+        <inv_id>92</inv_id>
+        <owner>Jessica Roberts</owner>
+        <device_name>HGEN-LT-Asst</device_name>
+        <manufacturer>Dell</manufacturer>
+        <model>Lattitude E6330</model>
+        <type>2</type>
+        <ip_address>192.168.0.93</ip_address>
+        <serial>FSK8TZ1</serial>
+        <processor>Intel Core i7</processor>
+        <ram>8</ram>
+        <location>A310A</location>
+        <type_id>2</type_id>
+        <type_desc>Laptop</type_desc>
+    </device>
+    <device>
+        <inv_id>93</inv_id>
+        <owner>John Shaffer</owner>
+        <device_name>john-pc</device_name>
+        <manufacturer>Dell</manufacturer>
+        <model>OptiPlex 390</model>
+        <type>1</type>
+        <ip_address>192.168.0.94</ip_address>
+        <serial>HCFGJQ1</serial>
+        <processor>Intel Core i3-2100 3.10GHz</processor>
+        <ram>8</ram>
+        <location>A739?</location>
+        <type_id>1</type_id>
+        <type_desc>Workstation</type_desc>
+    </device>
+    <device>
+        <inv_id>94</inv_id>
+        <owner>Kammerer - Jatinder</owner>
+        <device_name>HGEN-LT-Jatinder</device_name>
+        <manufacturer>Apple</manufacturer>
+        <model>MacBook Pro</model>
+        <type>2</type>
+        <ip_address>192.168.0.95</ip_address>
+        <serial>C02Q60DNG8WL</serial>
+        <processor>Intel Core i7</processor>
+        <ram>16</ram>
+        <location>4TH FLR ANNEX - Cube</location>
+        <type_id>2</type_id>
+        <type_desc>Laptop</type_desc>
+    </device>
+    <device>
+        <inv_id>95</inv_id>
+        <owner>Michael Barmada</owner>
+        <device_name>obelix</device_name>
+        <manufacturer>Apple</manufacturer>
+        <model>Mac Pro</model>
+        <type>1</type>
+        <ip_address>192.168.0.96</ip_address>
+        <serial>123456789</serial>
+        <processor>Intel Core i7-4770 3.40GHz</processor>
+        <ram>32</ram>
+        <location>4010A</location>
+        <type_id>1</type_id>
+        <type_desc>Workstation</type_desc>
+    </device>
+    <device>
+        <inv_id>96</inv_id>
+        <owner>Michael Singer</owner>
+        <device_name>it-dell-9010</device_name>
+        <manufacturer>Dell</manufacturer>
+        <model>OptiPlex 9010</model>
+        <type>1</type>
+        <ip_address>192.168.0.97</ip_address>
+        <serial>6BY3SW1</serial>
+        <processor>Intel Core i7-3770 3.40GHz</processor>
+        <ram>8</ram>
+        <location>A725</location>
+        <type_id>1</type_id>
+        <type_desc>Workstation</type_desc>
+    </device>
+    <device>
+        <inv_id>97</inv_id>
+        <owner>Mike Singer</owner>
+        <device_name>sensaphone</device_name>
+        <manufacturer>Apple</manufacturer>
+        <model>Mac Pro</model>
+        <type>1</type>
+        <ip_address>192.168.0.98</ip_address>
+        <serial>F5KMN0K2F9VN</serial>
+        <processor>Quad-Core Intel Xeon E5</processor>
+        <ram>32</ram>
+        <location>A725 Crabtree</location>
+        <type_id>1</type_id>
+        <type_desc>Workstation</type_desc>
+    </device>
+    <device>
+        <inv_id>98</inv_id>
+        <owner>Noel Harrie</owner>
+        <device_name>noel-pc</device_name>
+        <manufacturer>Dell</manufacturer>
+        <model>OptiPlex 790</model>
+        <type>1</type>
+        <ip_address>192.168.0.99</ip_address>
+        <serial>BQFHTV1</serial>
+        <processor>Intel Core i5-2400 3.10GHz</processor>
+        <ram>16</ram>
+        <location>A302</location>
+        <type_id>1</type_id>
+        <type_desc>Workstation</type_desc>
+    </device>
+    <device>
+        <inv_id>99</inv_id>
+        <owner>Padiath Lab</owner>
+        <device_name>hgen-plab-224</device_name>
+        <manufacturer>Dell</manufacturer>
+        <model>OptiPlex 780</model>
+        <type>1</type>
+        <ip_address>192.168.0.100</ip_address>
+        <serial>7Q6KFQ1</serial>
+        <processor>Intel Core2 Duo E7500 2.93GHz</processor>
+        <ram>4</ram>
+        <location>3RD FLR ANNEX - 5AB WINDOW</location>
+        <type_id>1</type_id>
+        <type_desc>Workstation</type_desc>
+    </device>
+    <device>
+        <inv_id>100</inv_id>
+        <owner>Padiath Lab</owner>
+        <device_name>hgen-plab-230</device_name>
+        <manufacturer>Dell</manufacturer>
+        <model>OptiPlex 3010</model>
+        <type>1</type>
+        <ip_address>192.168.0.101</ip_address>
+        <serial>66JFXV1</serial>
+        <processor>Intel Core i5-3470 3.20GHz</processor>
+        <ram>6</ram>
+        <location>3RD FLR ANNEX - 5CB WINDOW</location>
+        <type_id>1</type_id>
+        <type_desc>Workstation</type_desc>
+    </device>
+    <device>
+        <inv_id>101</inv_id>
+        <owner>Quasar Padiath</owner>
+        <device_name>HGEN-Padiath</device_name>
+        <manufacturer>Apple</manufacturer>
+        <model>iMac</model>
+        <type>1</type>
+        <ip_address>192.168.0.102</ip_address>
+        <serial>QP0520X0DNN</serial>
+        <processor>Intel Core i3 3.2 GHz</processor>
+        <ram>12</ram>
+        <location>4060G</location>
+        <type_id>1</type_id>
+        <type_desc>Workstation</type_desc>
+    </device>
+    <device>
+        <inv_id>102</inv_id>
+        <owner>Robert Baron</owner>
+        <device_name>anagenesis</device_name>
+        <manufacturer>Apple</manufacturer>
+        <model>iMac</model>
+        <type>1</type>
+        <ip_address>192.168.0.103</ip_address>
+        <serial>26BB6828A0</serial>
+        <processor>Intel Core i7-4770 3.40GHz</processor>
+        <ram>8</ram>
+        <location>A218</location>
+        <type_id>1</type_id>
+        <type_desc>Workstation</type_desc>
+    </device>
+    <device>
+        <inv_id>103</inv_id>
+        <owner>Robert Ferrell</owner>
+        <device_name>hgen-ferrell140</device_name>
+        <manufacturer>Dell</manufacturer>
+        <model>OptiPlex 7010</model>
+        <type>1</type>
+        <ip_address>192.168.0.104</ip_address>
+        <serial>CNNQNW1</serial>
+        <processor>Intel Core i7-3770 3.40GHz</processor>
+        <ram>6</ram>
+        <location>A304</location>
+        <type_id>1</type_id>
+        <type_desc>Workstation</type_desc>
+    </device>
+    <device>
+        <inv_id>104</inv_id>
+        <owner>Robert Ferrell Lab</owner>
+        <device_name>Ferrell HP1320</device_name>
+        <manufacturer>HP</manufacturer>
+        <model>LaserJet 1320 series</model>
+        <type>8</type>
+        <ip_address>192.168.0.105</ip_address>
+        <serial>1185D65B2D</serial>
+        <processor/>
+        <ram/>
+        <location>3RD FLR ANNEX - 5CD WINDOW</location>
+        <type_id>8</type_id>
+        <type_desc>Printer</type_desc>
+    </device>
+    <device>
+        <inv_id>105</inv_id>
+        <owner>Robert Ferrell Lab</owner>
+        <device_name>ferrell-lab-color-8</device_name>
+        <manufacturer>HP</manufacturer>
+        <model>Color LaserJet 3600</model>
+        <type>8</type>
+        <ip_address>192.168.0.106</ip_address>
+        <serial>CNWBF18611</serial>
+        <processor/>
+        <ram/>
+        <location>3RD FLR ANNEX - 5CD WINDOW</location>
+        <type_id>8</type_id>
+        <type_desc>Printer</type_desc>
+    </device>
+    <device>
+        <inv_id>106</inv_id>
+        <owner>Robin Grubs</owner>
+        <device_name>grubs</device_name>
+        <manufacturer>Dell</manufacturer>
+        <model>Latitude E6330</model>
+        <type>2</type>
+        <ip_address>192.168.0.107</ip_address>
+        <serial>G56YYW1</serial>
+        <processor>Intel Core i7-3520M 2.90GHz</processor>
+        <ram>16</ram>
+        <location>A305</location>
+        <type_id>2</type_id>
+        <type_desc>Laptop</type_desc>
+    </device>
+    <device>
+        <inv_id>107</inv_id>
+        <owner>Roman Lab</owner>
+        <device_name>HGEN-Rlab-3</device_name>
+        <manufacturer>Apple</manufacturer>
+        <model>iMac</model>
+        <type>1</type>
+        <ip_address>192.168.0.108</ip_address>
+        <serial>W87491ECX88</serial>
+        <processor>Intel Core i7-4770 3.40GHz</processor>
+        <ram>8</ram>
+        <location>A300</location>
+        <type_id>1</type_id>
+        <type_desc>Workstation</type_desc>
+    </device>
+    <device>
+        <inv_id>108</inv_id>
+        <owner>Ryan Evans</owner>
+        <device_name>methyl</device_name>
+        <manufacturer>Apple</manufacturer>
+        <model>Mac Pro</model>
+        <type>1</type>
+        <ip_address>192.168.0.109</ip_address>
+        <serial>123456789</serial>
+        <processor>Intel Core i7-4770 3.40GHz</processor>
+        <ram>32</ram>
+        <location>A725</location>
+        <type_id>1</type_id>
+        <type_desc>Workstation</type_desc>
+    </device>
+    <device>
+        <inv_id>109</inv_id>
+        <owner>Ryan Minster</owner>
+        <device_name>rminster</device_name>
+        <manufacturer>Apple</manufacturer>
+        <model>iMac</model>
+        <type>1</type>
+        <ip_address>192.168.0.110</ip_address>
+        <serial>D25GX0ENDHJV</serial>
+        <processor>Intel Core i5 2.7 GHz</processor>
+        <ram>16</ram>
+        <location>728</location>
+        <type_id>1</type_id>
+        <type_desc>Workstation</type_desc>
+    </device>
+    <device>
+        <inv_id>110</inv_id>
+        <owner>Ryan Minster</owner>
+        <device_name>default</device_name>
+        <manufacturer>Apple</manufacturer>
+        <model>MacBook Pro</model>
+        <type>2</type>
+        <ip_address>192.168.0.111</ip_address>
+        <serial>C02PQ701G8WM</serial>
+        <processor>Intel Core i7</processor>
+        <ram>16</ram>
+        <location>A302</location>
+        <type_id>2</type_id>
+        <type_desc>Laptop</type_desc>
+    </device>
+    <device>
+        <inv_id>111</inv_id>
+        <owner>Spare</owner>
+        <device_name>default</device_name>
+        <manufacturer>Apple</manufacturer>
+        <model>Mac Pro</model>
+        <type>1</type>
+        <ip_address>192.168.0.112</ip_address>
+        <serial>G87120MGUPZ</serial>
+        <processor>Dual-Core Intel Xeon 2.66 GHz</processor>
+        <ram>14</ram>
+        <location>A300</location>
+        <type_id>1</type_id>
+        <type_desc>Workstation</type_desc>
+    </device>
+    <device>
+        <inv_id>112</inv_id>
+        <owner>Stephan Lab</owner>
+        <device_name>HGEN-SLAB-151</device_name>
+        <manufacturer>Dell</manufacturer>
+        <model>Optiplex 9020</model>
+        <type>1</type>
+        <ip_address>192.168.0.113</ip_address>
+        <serial>JNV1M02</serial>
+        <processor>Intel Core i7-4770 3.40GHz</processor>
+        <ram>8</ram>
+        <location>3rd FLR ANNEX</location>
+        <type_id>1</type_id>
+        <type_desc>Workstation</type_desc>
+    </device>
+    <device>
+        <inv_id>113</inv_id>
+        <owner>students</owner>
+        <device_name>HGEN-MacLab-01</device_name>
+        <manufacturer>Apple</manufacturer>
+        <model>MacBook Pro</model>
+        <type>2</type>
+        <ip_address>192.168.0.114</ip_address>
+        <serial>C1MKLBDMDTY3</serial>
+        <processor>Intel Core i5 2.5 GHz</processor>
+        <ram>4</ram>
+        <location>A312</location>
+        <type_id>2</type_id>
+        <type_desc>Laptop</type_desc>
+    </device>
+    <device>
+        <inv_id>114</inv_id>
+        <owner>students</owner>
+        <device_name>HGEN-MacLab-02</device_name>
+        <manufacturer>Apple</manufacturer>
+        <model>MacBook Pro</model>
+        <type>2</type>
+        <ip_address>192.168.0.115</ip_address>
+        <serial>C1MKLBAQDTY3</serial>
+        <processor>Intel Core i5 2.5 GHz</processor>
+        <ram>4</ram>
+        <location>A312</location>
+        <type_id>2</type_id>
+        <type_desc>Laptop</type_desc>
+    </device>
+    <device>
+        <inv_id>115</inv_id>
+        <owner>students</owner>
+        <device_name>HGEN-MacLab-03</device_name>
+        <manufacturer>Apple</manufacturer>
+        <model>MacBook Pro</model>
+        <type>2</type>
+        <ip_address>192.168.0.116</ip_address>
+        <serial>C1MKLB9QDTY3</serial>
+        <processor>Intel Core i5 2.5 GHz</processor>
+        <ram>4</ram>
+        <location>A312</location>
+        <type_id>2</type_id>
+        <type_desc>Laptop</type_desc>
+    </device>
+    <device>
+        <inv_id>116</inv_id>
+        <owner>students</owner>
+        <device_name>HGEN-MacLab-04</device_name>
+        <manufacturer>Apple</manufacturer>
+        <model>MacBook Pro</model>
+        <type>2</type>
+        <ip_address>192.168.0.117</ip_address>
+        <serial>C1MKLBBMDTY3</serial>
+        <processor>Intel Core i5 2.5 GHz</processor>
+        <ram>4</ram>
+        <location>A312</location>
+        <type_id>2</type_id>
+        <type_desc>Laptop</type_desc>
+    </device>
+    <device>
+        <inv_id>117</inv_id>
+        <owner>students</owner>
+        <device_name>HGEN-MacLab-06</device_name>
+        <manufacturer>Apple</manufacturer>
+        <model>MacBook Pro</model>
+        <type>2</type>
+        <ip_address>192.168.0.118</ip_address>
+        <serial>CPWKJ0SMDTY3</serial>
+        <processor>Intel Core i5 2.5 GHz</processor>
+        <ram>4</ram>
+        <location>A312</location>
+        <type_id>2</type_id>
+        <type_desc>Laptop</type_desc>
+    </device>
+    <device>
+        <inv_id>118</inv_id>
+        <owner>students</owner>
+        <device_name>HGEN-MacLab-07</device_name>
+        <manufacturer>Apple</manufacturer>
+        <model>MacBook Pro</model>
+        <type>2</type>
+        <ip_address>192.168.0.119</ip_address>
+        <serial>CPWKJ1KADTY3</serial>
+        <processor>Intel Core i5 2.5 GHz</processor>
+        <ram>4</ram>
+        <location>A312</location>
+        <type_id>2</type_id>
+        <type_desc>Laptop</type_desc>
+    </device>
+    <device>
+        <inv_id>119</inv_id>
+        <owner>students</owner>
+        <device_name>HGEN-MacLab-08</device_name>
+        <manufacturer>Apple</manufacturer>
+        <model>MacBook Pro</model>
+        <type>2</type>
+        <ip_address>192.168.0.120</ip_address>
+        <serial>CPWKJ1LYDTY3</serial>
+        <processor>Intel Core i5 2.5 GHz</processor>
+        <ram>4</ram>
+        <location>A312</location>
+        <type_id>2</type_id>
+        <type_desc>Laptop</type_desc>
+    </device>
+    <device>
+        <inv_id>120</inv_id>
+        <owner>students</owner>
+        <device_name>HGEN-MacLab-09</device_name>
+        <manufacturer>Apple</manufacturer>
+        <model>MacBook</model>
+        <type>2</type>
+        <ip_address>192.168.0.121</ip_address>
+        <serial>W801404FFYT</serial>
+        <processor>Intel Core 2 Duo 2.26 GHz</processor>
+        <ram>4</ram>
+        <location>A312</location>
+        <type_id>2</type_id>
+        <type_desc>Laptop</type_desc>
+    </device>
+    <device>
+        <inv_id>121</inv_id>
+        <owner>students</owner>
+        <device_name>HGEN-MacLab-10</device_name>
+        <manufacturer>Apple</manufacturer>
+        <model>MacBook</model>
+        <type>2</type>
+        <ip_address>192.168.0.122</ip_address>
+        <serial>W801404BFYT</serial>
+        <processor>Intel Core 2 Duo 2.26 GHz</processor>
+        <ram>4</ram>
+        <location>A312</location>
+        <type_id>2</type_id>
+        <type_desc>Laptop</type_desc>
+    </device>
+    <device>
+        <inv_id>122</inv_id>
+        <owner>students</owner>
+        <device_name>HGEN-MacLab-12</device_name>
+        <manufacturer>Apple</manufacturer>
+        <model>MacBook</model>
+        <type>2</type>
+        <ip_address>192.168.0.123</ip_address>
+        <serial>W801404CFYT</serial>
+        <processor>Intel Core 2 Duo 2.26 GHz</processor>
+        <ram>4</ram>
+        <location>A312</location>
+        <type_id>2</type_id>
+        <type_desc>Laptop</type_desc>
+    </device>
+    <device>
+        <inv_id>123</inv_id>
+        <owner>students</owner>
+        <device_name>HGEN-MacLab-05</device_name>
+        <manufacturer>Apple</manufacturer>
+        <model>MacBook Pro</model>
+        <type>2</type>
+        <ip_address>192.168.0.124</ip_address>
+        <serial>C1MKLBCGDTY3</serial>
+        <processor>Intel Core i5 2.5 GHz</processor>
+        <ram>4</ram>
+        <location>A312</location>
+        <type_id>2</type_id>
+        <type_desc>Laptop</type_desc>
+    </device>
+    <device>
+        <inv_id>124</inv_id>
+        <owner>students</owner>
+        <device_name>HGEN-MacLab-11</device_name>
+        <manufacturer>Apple</manufacturer>
+        <model>MacBook</model>
+        <type>2</type>
+        <ip_address>192.168.0.125</ip_address>
+        <serial>W801404DFYT</serial>
+        <processor>Intel Core 2 Duo 2.26 GHz</processor>
+        <ram>4</ram>
+        <location>A312</location>
+        <type_id>2</type_id>
+        <type_desc>Laptop</type_desc>
+    </device>
+    <device>
+        <inv_id>125</inv_id>
+        <owner>Susanne Gollin</owner>
+        <device_name>gollin</device_name>
+        <manufacturer>Apple</manufacturer>
+        <model>iMac</model>
+        <type>1</type>
+        <ip_address>192.168.0.126</ip_address>
+        <serial>22412BD4F2</serial>
+        <processor>Intel Core i5 2.9 GHz</processor>
+        <ram>8</ram>
+        <location>4008</location>
+        <type_id>1</type_id>
+        <type_desc>Workstation</type_desc>
+    </device>
+    <device>
+        <inv_id>126</inv_id>
+        <owner>Susanne Gollin</owner>
+        <device_name>Susannes-Macbook-Air</device_name>
+        <manufacturer>Apple</manufacturer>
+        <model>MacBook Air</model>
+        <type>2</type>
+        <ip_address>192.168.0.127</ip_address>
+        <serial>C1MPL67NG944</serial>
+        <processor>Intel Core i7</processor>
+        <ram>8</ram>
+        <location>A300</location>
+        <type_id>2</type_id>
+        <type_desc>Laptop</type_desc>
+    </device>
+    <device>
+        <inv_id>127</inv_id>
+        <owner>Susanne Gollin Lab</owner>
+        <device_name>HGEN-GLab-147</device_name>
+        <manufacturer>Apple</manufacturer>
+        <model>iMac</model>
+        <type>1</type>
+        <ip_address>192.168.0.128</ip_address>
+        <serial>QP9190EX0TJ</serial>
+        <processor>Intel Core 2 Duo 2.66 GHz</processor>
+        <ram>4</ram>
+        <location>3RD FLR ANNEX - 5AB WINDOW</location>
+        <type_id>1</type_id>
+        <type_desc>Workstation</type_desc>
+    </device>
+    <device>
+        <inv_id>128</inv_id>
+        <owner>Susanne Gollin Lab</owner>
+        <device_name>hgen-glab-148</device_name>
+        <manufacturer>Dell</manufacturer>
+        <model>OptiPlex 170L</model>
+        <type>1</type>
+        <ip_address>192.168.0.129</ip_address>
+        <serial>B6XM291</serial>
+        <processor>Intel Pentium 4 3.20GHz</processor>
+        <ram>2</ram>
+        <location>3RD FLR ANNEX - 5A</location>
+        <type_id>1</type_id>
+        <type_desc>Workstation</type_desc>
+    </device>
+    <device>
+        <inv_id>129</inv_id>
+        <owner>Susanne Gollin Lab</owner>
+        <device_name>cyto1</device_name>
+        <manufacturer>Dell</manufacturer>
+        <model>Optiplex GX270</model>
+        <type>1</type>
+        <ip_address>192.168.0.130</ip_address>
+        <serial>123456789</serial>
+        <processor>Intel Core i5 2.9 GHz</processor>
+        <ram>8</ram>
+        <location>3RD FLR ANNEX - 3060B</location>
+        <type_id>1</type_id>
+        <type_desc>Workstation</type_desc>
+    </device>
+    <device>
+        <inv_id>130</inv_id>
+        <owner>Susanne Gollin Lab</owner>
+        <device_name>Gollen Lab 1</device_name>
+        <manufacturer>Dell</manufacturer>
+        <model>Optiplex GX270</model>
+        <type>1</type>
+        <ip_address>192.168.0.131</ip_address>
+        <serial>602lg51</serial>
+        <processor>Intel Core i5 2.9 GHz</processor>
+        <ram>8</ram>
+        <location>A300</location>
+        <type_id>1</type_id>
+        <type_desc>Workstation</type_desc>
+    </device>
+    <device>
+        <inv_id>131</inv_id>
+        <owner>Susanne Gollin Lab</owner>
+        <device_name>Gollen Lab 2</device_name>
+        <manufacturer>Dell</manufacturer>
+        <model>Latitude D510</model>
+        <type>1</type>
+        <ip_address>192.168.0.132</ip_address>
+        <serial>210ct71</serial>
+        <processor>Intel Core i5 2.9 GHz</processor>
+        <ram>8</ram>
+        <location>A300</location>
+        <type_id>1</type_id>
+        <type_desc>Workstation</type_desc>
+    </device>
+    <device>
+        <inv_id>132</inv_id>
+        <owner>Xingbin Wang</owner>
+        <device_name>exons</device_name>
+        <manufacturer>Apple</manufacturer>
+        <model/>
+        <type>1</type>
+        <ip_address>192.168.0.133</ip_address>
+        <serial>58B035A4CC30</serial>
+        <processor>Intel Core i5 2.9 GHz</processor>
+        <ram>8</ram>
+        <location>4060E</location>
+        <type_id>1</type_id>
+        <type_desc>Workstation</type_desc>
+    </device>
+    <device>
+        <inv_id>133</inv_id>
+        <owner>Xingbin Wang</owner>
+        <device_name>HGEN-LT-176</device_name>
+        <manufacturer>Dell</manufacturer>
+        <model>Lattitude E5550</model>
+        <type>2</type>
+        <ip_address>192.168.0.134</ip_address>
+        <serial>4770T32</serial>
+        <processor>Intel Core i7-5600U</processor>
+        <ram>16</ram>
+        <location>4060E</location>
+        <type_id>2</type_id>
+        <type_desc>Laptop</type_desc>
+    </device>
+    <device>
+        <inv_id>134</inv_id>
+        <owner>Yesim Demirci</owner>
+        <device_name>default</device_name>
+        <manufacturer>Dell</manufacturer>
+        <model>Precision</model>
+        <type>1</type>
+        <ip_address>192.168.0.135</ip_address>
+        <serial>123456789</serial>
+        <processor>Intel Core i5 2.9 GHz</processor>
+        <ram>8</ram>
+        <location>4010</location>
+        <type_id>1</type_id>
+        <type_desc>Workstation</type_desc>
+    </device>
+    <device>
+        <inv_id>135</inv_id>
+        <owner>Zolt Urban Lab</owner>
+        <device_name>urban-8</device_name>
+        <manufacturer>HP</manufacturer>
+        <model>Color LaserJet CP4005</model>
+        <type>8</type>
+        <ip_address>192.168.0.136</ip_address>
+        <serial>JP8RD38590</serial>
+        <processor/>
+        <ram/>
+        <location>3RD FLR ANNEX - 3A FLOOR</location>
+        <type_id>8</type_id>
+        <type_desc>Printer</type_desc>
+    </device>
+    <device>
+        <inv_id>136</inv_id>
+        <owner>Zolt Urban Lab</owner>
+        <device_name>Urban BW 8</device_name>
+        <manufacturer>HP</manufacturer>
+        <model>LaserJet P2055dn</model>
+        <type>8</type>
+        <ip_address>192.168.0.137</ip_address>
+        <serial>CNB9033096</serial>
+        <processor/>
+        <ram/>
+        <location>3RD FLR ANNEX - 3AB WINDOW</location>
+        <type_id>8</type_id>
+        <type_desc>Printer</type_desc>
+    </device>
+    <device>
+        <inv_id>137</inv_id>
+        <owner>Zsolt Urban</owner>
+        <device_name>mutation</device_name>
+        <manufacturer>Apple</manufacturer>
+        <model>iMac</model>
+        <type>1</type>
+        <ip_address>192.168.0.138</ip_address>
+        <serial>QP0040LFB9S</serial>
+        <processor>Intel Core 2 Duo 3.33 GHz</processor>
+        <ram>4</ram>
+        <location>A217</location>
+        <type_id>1</type_id>
+        <type_desc>Workstation</type_desc>
+    </device>
+    <device>
+        <inv_id>138</inv_id>
+        <owner>Zsolt Urban</owner>
+        <device_name>hgen-urban</device_name>
+        <manufacturer>Apple</manufacturer>
+        <model>MacBook Pro</model>
+        <type>2</type>
+        <ip_address>192.168.0.140</ip_address>
+        <serial>C02KL03ZDR55</serial>
+        <processor>Intel Core i5 2.9 GHz</processor>
+        <ram>8</ram>
+        <location>A308</location>
+        <type_id>2</type_id>
+        <type_desc>Laptop</type_desc>
+    </device>
+    <device>
+        <inv_id>139</inv_id>
+        <owner>Zsolt Urban</owner>
+        <device_name>hgen-kara</device_name>
+        <manufacturer>Dell</manufacturer>
+        <model>Lattitude E5550</model>
+        <type>2</type>
+        <ip_address>192.168.0.139</ip_address>
+        <serial>123456789</serial>
+        <processor>Intel Core i5 2.9 GHz</processor>
+        <ram>8</ram>
+        <location>A217</location>
+        <type_id>2</type_id>
+        <type_desc>Laptop</type_desc>
+    </device>
+    <device>
+        <inv_id>140</inv_id>
+        <owner>Zsolt Urban</owner>
+        <device_name>default</device_name>
+        <manufacturer>HP</manufacturer>
+        <model>LaserJet 1200</model>
+        <type>8</type>
+        <ip_address>192.168.0.141</ip_address>
+        <serial>123456789</serial>
+        <processor/>
+        <ram/>
+        <location>A217</location>
+        <type_id>8</type_id>
+        <type_desc>Printer</type_desc>
+    </device>
+    <device>
+        <inv_id>141</inv_id>
+        <owner>Zsolt Urban</owner>
+        <device_name>a218-8</device_name>
+        <manufacturer>HP</manufacturer>
+        <model>LaserJet 1300n</model>
+        <type>8</type>
+        <ip_address>192.168.0.142</ip_address>
+        <serial>CNBB027211</serial>
+        <processor/>
+        <ram/>
+        <location>A218</location>
+        <type_id>8</type_id>
+        <type_desc>Printer</type_desc>
+    </device>
+    <device>
+        <inv_id>142</inv_id>
+        <owner>Zsolt Urban</owner>
+        <device_name>Levine 8</device_name>
+        <manufacturer>HP</manufacturer>
+        <model>LaserJet 1220</model>
+        <type>8</type>
+        <ip_address>192.168.0.143</ip_address>
+        <serial>CNCG032576</serial>
+        <processor/>
+        <ram/>
+        <location>A217</location>
+        <type_id>8</type_id>
+        <type_desc>Printer</type_desc>
+    </device>
+    <device>
+        <inv_id>143</inv_id>
+        <owner>Zsolt Urban Lab</owner>
+        <device_name>amplication</device_name>
+        <manufacturer>Apple</manufacturer>
+        <model>iMac</model>
+        <type>1</type>
+        <ip_address>192.168.0.144</ip_address>
+        <serial>D25KJ0V2DNMM</serial>
+        <processor>Intel Core i5 2.9 GHz</processor>
+        <ram>16</ram>
+        <location>3RD FLR ANNEX - 3CD WINDOW</location>
+        <type_id>1</type_id>
+        <type_desc>Workstation</type_desc>
+    </device>
+    <device>
+        <inv_id>144</inv_id>
+        <owner>Zsolt Urban Lab</owner>
+        <device_name>cosmid</device_name>
+        <manufacturer>Apple</manufacturer>
+        <model>iMac</model>
+        <type>1</type>
+        <ip_address>192.168.0.150</ip_address>
+        <serial>H00420S9E86</serial>
+        <processor>Intel Core i5 660 3.33GHz</processor>
+        <ram>8</ram>
+        <location>3RD FLR ANNEX - 3AB WINDOW</location>
+        <type_id>1</type_id>
+        <type_desc>Workstation</type_desc>
+    </device>
+    <device>
+        <inv_id>145</inv_id>
+        <owner>Zsolt Urban Lab</owner>
+        <device_name>platereader</device_name>
+        <manufacturer>Dell</manufacturer>
+        <model>OptiPlex 980</model>
+        <type>1</type>
+        <ip_address>192.168.0.145</ip_address>
+        <serial>2C09Y41</serial>
+        <processor>Intel Core i5 660 3.33GHz</processor>
+        <ram>8</ram>
+        <location>3RD FLR ANNEX - 3060D</location>
+        <type_id>1</type_id>
+        <type_desc>Workstation</type_desc>
+    </device>
+    <device>
+        <inv_id>146</inv_id>
+        <owner>Zsolt Urban Lab</owner>
+        <device_name>nanodrop-pc</device_name>
+        <manufacturer>Dell</manufacturer>
+        <model>OptiPlex 980</model>
+        <type>1</type>
+        <ip_address>192.168.0.146</ip_address>
+        <serial>123456789</serial>
+        <processor>Intel Core i5 660 3.33GHz</processor>
+        <ram>8</ram>
+        <location>3RD FLR ANNEX - 3060D</location>
+        <type_id>1</type_id>
+        <type_desc>Workstation</type_desc>
+    </device>
+    <device>
+        <inv_id>147</inv_id>
+        <owner>Zsolt Urban Lab</owner>
+        <device_name>hgen-ulab-207</device_name>
+        <manufacturer>Dell</manufacturer>
+        <model>OptiPlex 980</model>
+        <type>1</type>
+        <ip_address>192.168.0.147</ip_address>
+        <serial>3ZT9FQ1</serial>
+        <processor>Intel Core i5 660 3.33GHz</processor>
+        <ram>8</ram>
+        <location>3RD FLR ANNEX - 3CD WINDOW</location>
+        <type_id>1</type_id>
+        <type_desc>Workstation</type_desc>
+    </device>
+    <device>
+        <inv_id>148</inv_id>
+        <owner>Zsolt Urban Lab</owner>
+        <device_name>hgen-ulab-208</device_name>
+        <manufacturer>Dell</manufacturer>
+        <model>OptiPlex 780</model>
+        <type>1</type>
+        <ip_address>192.168.0.148</ip_address>
+        <serial>CNSLZL1</serial>
+        <processor>Intel Core2 Duo E8500 3.16GHz</processor>
+        <ram>4</ram>
+        <location>3RD FLR ANNEX - 3AB WINDOW</location>
+        <type_id>1</type_id>
+        <type_desc>Workstation</type_desc>
+    </device>
+    <device>
+        <inv_id>149</inv_id>
+        <owner>Zsolt Urban Lab</owner>
+        <device_name>Urban Lab 1 1</device_name>
+        <manufacturer>Dell</manufacturer>
+        <model>Optiplex 390</model>
+        <type>1</type>
+        <ip_address>192.168.0.151</ip_address>
+        <serial>Cdsltv1</serial>
+        <processor>Intel Core i5 660 3.33GHz</processor>
+        <ram>8</ram>
+        <location>A720</location>
+        <type_id>1</type_id>
+        <type_desc>Workstation</type_desc>
+    </device>
+    <device>
+        <inv_id>150</inv_id>
+        <owner>Zsolt Urban Lab</owner>
+        <device_name>Urban Lab 1 2</device_name>
+        <manufacturer>Dell</manufacturer>
+        <model>Optiplex GX270</model>
+        <type>1</type>
+        <ip_address>192.168.0.152</ip_address>
+        <serial>2c09y41</serial>
+        <processor>Intel Core i5 660 3.33GHz</processor>
+        <ram>8</ram>
+        <location>A720</location>
+        <type_id>1</type_id>
+        <type_desc>Workstation</type_desc>
+    </device>
+    <device>
+        <inv_id>151</inv_id>
+        <owner>Zsolt Urban Lab</owner>
+        <device_name>default</device_name>
+        <manufacturer>Thermaltake</manufacturer>
+        <model/>
+        <type>1</type>
+        <ip_address>192.168.0.149</ip_address>
+        <serial>123456789</serial>
+        <processor>Intel Core i5 660 3.33GHz</processor>
+        <ram>8</ram>
+        <location>3RD FLR ANNEX - 3060B</location>
+        <type_id>1</type_id>
+        <type_desc>Workstation</type_desc>
+    </device>
+    <device>
+        <inv_id>159</inv_id>
+        <owner>Test</owner>
+        <device_name>Test</device_name>
+        <manufacturer>Apple</manufacturer>
+        <model>MacBook</model>
+        <type>2</type>
+        <ip_address>192.168.1.254</ip_address>
+        <serial>SDFJ234SFJ</serial>
+        <processor>Intel Core i7</processor>
+        <ram>16</ram>
+        <location>A825</location>
+        <type_id>2</type_id>
+        <type_desc>Laptop</type_desc>
+    </device>
 </inventory>
