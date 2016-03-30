@@ -41,7 +41,7 @@ public class Main {
         if(accessControlRequestMethod != null){
             response.header("Access-Control-Allow-Methods", accessControlRequestMethod);
         }
- 
+        
         return "OK";
     });//end options
 
@@ -87,7 +87,8 @@ public class Main {
                 resList.add(obj); //Add to ArrayList
             }//end while
 
-            //Return JSON
+            //Return OK status and JSON for AJAX success
+            res.status(200);
             return resList;
           
         } catch (Exception e) {
@@ -142,6 +143,10 @@ public class Main {
             documentElement.setAttribute("xmlns:xsi", "http://www.w3.org/2001/XMLSchema-instance");
             documentElement.setAttribute("xsi:schemaLocation", "http://stark-earth-7570.herokuapp.com/schema/inventory http://stark-earth-7570.herokuapp.com/schema/inventory/inventory.xsd");
 
+            
+            //Return OK status and XML for AJAX success
+            res.status(200);
+            
             //Finish formatting as XML and then return XML
             return (CreateXml.getDocumentAsXml(doc));
           

@@ -1,26 +1,26 @@
 html { 
-	background-color: #778899;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
+    background-color: #778899;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 body {
-	color: #fff;
-	font-family:Verdana, Arial, Helvetica, sans-serif;
+    color: #fff;
+    font-family:Verdana, Arial, Helvetica, sans-serif;
     font-size:11px;
-	line-height:1.286em;
-	margin-top:0px;
-	margin-bottom:30px;
-	padding:0;
-	text-align:center;
-	font-size: 13px;
+    line-height:1.286em;
+    margin-top:0px;
+    margin-bottom:30px;
+    padding:0;
+    text-align:center;
+    font-size: 13px;
 }
 
 h2 {
-	font-size: 14px;
-	font-weight:normal;
+    font-size: 14px;
+    font-weight:normal;
 }
 
 /* Navigation ----------------------------------------------------------------------- */
@@ -43,6 +43,7 @@ h2 {
     margin: 0;
     padding: 0;
     list-style: none;
+    z-index: 100;
 }
 
 .nav ul li {
